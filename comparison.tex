@@ -1,0 +1,222 @@
+\section{Comparative Study}
+\label{sec:comparison}
+
+In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristicsB}   we overview the key characteristics of the data generators clustered according to the respective applications. In particular, we show:
+
+\begin{itemize}
+\item Characteristics of the domain - its \textit{type} (fixed, specified using a schema, or extracted from input data) and the particular \textit{target} domain, or, in case of a generic tool, the chosen sample domain,
+\item Characteristics of \textit{read}/\textit{update} operations (if provided), i.e., whether the set of operations is fixed/generated, if it involves operation mixes (i.e., sets/sequences of operations), or if templates of operations are supported.
+\item Key configuration options:  
+  \begin{itemize}
+    \item whether the generator deals only with structure, or also with \textit{properties} of the graph,
+    \item supported types of \textit{distributions} used for generating of the data,
+    \item \textit{output format} of the produced graph,
+    \item  whether the generator is \textit{distributed} and thus enables more efficient data generation.
+  \end{itemize}
+\end{itemize}   
+ 
+  
+
+\begin{sidewaystable}
+\scriptsize 
+\centering
+\tbl{Key characteristics of the generators (part A)} {
+\begin{tabular}{| c | p{2.2cm} | l |  p{2.2cm} | l |  l | l | p{3cm} | p{1.4cm} | l | }
+ \hline               
+           &   & \multicolumn{2}{c}{\textbf{Domain}}
+               & \multicolumn{2}{|c|}{\textbf{Operations}}             
+               & \multicolumn{4}{c|}{\textbf{Configuration}}
+               \\ \hline                
+           &  \textbf{Generator}
+               & \textbf{Type}
+               & \textbf{Target / sample}               
+               & \textbf{Read}
+               & \textbf{Update}               
+               & \textbf{\rot{Properties}}
+               & \textbf{Distributions}
+			   & \textbf{Output format}
+               & \textbf{\rot{Distributed\ }}
+               \\ \hline                
+\hline   % general graphs (Angela)
+\multirow{5}{*}{\rot{\textbf{General}}}
+  & graph500  & fixed & & Y & N & Y & power-law & &  Y  \\
+\cline{2-10}
+   & R-MAt & fixed & & Y & N & Y & power-law & &  N  \\
+\cline{2-10}
+  & Watts-Strogatz~\cite{watts1998collective} & fixed & & Y & N & Y &  & &  N  \\
+\cline{2-10}
+  & Preferential Attachment~\cite{barabasi1999emergence} & fixed & & Y & N & Y &  & &  N  \\
+\cline{2-10}
+  & & & & & & & &  &   \\
+\hline
+\hline  % graph databases (Angela)
+\multirow{4}{*}{\rot{\textbf{DBs}}}
+ & XGDBench & fixed  & social network  & fixed & Y & Y & power-law &  MAG &  Y  \\
+ \cline{2-10}
+& graphGen & pattern-driven (Cypher schema) & user-defined  & -- & -- & Y & -- &  property graphs & N   \\
+ \cline{2-10}
+ & gMark & schema-driven (internal schema) &  user-defined  & generated &  N  & Y & uniform, normal, zipfian &  N-triples & N    \\
+\hline
+\hline % Semantic web (Irena)
+\multirow{18}{*}{\rot{\textbf{Semantic web}}}
+ & LUBM & fixed & university  & fixed & N & Y & random (LCG) &  RDF & N   \\  
+\cline{2-10}
+ & LBBM & extracted & Lehigh University BibTeX  & N & N & Y & Monte Carlo &  RDF & N   \\  
+\cline{2-10}
+ & UOBM & fixed & university  & fixed & N & Y & random &  RDF & N   \\  
+\cline{2-10}
+ & IIMB & fixed & movies  & N & N & Y & random &  RDF & N   \\  
+\cline{2-10}
+ & BSBM & fixed & e-commerce  & fixed & N & Y & mostly normal &  RDF, relational & N   \\ 
+\cline{2-10}
+ & SP$^2$Bench & fixed & DBLP  & fixed & N & Y & based on DBLP  & RDF & N   \\ 
+\cline{2-10}
+ & \cite{Duan:2011:AOC:1989323.1989340} & extracted & -- & N & Y &N & -- &  RDF & N    \\ 
+\cline{2-10}
+ & DBPSB & extracted & DBpedia &  templates & N & Y & random &  RDF & N   \\  
+\cline{2-10}
+ & LODIB & fixed & e-commerce &  N & N & Y & 44 types &  RDF & N   \\ 
+\cline{2-10}
+ & SIB & fixed & social network &  mixes & mix & Y & from real-world data &  RDF & N   \\ 
+\cline{2-10}
+ & Geographica & fixed & OpenStreetMap  & fixed + templates  & N & Y & -- &  RDF & N   \\ 
+\cline{2-10}
+ & WatDiv & schema-driven & user-defined  & templates & N & Y & uniform, normal, Zipfian &  RDF & N   \\  
+\cline{2-10}
+ & RBench & extracted & DBLP, Yago  & templates & N & Y & from real-world data &  RDF & N  \\  
+\cline{2-10}
+ & LDBC SPB & fixed & media  & mixes & N & Y & power law, skewed values, value correlation &  RDF & N  \\  
+\cline{2-10}
+ & LinkGen & & & & & & & & \\
+\hline
+\end{tabular} }
+\label{tab:comparisonCharacteristicsA}
+\end{sidewaystable}
+
+\begin{sidewaystable}
+\scriptsize 
+\centering
+\tbl{Key characteristics of the generators (part B)} {
+\begin{tabular}{| c | p{2.2cm}| l |  p{2.2cm} | l |  l | l | p{3cm} | p{1.4cm} | l | }
+ \hline               
+           &   & \multicolumn{2}{c}{\textbf{Domain}}
+               & \multicolumn{2}{|c|}{\textbf{Operations}}             
+               & \multicolumn{4}{c|}{\textbf{Configuration}}
+               \\ \hline                
+           &  \textbf{Generator}
+               & \textbf{Type}
+               & \textbf{Target / sample}               
+               & \textbf{Read}
+               & \textbf{Update}               
+               & \textbf{\rot{Properties}}
+               & \textbf{Distributions}
+			   & \textbf{Output format}
+               & \textbf{\rot{Distributed\ }}
+               \\ \hline                
+\hline
+\hline % social networks (Arnau)
+\multirow{9}{*}{\rot{\textbf{Social networks}}}
+& LDBC SNB  & Y & Y &   generated &  & Y & Facebook-like &  CSV, RDF & Y     \\
+\cline{2-10}
+& S3G2 & Y & Y  & N &  & Y & Facebook-like  &  CSV, RDF & Y   \\
+\cline{2-10}
+& SNG  & Y & Y &   N &  & Y & power-law & ? &  ?   \\
+\cline{2-10}
+& Forest Fire  & N & Y   & N &  & N & power-law &  ? & N   \\
+\cline{2-10}
+& Darwini  & N & N &   N &  & N & user-defined &  ? & Y   \\
+\cline{2-10}
+& BTER  & N & N &   N &  & N & user-defined &  ? & Y  \\
+\cline{2-10}
+  & & & & & & & & &    \\
+\cline{2-10}
+  & & & & & & & & &    \\
+\cline{2-10}
+  & & & & & & & & &    \\
+\hline
+\hline   % graph analytics (Sherif)
+\multirow{5}{*}{\rot{\textbf{Analytics}}}
+  & & & & & & & & &    \\
+\cline{2-10}
+  & & & & & & & & &    \\
+\cline{2-10}
+  & & & & & & & & &    \\
+\cline{2-10}
+  & & & & & & & & &    \\
+\cline{2-10}
+  & & & & & & & &  &   \\
+\hline
+\hline   % streaming (Sherif)
+\multirow{5}{*}{\rot{\textbf{Streaming}}}
+  & & & & & & & & &    \\
+\cline{2-10}
+  & & & & & & & & &    \\
+\cline{2-10}
+  & & & & & & & & &    \\
+\cline{2-10}
+  & & & & & & & & &    \\
+\cline{2-10}
+  & & & & & & & &  &   \\
+\hline
+\end{tabular} }
+\label{tab:comparisonCharacteristicsB}
+\end{sidewaystable}
+
+
+In Table~\ref{tab:comparisonReferences} we provide an overview of works which use the respective generator for evaluation of the proposed method or comparative study of a selected set methods. \QUE{CSUR has strict page limit 35 pages. I'm afraid that this will extend the list of references extremely.}
+
+
+\begin{table}
+\scriptsize
+\centering
+\tbl{Exploitation of the generators}{
+\begin{tabular}{| l | p{11.5cm} | }
+ \hline          \textbf{Generator}
+               & \textbf{Cited in}
+               \\ \hline
+\hline  % general graphs
+  & \\  
+\hline
+  & \\  
+\hline
+\hline % graph databases
+  & \\  
+\hline
+  & \\  
+\hline
+\hline % Linked Data
+ LUBM & \\  
+\hline
+ LBBM & \\  
+\hline
+ UOBM & \\  
+\hline
+ IIMB & \\  
+\hline
+ BSBM & \\  
+\hline
+ SP$^2$Bench & \\  
+\hline
+ DBPSB & \\  
+\hline
+ LODIB & \\  
+\hline
+ SIB & \\  
+\hline
+ Geographica & \\  
+\hline
+ WatDiv & \\  
+\hline
+ RBench & \\  
+\hline
+ LDBC SPB & \\  
+\hline
+\hline  % social networks
+  & \\  
+\hline
+  & \\  
+\hline
+\end{tabular} }
+\label{tab:comparisonReferences}
+\end{table}
+

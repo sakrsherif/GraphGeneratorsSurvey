@@ -1,0 +1,27 @@
+\subsection{General Graphs}
+\label{sec:generators_general}
+
+First of all we will focus on papers dealing with generation of general graph data not aiming at particular application domain. Currently, there exists a number of tools which involve a kind of general graph data generator, such as gtools from projects nauty and Traces~\cite{gtools} or the Stanford GraphBase~\cite{GraphBase}. We will, however, focus on primarily generating/benchmarking projects targeting Big Data world.
+
+
+
+\paragraph{GraphGen} For the purpose of testing the scalability of an indexing technique called FG-index~\cite{Cheng:2007:FTV:1247480.1247574} on size of the database of graphs, their average size and average density, the authors have also implemented a synthetic generator called GraphGen~\cite{GraphGen}. It is based on the IBM synthetic data generation code for associations and sequential patterns\footnote{From 1996, no longer available at \url{http://www.almaden.ibm.com/cs/projects/iis/hdb/Projects/data mining/mining.shtml}.}. GraphGen creates a collection of labeled, undirected and connected graphs aiming at performance evaluation of frequent subgraph mining algorithms and graph query processing algorithms. The result is represented as a list of graphs, each consisting of a list of nodes and a list of edges.
+
+
+
+\paragraph{HPC Scalable Graph Analysis Benchmark} The HPC Scalable Graph Analysis Benchmark~\cite{HPCgraph,Bader:2005:DIH:2099301.2099360} represents an application with multiple analysis techniques that access a single data structure representing a weighted, directed graph. The benchmark is composed of four separated operations (graph construction, classification of large vertex sets, graph extraction with BFS, and graph analysis with betweenness centrality) on a graph that follows a power-law distribution.
+
+The graph generator constructs a list of edge tuples containing vertex identifiers (with the edge direction from the first one to the second one) and weights that represent data assigned to the edges of the multigraph in the form of positive integers with a uniform random distribution. The generator has the following parameters: number of vertices, number of edges, and maximum weight of an edge. The algorithm of the generator is based on R-MAT. Since the authors aim to avoid data locality, in the final step the vertex numbers are randomly permuted, and then edge tuples randomly shuffled.
+
+A related project from the same authors developed for the 9th DIMACS Shortest Paths Challenge is GTgraph~\cite{GTgraph}. It involves three types of graphs: input graph instances used in the DARPA HPCS SSCA\#2 graph theory benchmark (version 1.0), Erd\"{o}s-R\'{e}nyi random graphs, and small-world graphs based on the R-MAT model.
+
+
+\paragraph{Graph 500 Benchmark} The Graph 500 Benchmark~\cite{Graph500} includes a scalable data generator which produces weighted, undirected graph as a list of edge tuples containing the label of start vertex and end vertex together with a weight that represents data assigned to the edge. The space of vertex  labels is the set of integers beginning with 0. The input values required to describe the graph are (1) scale, i.e., the logarithm base two of the number of vertices, and (2) edge factor, i.e., the ratio of the graph's edge count to its vertex count (i.e., half the average degree of a vertex in the graph). The graph generator is a Kronecker generator similar to R-MAT. The data must not exhibit any locality, so in the final step the vertex labels and order of edges are randomly shuffled.
+
+The covered operations currently involve BFS; however, the authors intend to involve also two more types -- optimization (single source shortest path) and edge-oriented (maximal independent set) -- and five graph-related business areas cybersecurity, medical informatics, data enrichment, social networks, and symbolic networks.
+
+
+%\paragraph{gtools} Projects nauty and Traces~\cite{gtools} are programs for computing automorphism groups of graphs and digraphs~\cite{McKay201494}; they can also produce a canonical label. In the respective package there is also suite of programs called gtools which involve generators for non-isomorphic graphs, bipartite graphs, digraphs, and multigraphs.
+
+
+

@@ -1,0 +1,30 @@
+\section{Challenges and Open Problems}
+\label{sec:challenges}
+
+...
+
+\subsection{Single- vs. multi-domain}
+...
+
+\subsection{Simple Usage, Simple Parameters}
+Proposal of a data generator (not necessarily for graph data) has to face an important schism. On the one hand, there is the aim to provide the user with as many parameters as possible in order to enable one to generate any kind of data. This approach seems to be reasonable, but it encounters the fact that users are usually unwilling to use complex benchmarking tools. This observation can be seen, for example, in the case of XML benchmarks -- even though there exist robust and complex data generators (such as ToXGene~\cite{conf/webdb/BarbosaMKL02}, which supports specification of structural aspects, value distributions, references etc.), the most popular benchmarking tool is XMark~\cite{Schmidt:2002:XBX:1287369.1287455} which models a single use case and enables to specify just the size of the data. Hence, the other extreme is to provide a simple data generator which does not require any complex settings and thus the benchmarking process is extremely simple and fast.
+
+Considering the complex structure of graph data and the variety of applications having highly specific types of graphs, the latter solution is difficult to implement. A reasonable compromise can thus be seen in a data generator which is provided with sample graph data and is capable of automatic analysis of their structural and value specifics in order to gain the complex parameters.
+
+\subsection{Evolving Graph Data}
+As user requirements as well as environments change, most of the existing applications naturally evolve over time, at least to some extent. This evolution usually influences the structure of the data and consequently all the related parts of the application (i.e., storage strategies, operations, indices etc.). The respective data generator should hence be able to simulate such a growth and/or change in structure.
+
+In some graph applications, such as, e.g., social networks, the evolution of the data is a significant aspect, especially in the activity graphs, that has been studied extensively~\cite{doreian1997evolution,Kumar:2006:SEO:1150402.1150476,Hellmann2014583,wang2013,Kossinets88,Viswanath:2009:EUI:1592665.1592675}.  A related problem is \emph{data versioning} and respective ability to query across multiple versions of data or in general its analysis. Considering graph data this problem is also common, for example  in the area of Linked Data~\cite{DBLP:conf/semweb/Papakonstantinou16,DBLP:conf/esws/MeimarisP16,fernandez2015towards,fernandez2015bear}.
+
+As shown in papers~\cite{Leskovec:2005:RMT:2101235.2101254,Leskovec:2005:GOT:1081870.1081893}, evolving graphs have further specific features. For example, some graphs grow over time according to a \emph{densification power law} which means that real graphs tend to sprout many more edges than nodes, and thus are densifying as they grow. Also the effective diameter of graphs tends to shrink or stabilize as the graph grows with time.
+
+%\paragraph{} Following the same recursion idea, paper~\cite{Leskovec:2005:RMT:2101235.2101254} uses Kronecker multiplication to generate self-similar graphs. The network starts with an initial graph G1 that contains $N_1$ nodes and $E_1$ edges. Using matrix recursion, larger successive graphs $G_2, G_3, ... G_n$ are generated. The $k$-th graph $G_k$ contains $N_k = N^k_1$ nodes. Many graphs often densify over time, exhibiting a growth in the number of edges that is superlinear to the number of nodes. Kronecker multiplication produces graphs with a fixed diameter and a densification power law degree distribution with exponent $k = log(E_1)/log(N_1)$. The graph generation process introduces a staircase effect in the nodes' degrees, and each community consists of smaller nested communities that are formed through expansion and recursion.
+
+
+\subsection{Multi-model Data}
+With the dawn of Big Data and especially its Variety aspect there have emerged also new types of database management systems. One of the most interesting ones are so-called \emph{multi-model databases} which enable to store and especially query across structurally different data. There exist various types of multi-model systems combining  distinct subsets of Big Data structures; hence, there naturally exists systems which combine graph data with other data models. For example, OrientDB\footnote{\url{http://orientdb.com/orientdb/}} which was implemented on the basis of an object DBMS currently supports graph, document, key/value, and object models.
+
+Such type of DBMSs also needs a specific benchmark/data generator which enables to test new features and analyze efficiency of operations. However, since the multi-model systems are in the context of Big Data rather new, there exist only a few benchmarks targeting multi-model DBMSs (such as Bigframe~\cite{journals/pvldb/KunjirKB14} or UniBench~\cite{conf/cidr/lu17}) with limited capabilities.
+
+\input{generators_community_detection}
+
