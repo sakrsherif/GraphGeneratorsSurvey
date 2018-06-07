@@ -5,18 +5,33 @@
 
 %\TODO{The abundance of interconnected data has fueled the design and implementation of graph generators reproducing real-world linking properties, or gauging the effectiveness of graph algorithms, techniques and applications manipulating these data.}
 
-One of the most popular data structures in the world of computer science are graphs. They enable to represent complex information in a simple and yet powerful way supported by a strong mathematical background. With the dawn of the new millennium which brought numerous novel technologies and applications, the graphs have become even more popular. There has appeared a number of use cases\footnote{\url{https://neo4j.com/use-cases/}} (such as fraud detection, recommendation engines, social networks etc.) where graphs represent the linked information. 
+%One of the most popular data structures in the world of computer science are graphs. 
+Graphs are ubiquitous data structures that span a wide array of disciplines
+and are subject of study in several subfields of computer science.
+Nowadays, due to the dawn of numerous tools and applications manipulating
+graphs, they are adopted as a rich data model in many data science use
+cases involving disparate domain knowledge, mathematical foundations and
+computer science. Interconnected data is oftentimes used to encode domain-specific 
+use cases, such as recommendation networks, social networks,
+protein-to-protein interactions, geolocation networks, and fraud detection analysis networks, to
+name a few.   
+% ANGELA: I do not think we should cite Neo4J, which is a graph database. 
+%They enable to represent complex information in a simple and yet powerful way supported by a strong mathematical background. With the dawn of the new millennium which brought numerous novel technologies and applications, the graphs have become even more popular. There has appeared a number of use cases\footnote{\url{https://neo4j.com/use-cases/}} (such as fraud detection, recommendation engines, social networks etc.) where graphs represent the linked information. 
 
-In general, we can distinguish two types of graph data sets: (1) a single large graph (possibly with several components), such as social networks  or Linked Data graphs, and (2) a large set of small graphs, such as chemical compounds\footnote{\url{https://pubchem.ncbi.nlm.nih.gov/}} or linguistics syntax trees\footnote{\url{https://catalog.ldc.upenn.edu/ldc99t42}}. Naturally, the algorithms used in theses two classes differ a lot~\cite{DBLP:books/igi/Sakr2011}. In the former case we can search, e.g., for communities and their features or shortest paths, while in the latter case we usually query for supergraphs, subgraphs or graphs similar to a given graph pattern. Also, as in the other fields, quite often the respective real-world data is not publicly available (or simply does not exist when a particular method for manipulation with the data is proposed). As a consequence, also in the world of graphs there has appeared a number of graph data generators which enable to  reproduce the respective real-world linking properties and gauge the effectiveness of a particular algorithm.
+In general, we can distinguish between two broad types of graph data sets: (1) a single large graph (possibly with several components), such as social networks  or Linked Data graphs, and (2) a large set of small graphs, such as chemical compounds\footnote{\url{https://pubchem.ncbi.nlm.nih.gov/}} or linguistics syntax trees\footnote{\url{https://catalog.ldc.upenn.edu/ldc99t42}}. Naturally, the algorithms used in theses two classes differ a lot~\cite{DBLP:books/igi/Sakr2011}. In the former case we can search, e.g., for communities and their features or shortest paths, while in the latter case we usually query for supergraphs, subgraphs or graphs similar to a given graph pattern. Also, as in the other fields, quite often the respective real-world data is not publicly available (or simply does not exist when a particular method for data manipulation is proposed). 
+Even in the cases in which real data is abundant, many algorithms and techniques need to be tested on various order of magnitudes of the graph sizes thus leading to the inception of 
+configurable graph generators that reproduce real-world graph properties and provide unique tuning opportunities for 
+algorithms and tools handling such data. 
+%As a consequence, also in the world of graphs there has appeared a number of graph data generators which enable to  reproduce the respective real-world linking properties and gauge the effectiveness of a particular algorithm.
 
-In this survey we provide a comprehensive overview of the state-of-the-art graph generators by focusing on those that are pertinent and suitable for data science tasks. Our aim is to cover a wide range of currently popular areas of graph data processing. In particular, we consider graph generation in the areas of graph databases, graph data mining, graph streaming and machine learning communities, alongside community detection, social networks and IoT communities. Despite the disparate requirements of graph generators throughout these communities, we analyze them under a common umbrella, reaching out the functionalities, the practical usage, and the supported operations of graph generators. The reasons for this scope and classification are as follows:
+In this survey, we provide a comprehensive overview of the state-of-the-art graph generators by focusing on those that are pertinent and suitable for data science tasks. Our aim is to cover a wide range of currently popular areas of graph data processing. In particular, we consider graph generation in the areas of graph databases, graph data mining, graph streaming and machine learning communities, alongside community detection, social networks and IoT communities. Despite the disparate requirements of graph generators throughout these communities, we analyze them under a common umbrella, reaching out the functionalities, the practical usage, and the supported operations of graph generators. The reasons for this scope and classification are as follows:
 
 \begin{enumerate}
   \item Despite the differences of the covered areas, the requirements for the graph data generators can be similar in particular cases. Reusing or learning from tools in other fields can thus bring new opportunities for both researchers and practitioners. 
   \item The selected classification is serving the need of providing data scientists, researchers and practitioners with the right data generator at hand for their work.
 \end{enumerate}
 
-To conclude the comparative study, we discuss open challenges and missing features of graph generators in view of the evolution of data science.
+To conclude the comparative study, we discuss open challenges and missing features of graph generators in view of identifying future challenges in data science.
 
 
 \paragraph*{Contributions} The key contributions of this survey are as follows:
