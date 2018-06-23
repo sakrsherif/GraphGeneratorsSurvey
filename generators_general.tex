@@ -9,6 +9,13 @@ GraphBase~\cite{GraphBase}. We will, however, focus on primarily
 generating/benchmarking projects targeting Big Data world.
 
 
+\paragraph {Preferential Attachment} Barabasi and Albert introduced a graph generation model that relies on two main mechanisms~\cite{Barabasi99emergenceScaling}. The first mechanism is continuously expanding the graphs by adding new vertices. The second mechanism is to preferentially attach the new vertices   to the nodes/regions that are already well connected. In this approach, the generation of large graphs is governed by standard, robust self-organizing mechanism that go beyond the characteristics of individual applications.
+
+\paragraph {R-Mat} (\emph{R}ecursive \emph{Mat}rix) R-Mat is a procedural synthetic graph generator which is designed to generate power-law degree
+distributions~\cite{DBLP:conf/sdm/ChakrabartiZF04}. 
+The generator is recursive and uses only a small number of parameters.
+In principle, the strategy of this generator to find simple mechanisms to generate graphs that match
+the properties of the real graphs. In particular, the design goals of R-Mat is to generate graphs that match the degree distributions, imitate a community structure and have a small diameter. R-Mat can generate weighted, directed and bipartite graphs.
 
 \paragraph{GraphGen} For the purpose of testing the scalability of an indexing
 technique called FG-index~\cite{Cheng:2007:FTV:1247480.1247574} on size of the
@@ -22,28 +29,7 @@ connected graphs aiming at performance evaluation of frequent subgraph mining
 algorithms and graph query processing algorithms. The result is represented as a
 list of graphs, each consisting of a list of nodes and a list of edges.
 
-\paragraph{HPC Scalable Graph Analysis Benchmark} The HPC Scalable Graph
-Analysis Benchmark~\cite{HPCgraph,Bader:2005:DIH:2099301.2099360} represents an
-application with multiple analysis techniques that access a single data
-structure representing a weighted, directed graph. The benchmark is composed of
-four separated operations (graph construction, classification of large vertex
-sets, graph extraction with BFS, and graph analysis with betweenness centrality)
-on a graph that follows a power-law distribution.
 
-The graph generator constructs a list of edge tuples containing vertex
-identifiers (with the edge direction from the first one to the second one) and
-weights that represent data assigned to the edges of the multigraph in the form
-of positive integers with a uniform random distribution. The generator has the
-following parameters: number of vertices, number of edges, and maximum weight of
-an edge. The algorithm of the generator is based on R-MAT. Since the authors aim
-to avoid data locality, in the final step the vertex numbers are randomly
-permuted, and then edge tuples randomly shuffled.
-
-A related project from the same authors developed for the 9th DIMACS Shortest
-Paths Challenge is GTgraph~\cite{GTgraph}. It involves three types of graphs:
-input graph instances used in the DARPA HPCS SSCA\#2 graph theory benchmark
-(version 1.0), Erd\"{o}s-R\'{e}nyi random graphs, and small-world graphs based
-on the R-MAT model.
 
 
 \paragraph{Graph 500 Benchmark} The Graph 500 Benchmark~\cite{Graph500} includes
@@ -54,9 +40,8 @@ the set of integers beginning with 0. The input values required to describe the
 graph are (1) scale, i.e., the logarithm base two of the number of vertices, and
 (2) edge factor, i.e., the ratio of the graph's edge count to its vertex count
 (i.e., half the average degree of a vertex in the graph). The graph generator is
-a Kronecker generator similar to R-MAT. The data must not exhibit any locality,
+a Kronecker generator similar to R-MAT~\cite{DBLP:conf/sdm/ChakrabartiZF04}. The data must not exhibit any locality,
 so in the final step the vertex labels and order of edges are randomly shuffled.
-
 The covered operations currently involve BFS; however, the authors intend to
 involve also two more types -- optimization (single source shortest path) and
 edge-oriented (maximal independent set) -- and five graph-related business areas
@@ -76,7 +61,7 @@ probability, for each node, the excess degree is computed (the degree that in
 expectation will not be realized internally in the group) and used to connect
 nodes from different groups at random. The authors describe a highly scalable
 MapReduce based implementation that is capable of generating large graphs (with
-billions of nodes) in reasonable amounts of time. 
+billions of nodes) in reasonable amounts of time.
 
 \paragraph{Darwini} Darwini~\cite{edunov2016darwini} is an extension of BTER
 designed to run on Vertex Centric computing frameworks like
