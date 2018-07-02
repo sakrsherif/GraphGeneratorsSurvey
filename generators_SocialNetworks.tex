@@ -2,31 +2,42 @@
 \label{sec:generators_socialnetworks}
 
 On-line social networks, like Facebook, Twitter, or LinkedIn, have become a
-phenomenon used by billions of people every day and thus providing extremely
-useful information for various domains. However, an analysis of such type of
-graph has to cope with two problems: (1) availability of the data and (2)
-privacy of the data. Hence, data generators which provide realistic synthetic
-social network graphs are in great demand.
+phenomenon used by billions of people every day. Their bussiness model is
+heavily based on understanding the behavior and interests of their users, and
+thus their analysis has been proven to be of an inestimable value.  However,
+doing research on novel and more efficient ways to analyze such requires the
+access to real datasets, which is in most cases not possible since companies
+holding the data do not want to or cannot share them. Hence, social network
+generators which provide realistic synthetic outputs are in great demand.
 
-Analyses of social networks identify their various specific
-features~\cite{Chakrabarti:2006:GML:1132952.1132954}. For example, the social
-graph has high \emph{clustering coefficient}, i.e. the degree of transitivity of
-a graph. Or, its diameter, i.e. the minimum number of hops in which some
-fraction (e.g., 90\%) of all connected pairs of nodes can reach each other, is
-usually low due to weak ties joining faraway cliques. Another important aspect
-of social networks is the community effect. A detailed study of structure of
-communities in 70 real-world networks is provided, e.g., in
-paper~\cite{Leskovec:2008:SPC:1367497.1367591}. Authors of
-paper~\cite{Prat-Perez:2014:CSS:2621934.2621942} analyze the structure of
-communities (clustering coefficient, triangle participation ratio, bridges,
-diameter, conductance and size) in both real graphs and output by existing graph
-generators LFR~\cite{PhysRevE.78.046110} and the
-LDBC-SNB~\cite{Erling:2015:LSN:2723372.2742786}. %They discover that communities
+Compared to other types of networks (e.g. computer networks or road networks),
+social networks exhibit a set of particular characteristics as explained in
+~\cite{Chakrabarti:2006:GML:1132952.1132954}. For example, people tend to
+connect to persons with similar interests, persons geo-located closely, family
+members or persons studying or working at the same place. This leads to the
+formation of what are known as communities (modules of highly interconnected
+persons that share similarities), which in turn makes these networks to exhibit
+a large clustering coefficient (e.g. percentage of transitive relations or
+triangles).  Such modular structure also leads to the formation of a network
+with a small diameter, i.e. the minimum number of hops in which some fraction
+(e.g., 90\%) of all connected pairs of nodes can reach each other. This is
+usually due to weak ties connecting far away modules. Finally, social networks
+usually have a large largest connected component, accounting for more than 90\%
+of its nodes. 
+
+A detailed study of the structure of communities in 70 real-world networks is
+provided, e.g., in paper~\cite{Leskovec:2008:SPC:1367497.1367591}. Additionally,
+authors of paper~\cite{Prat-Perez:2014:CSS:2621934.2621942} analyze the
+structure of communities (clustering coefficient, triangle participation ratio,
+bridges, diameter, conductance and size) in both real graphs and output by
+existing graph generators LFR~\cite{PhysRevE.78.046110} and the
+LDBC-SNB~\cite{Erling:2015:LSN:2723372.2742786}. They discover that communities
 found among different graphs follow quite similar distributions and that
 communities in a single graph have diverse nature, and are difficult to fit with
 a single model.
 
-Network generators can be categorized into statistical and agent-based.
+Exhisting, social network generators try to reproduce different aspects of the
+generated network, from high can be categorized into statistical and agent-based.
 \emph{Statistical
 approaches}~\cite{PhysRevE.78.046110,Yao2011,Armstrong:2013:LDB:2463676.2465296,Pham2013,Sukthankar-SocialInfo2014,Erling:2015:LSN:2723372.2742786,Nettleton2016}
 focus on reproducing aspects of the network statistics. In \emph{agent-based
