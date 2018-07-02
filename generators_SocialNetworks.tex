@@ -2,36 +2,24 @@
 \label{sec:generators_socialnetworks}
 
 On-line social networks, like Facebook, Twitter, or LinkedIn, have become a
-phenomenon used by billions of people every day. Their bussiness model is
-heavily based on understanding the behavior and interests of their users, and
-thus their analysis has been proven to be of an inestimable value.  However,
-doing research on novel and more efficient ways to analyze such requires the
-access to real datasets, which is in most cases not possible since companies
-holding the data do not want to or cannot share them. Hence, social network
-generators which provide realistic synthetic outputs are in great demand.
-
-Compared to other types of networks (e.g. computer networks or road networks),
-social networks exhibit a set of particular characteristics as explained in
-~\cite{Chakrabarti:2006:GML:1132952.1132954}. For example, people tend to
-connect to persons with similar interests, persons geo-located closely, family
-members or persons studying or working at the same place. This leads to the
-formation of what are known as communities (modules of highly interconnected
-persons that share similarities), which in turn makes these networks to exhibit
-a large clustering coefficient (e.g. percentage of transitive relations or
-triangles).  Such modular structure also leads to the formation of a network
-with a small diameter, i.e. the minimum number of hops in which some fraction
-(e.g., 90\%) of all connected pairs of nodes can reach each other. This is
-usually due to weak ties connecting far away modules. Finally, social networks
-usually have a large largest connected component, accounting for more than 90\%
-of its nodes. 
-
-A detailed study of the structure of communities in 70 real-world networks is
-provided, e.g., in paper~\cite{Leskovec:2008:SPC:1367497.1367591}. Additionally,
-authors of paper~\cite{Prat-Perez:2014:CSS:2621934.2621942} analyze the
-structure of communities (clustering coefficient, triangle participation ratio,
-bridges, diameter, conductance and size) in both real graphs and output by
-existing graph generators LFR~\cite{PhysRevE.78.046110} and the
-LDBC-SNB~\cite{Erling:2015:LSN:2723372.2742786}. They discover that communities
+phenomenon used by billions of people every day and thus providing extremely
+useful information for various domains. However, an analysis of such type of
+graph has to cope with two problems: (1) availability of the data and (2)
+privacy of the data. Hence, data generators which provide realistic synthetic
+social network graphs are in great demand. In general, analyses of social networks identify their various specific
+features~\cite{Chakrabarti:2006:GML:1132952.1132954}. For example, the social
+graph has high \emph{clustering coefficient}, i.e. the degree of transitivity of
+a graph. Or, its diameter, i.e. the minimum number of hops in which some
+fraction (e.g., 90\%) of all connected pairs of nodes can reach each other, is
+usually low due to weak ties joining faraway cliques. Another important aspect
+of social networks is the community effect. A detailed study of structure of
+communities in 70 real-world networks is provided, e.g., in
+paper~\cite{Leskovec:2008:SPC:1367497.1367591}. Authors of
+paper~\cite{Prat-Perez:2014:CSS:2621934.2621942} analyze the structure of
+communities (clustering coefficient, triangle participation ratio, bridges,
+diameter, conductance and size) in both real graphs and output by existing graph
+generators LFR~\cite{PhysRevE.78.046110} and the
+LDBC-SNB~\cite{Erling:2015:LSN:2723372.2742786}. %They discover that communities
 found among different graphs follow quite similar distributions and that
 communities in a single graph have diverse nature, and are difficult to fit with
 a single model.
@@ -58,15 +46,13 @@ the networks are constructed by directly simulating the agents' social choices.
 %adjacency matrix by obeying the described constraints.
 
 \paragraph{Realistic Social Network}
-Paper~\cite{Barrett:2009:GAL:1995456.1995598} focuses on construction of
+~\cite{Barrett:2009:GAL:1995456.1995598} focused on construction of
 realistic social networks using a combination of public and private data sets
 and large-scale agent based techniques. The process works as follows: Step 1
 creates a synthetic population by integrating databases from commercial and
 public sources. In Step 2, a set of activity templates are determined. Each
 synthetic individual is assigned a 24-hour activity sequence including
-geo-locations for each activity.
-
-To demonstrate the approach, the authors develop a synthetic population for the
+geo-locations for each activity. To demonstrate the approach, the authors develop a synthetic population for the
 United States that models every individual in the population. The synthetic
 population is a set of geographically located people and households. Household
 structure and demographics are derived from U.S. Census data. The activity
@@ -74,11 +60,9 @@ templates are  based on several thousand responses to an activity or time-use
 survey. Demographic information for each person and location, a minute-by-minute
 schedule of each person's activities, and the locations where these activities
 take place is generated by a combination of simulation and data fusion
-techniques. This information is captured by a dynamic social contact network.
+techniques. This information is captured by a dynamic social contact network. Similar methods for agent-based strategies have been reported in~\cite{Bernstein:2013:SAS:2499604.2499609}.
 
-Similar agent-based strategies can be found, e.g., in papers~\cite{Bernstein:2013:SAS:2499604.2499609}.
-
-\paragraph{Linkage vs. Activity Graphs} Paper~\cite{Yao2011} distinguishes two
+\paragraph{Linkage vs. Activity Graphs} ~\cite{Yao2011} distinguished between two
 types of social network graphs -- the \emph{linkage graph}, where nodes stand
 for the people in the social network and edges are their friendship links, and
 the \emph{activity graph}, where nodes also stand for the people but edges stand
@@ -92,9 +76,7 @@ clustering coefficient over time. However, the authors do not observe diameter
 shrinking in Epinions? activity graph and there is a difference in degree
 correlation (how frequently nodes with similar degrees connect to each other).
 Namely linkage graphs have positive degree correlation whereas activity graphs
-show neutral degree correlation.
-
-With regards to the findings, the proposed generator focusses on linkage graphs
+show neutral degree correlation. With regards to the findings, the proposed generator focusses on linkage graphs
 with positive degree correlation. For this purpose it extends the ``forest
 fire'' spreading process algorithm~\cite{Leskovec:2005:GOT:1081870.1081893} with
 link symmetry. It has two parameters -- the \emph{burning probability} $P_b$
@@ -106,8 +88,8 @@ brings more links. It gives chances for big nodes to connect back to big nodes.
 
 
 \paragraph{LinkBench} The LinkBench
-benchmark~\cite{Armstrong:2013:LDB:2463676.2465296} aims to predict the
-performance of a database when used for persistent storage of Facebook?s
+benchmark~\cite{Armstrong:2013:LDB:2463676.2465296} has been designed to predict the
+performance of a database when used for persistent storage of Facebook's
 production data. The benchmark considers true Big Data and related problems with
 sharding, replication etc. The social graph at Facebook comprises objects (nodes
 with IDs, version, timestamp and data) and associations (directed edges, pairs
@@ -133,9 +115,7 @@ is possible to have a correlated degree distribution, from which the degree of
 each node is generated, correlated with properties of node. Hence the generator
 can ensure that, e.g., people with many friends in a social network will
 typically post more pictures than people with few friends, i.e., the amount of
-friend nodes influences the amount of posted comment and picture nodes.
-
-The data generation process starts with generating a number of nodes with
+friend nodes influences the amount of posted comment and picture nodes. The data generation process starts with generating a number of nodes with
 property values generated according to specified property value correlations and
 then adding respective edges according to specified correlation dimensions. It
 has multiple phases, each focusing on one correlation dimension. Each pass along
@@ -143,9 +123,7 @@ one correlation dimension is a Map phase in which data is generated, followed by
 a Reduce phase that sorts the data along the correlation dimension in the next
 pass. A heuristic observation that ``the probability that two nodes are
 connected is typically skewed with respect to some similarity between the
-nodes'' enables to focus only on sliding window of most probable candidates.
-
-The core idea of the framework is demonstrated using an example of a social
+nodes'' enables to focus only on sliding window of most probable candidates. The core idea of the framework is demonstrated using an example of a social
 network (consisting of persons and social activities).  The dictionaries for
 property values are inspired by DBpedia and provided with 20 property value
 correlations. The edges are generated according to 3 correlation dimensions.
@@ -173,9 +151,7 @@ assignments closer to the target distribution extracted from social media
 dataset using the Particle Swarm Optimization algorithm. The tuned attributes
 are then used to add additional links to the network based on the feature
 similarity parameter -- a source node is selected randomly and connected to the
-most similar node.
-
-Multi-Link Generator (MLG) further  uses link co-occurrence statistics from the
+most similar node. Multi-Link Generator (MLG) further  uses link co-occurrence statistics from the
 original dataset to create a multiplex network. MLG uses the same network growth
 process as ASG.. Based on the link density parameter, either a new node is
 generated with a label based on the label distribution of the target dataset or
@@ -197,15 +173,13 @@ The graph generator realizes power laws, uses skewed value distributions, and
 introduces plausible correlations between property values and graph structures.
 It is implemented on top of Hadoop to provide scalability.
 
-The generated data have become a part if several graph benchmarks, such as
-GraphBIG~\cite{Nai:2015:GUG:2807591.2807626}.
+%The generated data have become a part if several graph benchmarks, such as GraphBIG~\cite{Nai:2015:GUG:2807591.2807626}.
 
-\paragraph{Towards More Realistic Data} The authors of
-paper~\cite{Nettleton2016} claim that the main body of existing work lies in
+\paragraph{Towards More Realistic Data} ~\cite{Nettleton2016} argued that the main body of existing work lies in
 topology generation which approximate the characteristics of a real social
 network (such as a small graph diameter, small average path length, skew degree
 distribution, and community structures), however without data. Hence, they
-implement a general stochastic modeling system which allows the users to
+introduced a general stochastic modeling system which allows the users to
 populate a graph topology with data. The approach has three steps: (1) topology
 generation (using R-MAT) plus community identification using the Louvain
 method~\cite{1742-5468-2008-10-P10008} or usage of a real-world topology from
