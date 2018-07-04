@@ -1,13 +1,157 @@
 \section{Graph Data Sets}
 
-Before we focus on graph data generators, we briefly overview graph data sets devoted to benchmarking of various types of graph algorithms. \cite{Knuth:1993:SGP:164984} denotes such a  database of graphs (or graph library or graph archive) and related computer programs as a \emph{graphbase}. In general, there exist several types of testing graph data sets~\cite{Bachmaier2012}:
+Besides graph data generators, many graph algorithms and systems are benchmarked
+using real graph data sets, including new graph data generation techniques. In
+this section we review the most widely used graph datasets in the literature and
+their purpose.
 
+%In general, there exist several types of testing graph data
+%sets~\cite{Bachmaier2012}:
+
+\paragraph{Large Scale Graph Analytics}
+
+Large scale graph analytics systems are usually benchmarked using a combination of
+real and synthetically generated graphs. Because of the rapid evolution of such
+systems and their increasing capability to process larger graphs, the datasets
+typically used  in the literature quickly change overtime. The most commonly
+used datasets are, which can be downloaded from several graph dataset
+repositories~\cite{snapnets,lawalgo}: 
 \begin{itemize}
-  \item A real-world data set which represents a graph, such as the Internet Movie Database (IMDb)\footnote{\url{http://www.imdb.com/}} or various data sets available in the Stanford Large Network Dataset Collection~\cite{snapnets},
-  \item A general graphbase, such as the Open Graph Archive~\cite{Bachmaier2012}, the Stanford GraphBase~\cite{Knuth:1993:SGP:164984}, or the GraphArchive~\cite{GraphArchive},
-  \item A dataset dedicated to specific experimental goals, such as graph partitioning and graph clustering~\cite{10dimacs}, shortest paths~\cite{9dimacs}, or graph coloring~\cite{coloring}, and
-  \item A dataset devoted to matrices, such as the SuiteSparse Matrix Collection~\cite{SuiteSparse} or  the Matrix Market~\cite{MatrixMarket}.
+  \item Dblp~\cite{yang2015defining}: Represents a co-authorship network where
+    researchers from Dblp are represented as vertices, and there exists and edge
+    between them if they have published a paper together. 
+  \item Amazon~\cite{yang2015defining}: Represents a product co-purchasing
+    network, such that each vertex is a product and an edge between two products
+    exists if a person has bought the two products. 
+  \item Road networks~\cite{leskovec2009community}: Consist of a set of road
+    networks from the US.  
+  \item LiveJournal~\cite{yang2015defining}: A social network where vertices
+    represent the users and the edges the acquitances between them.
+  \item Orkut~\cite{yang2015defining}: Like LiveJournal, this is a social network
+    where vertices represent persons and the edges their friendships.
+  \item Twitter~\cite{kwak2010twitter}: This is a directed network representing
+    the follower-followee interaction of Twitter.
+  \item Friendster~\cite{yang2015defining}: A social network like LiveJournal and
+    Orkut, where nodes represent persons and edges their relationships.
+  \item WebUK~\cite{delis}: A web graph of the UK subdomain, where nodes represent
+    websites and edges the hyperlinks between them.
+  \item ClueWeb2012~\cite{clueweb}. This is a crawl of the web from 2012, where
+    vertices represent websites and the edges the hyperlinks connecting them.
 \end{itemize}
 
+\paragraph{Recommender Systems }
 
-...
+Many recommender systems are based on graphs, either bipartite graphs or
+many-to-many graphs. Such systems are usually tested on several real datasets,
+many of them containing information about rating of products or other items such
+as movies, books or songs. The following are the most widely used datasets for
+testing recommender systems:
+
+\begin{itemize}
+\item MovieLens~\cite{movielens}: Consists of a bipartite graph
+  between users and movies, where edges represent the ratings the different
+  users have made to the movies they watched. 
+\item Book-Crossings~\cite{ziegler2005improving}: Is a dataset with book ratings
+  from users. 
+\item Jester~\cite{goldberg2001eigentaste}: This dataset contains jokes (with
+  their text) and ratings from users. 
+\item Last.fm~\cite{hetrec}: This dataset contains the list of the top
+  most listened artists per user, including the number of times the songs from
+  those artists were played. Additionally, it contains connections between users
+  (the social network they form), and a set of tags attached to artists that can
+  be used to create content vectors.
+\item Netflix~\cite{zhou2008large}: This dataset was used during the famous
+  Netflix prize. It consists of a bipartite graph with movie ratings from users.
+\end{itemize}
+
+\paragraph{Reputation Algorithms}
+
+Another application using social network data is that of assessing the degree of
+reputation of a user based on their past interactions and
+rankings~\cite{kamvar2003eigentrust,katz2006social,kumar2016edge}. Such
+algorithms are typically evaluated on networks with explicit user rankings or
+votings from other users, being the most widely used datasets the following
+examples:
+
+  \begin{itemize}
+    \item Bitcoin~\cite{moore2013beware}: This dataset contains information from
+      several Bitcoin exchanges, where users are able to rate other users after
+      their transactions. Here, the vertices represent the users and the edges,
+      which are labelled, the ratings between them.
+    \item Wikipedia RFA~\cite{west2014exploiting}: This is a network extracted
+      from Wikipedia, where the vertices represent users  and the
+      edges, which are labelled, the votes emitted by administrators for the
+      user to become an administrator.  Each vote is accompained with a text
+      explaining the vote's sign. 
+    \item WikiSigned~\cite{maniu2011building}: This is a network of Wikipedia
+      editors where the vertices are the editors and the edges, which are
+      labelled, represent the turst level between two editors.
+    \item Extended Epinions~\cite{massa2007trust}: This is an extended version of
+      the Epinions network which also contains the levels of distrust between the
+      users, expressed by means of edges between them.
+    \item Twitter Indian Elections~\cite{kagan2015using}: This network represents
+      a Twitter network where vertices represent users and there is an edge
+      between two users if a user mentions another one in a tweet. The edges
+      are labelled with the average sentiment of one user towards another. 
+  \end{itemize}
+
+
+\paragraph{Graph partitioning, Clustering and Community Detection}
+
+Many of the already discussed datasets are also typically used to test and
+compare graph partitioning, clustering and community detection algorithms. One
+can find a comprehensive lists of datasets for such algorithms
+in~\cite{10dimacs,yang2015defining}, some of them already discussed for other
+applications. Here, we summarize the most widely used in the literature:
+
+\begin{itemize}
+  \item Dblp, Amazon, LiveJournal, Orkut and Friendster~\cite{yang2015defining}
+    are widely used for evaluating community detection since they provide
+    information about the meta-communities they contain. For instance, in
+    Livejournal, users can join groups of users talking about given topics. Such
+    groups are exported as meta-communities, and similar approaches are used for
+    other graphs. Community detection algorithms are then evaluated by trying to
+    infer such meta-communities without prior knowledge of the user to group
+    assignment.
+  \item Zachary Karate Club~\cite{zachary1977information}: This graph consists
+    of a small networks of members of a karate club that was dismissed and split
+    into two new karate clubs. Vertices represent persons and edges friendship
+    relationships. Information about what people joined each of the two new
+    karate clubs is provided.
+  \item PolBlogs~\cite{adamic2005political}: This is a network consisting of
+    blogs talking about the US 2005 political elections, where a vertex
+    represents a blog and the edges the hyperlinks between the blogs. Each blog
+    has an associated label, whehter it is left or right oriented.
+  \item PolBooks~\cite{10dimacs}: Is a network of books of Amazon that talk
+    about politics, and edges between two books exist if they are co-purchased
+    together. The books have labels of whether they are left or right oriented.
+  \item Football~\cite{girvan2002network}: A network of american university
+    football teams. Each node represents a football team and the edges represent
+    the matches between them during the season. Each team is associated to a
+    division.
+\end{itemize}
+
+\paragraph{Information Diffussion}
+% - http://pure-oai.bham.ac.uk/ws/files/14790571/srep02980.pdf
+% - https://www.americanvoiceforfreedom.org/wp-content/uploads/2018/03/The-spread-of-true-and-false-news-online.pdf
+
+ \paragraph{Knowledge bases}
+% - Wikipedia https://en.wikipedia.org/wiki/Wikipedia:Database_download
+
+%\begin{itemize} 
+%  \item A real-world data set which represents a graph, such as
+%      the Internet Movie Database (IMDb)\footnote{\url{http://www.imdb.com/}} or
+%      various data sets available in the Stanford Large Network Dataset
+%      Collection~\cite{snapnets}, 
+%    \item A general graphbase, such as the Open
+%      Graph Archive~\cite{Bachmaier2012}, the Stanford
+%    GraphBase~\cite{Knuth:1993:SGP:164984}, or the
+%  GraphArchive~\cite{GraphArchive}, 
+%\item A dataset dedicated to specific
+%    experimental goals, such as graph partitioning and graph
+%    clustering~\cite{10dimacs}, shortest paths~\cite{9dimacs}, or graph
+%    coloring~\cite{coloring}, and 
+%  \item A dataset devoted to matrices, such as
+%the SuiteSparse Matrix Collection~\cite{SuiteSparse} or  the Matrix
+%Market~\cite{MatrixMarket}.  
+%\end{itemize}
