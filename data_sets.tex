@@ -142,16 +142,40 @@ such networks.
     network before, during and after the discovery of the Higgs boson.
     Concretely, it contains the tweets, the mentions, retweets,
     followers/followees, etc.  
-  \item Memetracker~\cite{leskovec2009memede2013}: Memetracker is a dataset that
+  \item Memetracker~\cite{leskovec2009meme}: Memetracker is a dataset that
     contains the quotes and phrases that appear more frequently on the entire
     news spectrum. It consists of the links of the news, the time and memes, and
     is used to understand how information spanws, evolves and dies.
 \end{itemize}
 
- \paragraph{Semantic Web and Knowledge bases}
+\paragraph{Semantic Web and Knowledge bases}
 
-% - Wikipedia https://en.wikipedia.org/wiki/Wikipedia:Database_download
-% - DbPedia
+Semantic web and RDF engines have a well accepted set of real datasets, used to
+test reasoning engines as well as to use as baselines for the creation of new
+synthetic generators for the semantic web.   
+
+\begin{itemize}
+  \item DbPedia~\cite{Bizer:2009:DCP:1640541.1640848}: The DBPedia project aims at creating
+    a structured version of Wikipedia. It allows users to semantically query the
+    relationships between the different resources at wikipedia.
+  \item Freebase~\cite{bollacker2008freebase}: Is a collaborative knowledge base
+    made of metadata mainly provided by community members. It contains
+    structured data from multiple sources in an attempt to create a global
+    resource of information accessible both from persons and machines. The
+    project was discontinued in 2014 and replaced by Wikidata.
+  \item Yago~\cite{suchanek2007yago}, Yago2~\cite{hoffart2013yago2} \&
+    Yago3~\cite{mahdisoltani2013yago3}: These are
+    open source knowledge bases developed at the Max Planck Institute of
+    Computer Science in Saarbr\"ucken. It contains structured data automatically extracted
+    from Wikipedia and other sources.
+  \item Wikidata~\cite{vrandevcic2014wikidata}: This is a knowledge base
+    collaboratively edited by the community and hosted by the Wikimedia
+    Foundation. It contains structured data from its sister projects Wikipedia,
+    Wikivoyage, Wikisource and others.
+  \item Billion Triple Challenge~\cite{btc-2014}: This is a semantic dataset
+    crawled from different sources, including Freebase, DBPedia or the BBC. A
+    detailed description of the crawling process can be found in~\cite{kafer2012towards}.  
+\end{itemize}
 
 %\begin{itemize} 
 %  \item A real-world data set which represents a graph, such as
