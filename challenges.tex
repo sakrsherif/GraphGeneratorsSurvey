@@ -1,28 +1,133 @@
 \section{Challenges and Open Problems}
 \label{sec:challenges}
 
-...
+In this section, we discuss several of the open challenges in large scale graph
+generation. 
 
 \subsection{Single- vs. multi-domain}
-...
+
+Most of existing graph generators generate graphs that are either not labeled or
+are specific of a given domain (e.g.  Social Networks). Graphs from different
+domains have different schemas, structural characteristics, property
+distributions, etc. which might have an impact on the performance of the
+application under test. Thus, graph processing engine developers are asking for
+generators or tools to generate graphs flexibily, allowing to configure aspects
+such as the size, the schema, the data distributions and other structural
+characteristics such as the degree distribution, the clustering coefficient,
+etc.
+
 
 \subsection{Simple Usage, Simple Parameters}
-Proposal of a data generator (not necessarily for graph data) has to face an important schism. On the one hand, there is the aim to provide the user with as many parameters as possible in order to enable one to generate any kind of data. This approach seems to be reasonable, but it encounters the fact that users are usually unwilling to use complex benchmarking tools. This observation can be seen, for example, in the case of XML benchmarks -- even though there exist robust and complex data generators (such as ToXGene~\cite{conf/webdb/BarbosaMKL02}, which supports specification of structural aspects, value distributions, references etc.), the most popular benchmarking tool is XMark~\cite{Schmidt:2002:XBX:1287369.1287455} which models a single use case and enables to specify just the size of the data. Hence, the other extreme is to provide a simple data generator which does not require any complex settings and thus the benchmarking process is extremely simple and fast.
+Proposal of a data generator (not necessarily for graph data) has to face an
+important schism. On the one hand, there is the aim to provide the user with as
+many parameters as possible in order to enable one to generate any kind of data.
+This approach seems to be reasonable, but it encounters the fact that users are
+usually unwilling to use complex benchmarking tools. This observation can be
+seen, for example, in the case of XML benchmarks -- even though there exist
+robust and complex data generators (such as
+ToXGene~\cite{conf/webdb/BarbosaMKL02}, which supports specification of
+structural aspects, value distributions, references etc.), the most popular
+benchmarking tool is XMark~\cite{Schmidt:2002:XBX:1287369.1287455} which models
+a single use case and enables to specify just the size of the data. Hence, the
+other extreme is to provide a simple data generator which does not require any
+complex settings and thus the benchmarking process is extremely simple and fast.
 
-Considering the complex structure of graph data and the variety of applications having highly specific types of graphs, the latter solution is difficult to implement. A reasonable compromise can thus be seen in a data generator which is provided with sample graph data and is capable of automatic analysis of their structural and value specifics in order to gain the complex parameters.
+Considering the complex structure of graph data and the variety of applications
+having highly specific types of graphs, the latter solution is difficult to
+implement. A reasonable compromise can thus be seen in a data generator which is
+provided with sample graph data and is capable of automatic analysis of their
+structural and value specifics in order to gain the complex parameters.
 
 \subsection{Evolving Graph Data}
-As user requirements as well as environments change, most of the existing applications naturally evolve over time, at least to some extent. This evolution usually influences the structure of the data and consequently all the related parts of the application (i.e., storage strategies, operations, indices etc.). The respective data generator should hence be able to simulate such a growth and/or change in structure.
+As user requirements as well as environments change, most of the existing
+applications naturally evolve over time, at least to some extent. This evolution
+usually influences the structure of the data and consequently all the related
+parts of the application (i.e., storage strategies, operations, indices etc.).
+The respective data generator should hence be able to simulate such a growth
+and/or change in structure.
 
-In some graph applications, such as, e.g., social networks, the evolution of the data is a significant aspect, especially in the activity graphs, that has been studied extensively~\cite{doreian1997evolution,Kumar:2006:SEO:1150402.1150476,Hellmann2014583,wang2013,Kossinets88,Viswanath:2009:EUI:1592665.1592675}.  A related problem is \emph{data versioning} and respective ability to query across multiple versions of data or in general its analysis. Considering graph data this problem is also common, for example  in the area of Linked Data~\cite{DBLP:conf/semweb/Papakonstantinou16,DBLP:conf/esws/MeimarisP16,fernandez2015towards,fernandez2015bear}.
+In some graph applications, such as, e.g., social networks, the evolution of the
+data is a significant aspect, especially in the activity graphs, that has been
+studied
+extensively~\cite{doreian1997evolution,Kumar:2006:SEO:1150402.1150476,Hellmann2014583,wang2013,Kossinets88,Viswanath:2009:EUI:1592665.1592675}.
+A related problem is \emph{data versioning} and respective ability to query
+across multiple versions of data or in general its analysis. Considering graph
+data this problem is also common, for example  in the area of Linked
+Data~\cite{DBLP:conf/semweb/Papakonstantinou16,DBLP:conf/esws/MeimarisP16,fernandez2015towards,fernandez2015bear}.
 
-As shown in papers~\cite{Leskovec:2005:RMT:2101235.2101254,Leskovec:2005:GOT:1081870.1081893}, evolving graphs have further specific features. For example, some graphs grow over time according to a \emph{densification power law} which means that real graphs tend to sprout many more edges than nodes, and thus are densifying as they grow. Also the effective diameter of graphs tends to shrink or stabilize as the graph grows with time.
+As shown in
+papers~\cite{Leskovec:2005:RMT:2101235.2101254,Leskovec:2005:GOT:1081870.1081893},
+evolving graphs have further specific features. For example, some graphs grow
+over time according to a \emph{densification power law} which means that real
+graphs tend to sprout many more edges than nodes, and thus are densifying as
+they grow. Also the effective diameter of graphs tends to shrink or stabilize as
+the graph grows with time.
 
-%\paragraph{} Following the same recursion idea, paper~\cite{Leskovec:2005:RMT:2101235.2101254} uses Kronecker multiplication to generate self-similar graphs. The network starts with an initial graph G1 that contains $N_1$ nodes and $E_1$ edges. Using matrix recursion, larger successive graphs $G_2, G_3, ... G_n$ are generated. The $k$-th graph $G_k$ contains $N_k = N^k_1$ nodes. Many graphs often densify over time, exhibiting a growth in the number of edges that is superlinear to the number of nodes. Kronecker multiplication produces graphs with a fixed diameter and a densification power law degree distribution with exponent $k = log(E_1)/log(N_1)$. The graph generation process introduces a staircase effect in the nodes' degrees, and each community consists of smaller nested communities that are formed through expansion and recursion.
+%\paragraph{} Following the same recursion idea,
+%paper~\cite{Leskovec:2005:RMT:2101235.2101254} uses Kronecker multiplication to
+%generate self-similar graphs. The network starts with an initial graph G1 that
+%contains $N_1$ nodes and $E_1$ edges. Using matrix recursion, larger successive
+%graphs $G_2, G_3, ... G_n$ are generated. The $k$-th graph $G_k$ contains $N_k
+%= N^k_1$ nodes. Many graphs often densify over time, exhibiting a growth in the
+%number of edges that is superlinear to the number of nodes. Kronecker
+%multiplication produces graphs with a fixed diameter and a densification power
+%law degree distribution with exponent $k = log(E_1)/log(N_1)$. The graph
+%generation process introduces a staircase effect in the nodes' degrees, and
+%each community consists of smaller nested communities that are formed through
+%expansion and recursion.
 
 
 \subsection{Multi-model Data}
-With the dawn of Big Data and especially its Variety aspect there have emerged also new types of database management systems. One of the most interesting ones are so-called \emph{multi-model databases} which enable to store and especially query across structurally different data. There exist various types of multi-model systems combining  distinct subsets of Big Data structures; hence, there naturally exists systems which combine graph data with other data models. For example, OrientDB\footnote{\url{http://orientdb.com/orientdb/}} which was implemented on the basis of an object DBMS currently supports graph, document, key/value, and object models.
+With the dawn of Big Data and especially its Variety aspect there have emerged
+also new types of database management systems. One of the most interesting ones
+are so-called \emph{multi-model databases} which enable to store and especially
+query across structurally different data. There exist various types of
+multi-model systems combining  distinct subsets of Big Data structures; hence,
+there naturally exists systems which combine graph data with other data models.
+For example, OrientDB\footnote{\url{http://orientdb.com/orientdb/}} which was
+implemented on the basis of an object DBMS currently supports graph, document,
+key/value, and object models.
 
-Such type of DBMSs also needs a specific benchmark/data generator which enables to test new features and analyze efficiency of operations. However, since the multi-model systems are in the context of Big Data rather new, there exist only a few benchmarks targeting multi-model DBMSs (such as Bigframe~\cite{journals/pvldb/KunjirKB14} or UniBench~\cite{conf/cidr/lu17}) with limited capabilities.
+Such type of DBMSs also needs a specific benchmark/data generator which enables
+to test new features and analyze efficiency of operations. However, since the
+multi-model systems are in the context of Big Data rather new, there exist only
+a few benchmarks targeting multi-model DBMSs (such as
+Bigframe~\cite{journals/pvldb/KunjirKB14} or UniBench~\cite{conf/cidr/lu17})
+with limited capabilities.
+
+\subsection{Large scale graphs with realistic structure}
+
+Most of existing graph generators aiming at generating large graphs with realistic
+structural characteristics focus principally on reproducing the degree
+distribution and the clustering
+coefficient~\cite{kolda2014scalable,edunov2016darwini}. However, there are other
+structural characteristics one might be interested in reproducing for a large
+graph, such the diameter, the size of the largest connected component, or the
+hierarchical community structure. Graph practitioners are intersted in knowing
+how other high-level structural characteristics affect the performance of graph
+queries and graph algorithms. Thus, there is an open challenge to create
+graph generators that allow reproducing many other structural characteristics
+besides the degree or the clustering coefficient, that can also generat graphs
+at a scale.
+
+
+\subsection{Machine Learning based graph generation}
+
+With the advent of neural networks and specially generative adversarial networks
+(GANs)~\cite{goodfellow2014generative}, several researchers have started to
+explore their application to generate graphs. This is the case of
+~\cite{kipf2016variational,grover2018graphite,simonovsky2018graphvae,li2018learning,you2018graphrnn},
+which present several generative models to generate realistic graphs.  Such
+techniques still suffer from several problems. For instance, some of them are
+limited to learn from a single
+graph~\cite{kipf2016variational,grover2018graphite} or generate small
+graphs~\cite{simonovsky2018graphvae,li2018learning,you2018graphrnn}. The
+technique proposed in~\cite{you2018graphrnn} is capable of generating graphs
+with complex edge dependencies (e.g. community structure) and is not restricted
+to graphs of a fixed size. However, there is still in general several open
+challenges, including the capability of learning from and generating large graphs comparable
+in size to those typically used for benchmarking, and robust generation
+techniques with structural guarantees (e.g. degree distribution, clustering
+coefficient, etc.).  
+
 
