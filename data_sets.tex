@@ -1,9 +1,6 @@
 \section{Graph Data Sets}
 
-Besides graph data generators, many graph algorithms and systems are benchmarked
-using real graph data sets, including new graph data generation techniques. In
-this section we review the most widely used graph datasets in the literature and
-their purpose.
+Besides graph data generators, many graph algorithms and systems are benchmarked using real graph data sets, including new graph data generation techniques. In this section, we review the most widely used graph datasets in the literature and their purpose.
 
 %In general, there exist several types of testing graph data
 %sets~\cite{Bachmaier2012}:
@@ -15,27 +12,27 @@ real and synthetically generated graphs. Because of the rapid evolution of such
 systems and their increasing capability to process larger graphs, the datasets
 typically used  in the literature quickly change overtime. The most commonly
 used datasets are, which can be downloaded from several graph dataset
-repositories~\cite{snapnets,lawalgo}: 
+repositories~\cite{snapnets,lawalgo}:
 \begin{itemize}
-  \item Dblp~\cite{yang2015defining}: Represents a co-authorship network where
+  \item \textbf{DBLP}~\cite{yang2015defining}: Represents a co-authorship network where
     researchers from Dblp are represented as vertices, and there exists and edge
-    between them if they have published a paper together. 
-  \item Amazon~\cite{yang2015defining}: Represents a product co-purchasing
+    between them if they have published a paper together.
+  \item \textbf{Amazon}~\cite{yang2015defining}: Represents a product co-purchasing
     network, such that each vertex is a product and an edge between two products
-    exists if a person has bought the two products. 
-  \item Road networks~\cite{leskovec2009community}: Consist of a set of road
-    networks from the US.  
-  \item LiveJournal~\cite{yang2015defining}: A social network where vertices
+    exists if a person has bought the two products.
+  \item \textbf{Road networks}~\cite{leskovec2009community}: Consist of a set of road
+    networks from the US.
+  \item \textbf{LiveJournal}~\cite{yang2015defining}: A social network where vertices
     represent the users and the edges the acquitances between them.
-  \item Orkut~\cite{yang2015defining}: Like LiveJournal, this is a social network
+  \item \textbf{Orkut}~\cite{yang2015defining}: Like LiveJournal, this is a social network
     where vertices represent persons and the edges their friendships.
-  \item Twitter~\cite{kwak2010twitter}: This is a directed network representing
+  \item \textbf{Twitter}~\cite{kwak2010twitter}: This is a directed network representing
     the follower-followee interaction of Twitter.
-  \item Friendster~\cite{yang2015defining}: A social network like LiveJournal and
+  \item \textbf{Friendster}~\cite{yang2015defining}: A social network like LiveJournal and
     Orkut, where nodes represent persons and edges their relationships.
-  \item WebUK~\cite{delis}: A web graph of the UK subdomain, where nodes represent
+  \item \textbf{WebUK}~\cite{delis}: A web graph of the UK subdomain, where nodes represent
     websites and edges the hyperlinks between them.
-  \item ClueWeb2012~\cite{clueweb}. This is a crawl of the web from 2012, where
+  \item \textbf{ClueWeb2012}~\cite{clueweb}. This is a crawl of the web from 2012, where
     vertices represent websites and the edges the hyperlinks connecting them.
 \end{itemize}
 
@@ -48,19 +45,19 @@ as movies, books or songs. The following are the most widely used datasets for
 testing recommender systems:
 
 \begin{itemize}
-\item MovieLens~\cite{movielens}: Consists of a bipartite graph
+\item \textbf{MovieLens}~\cite{movielens}: Consists of a bipartite graph
   between users and movies, where edges represent the ratings the different
-  users have made to the movies they watched. 
-\item Book-Crossings~\cite{ziegler2005improving}: Is a dataset with book ratings
-  from users. 
-\item Jester~\cite{goldberg2001eigentaste}: This dataset contains jokes (with
-  their text) and ratings from users. 
-\item Last.fm~\cite{hetrec}: This dataset contains the list of the top
+  users have made to the movies they watched.
+\item \textbf{Book-Crossings}~\cite{ziegler2005improving}: Is a dataset with book ratings
+  from users.
+\item \textbf{Jester}~\cite{goldberg2001eigentaste}: This dataset contains jokes (with
+  their text) and ratings from users.
+\item \textbf{Last.fm}~\cite{hetrec}: This dataset contains the list of the top
   most listened artists per user, including the number of times the songs from
   those artists were played. Additionally, it contains connections between users
   (the social network they form), and a set of tags attached to artists that can
   be used to create content vectors.
-\item Netflix~\cite{zhou2008large}: This dataset was used during the famous
+\item \textbf{Netflix}~\cite{zhou2008large}: This dataset was used during the famous
   Netflix prize. It consists of a bipartite graph with movie ratings from users.
 \end{itemize}
 
@@ -74,25 +71,25 @@ votings from other users, being the most widely used datasets the following
 examples:
 
   \begin{itemize}
-    \item Bitcoin~\cite{moore2013beware}: This dataset contains information from
+    \item \textbf{Bitcoin}~\cite{moore2013beware}: This dataset contains information from
       several Bitcoin exchanges, where users are able to rate other users after
       their transactions. Here, the vertices represent the users and the edges,
       which are labelled, the ratings between them.
-    \item Wikipedia RFA~\cite{west2014exploiting}: This is a network extracted
+    \item \textbf{Wikipedia RFA}~\cite{west2014exploiting}: This is a network extracted
       from Wikipedia, where the vertices represent users  and the
       edges, which are labelled, the votes emitted by administrators for the
       user to become an administrator.  Each vote is accompained with a text
-      explaining the vote's sign. 
-    \item WikiSigned~\cite{maniu2011building}: This is a network of Wikipedia
+      explaining the vote's sign.
+    \item \textbf{WikiSigned}~\cite{maniu2011building}: This is a network of Wikipedia
       editors where the vertices are the editors and the edges, which are
       labelled, represent the turst level between two editors.
-    \item Extended Epinions~\cite{massa2007trust}: This is an extended version of
+    \item \textbf{Extended Epinions}~\cite{massa2007trust}: This is an extended version of
       the Epinions network which also contains the levels of distrust between the
       users, expressed by means of edges between them.
-    \item Twitter Indian Elections~\cite{kagan2015using}: This network represents
+    \item \textbf{Twitter Indian Elections}~\cite{kagan2015using}: This network represents
       a Twitter network where vertices represent users and there is an edge
       between two users if a user mentions another one in a tweet. The edges
-      are labelled with the average sentiment of one user towards another. 
+      are labelled with the average sentiment of one user towards another.
   \end{itemize}
 
 
@@ -105,7 +102,7 @@ in~\cite{10dimacs,yang2015defining}, some of them already discussed for other
 applications. Here, we summarize the most widely used in the literature:
 
 \begin{itemize}
-  \item Dblp, Amazon, LiveJournal, Orkut and Friendster~\cite{yang2015defining}
+  \item \textbf{DBLP}, \textbf{Amazon}, \textbf{LiveJournal}, \textbf{Orkut} and \textbf{Friendster}~\cite{yang2015defining}
     are widely used for evaluating community detection since they provide
     information about the meta-communities they contain. For instance, in
     Livejournal, users can join groups of users talking about given topics. Such
@@ -113,19 +110,19 @@ applications. Here, we summarize the most widely used in the literature:
     other graphs. Community detection algorithms are then evaluated by trying to
     infer such meta-communities without prior knowledge of the user to group
     assignment.
-  \item Zachary Karate Club~\cite{zachary1977information}: This graph consists
+  \item \textbf{Zachary Karate Club}~\cite{zachary1977information}: This graph consists
     of a small networks of members of a karate club that was dismissed and split
     into two new karate clubs. Vertices represent persons and edges friendship
     relationships. Information about what people joined each of the two new
     karate clubs is provided.
-  \item PolBlogs~\cite{adamic2005political}: This is a network consisting of
+  \item \textbf{PolBlogs}~\cite{adamic2005political}: This is a network consisting of
     blogs talking about the US 2005 political elections, where a vertex
     represents a blog and the edges the hyperlinks between the blogs. Each blog
     has an associated label, whehter it is left or right oriented.
-  \item PolBooks~\cite{10dimacs}: Is a network of books of Amazon that talk
+  \item \textbf{PolBooks}~\cite{10dimacs}: Is a network of books of Amazon that talk
     about politics, and edges between two books exist if they are co-purchased
     together. The books have labels of whether they are left or right oriented.
-  \item Football~\cite{girvan2002network}: A network of american university
+  \item \textbf{Football}~\cite{girvan2002network}: A network of american university
     football teams. Each node represents a football team and the edges represent
     the matches between them during the season. Each team is associated to a
     division.
@@ -138,11 +135,11 @@ how information propagates. As such, there several datasets used to understand
 such networks.
 
 \begin{itemize}
-  \item Higgs-Twitter~\cite{de2013anatomy}: This dataset contains the Twitter
+  \item \textbf{Higgs-Twitter}~\cite{de2013anatomy}: This dataset contains the Twitter
     network before, during and after the discovery of the Higgs boson.
     Concretely, it contains the tweets, the mentions, retweets,
-    followers/followees, etc.  
-  \item Memetracker~\cite{leskovec2009meme}: Memetracker is a dataset that
+    followers/followees, etc.
+  \item \textbf{Memetracker}~\cite{leskovec2009meme}: Memetracker is a dataset that
     contains the quotes and phrases that appear more frequently on the entire
     news spectrum. It consists of the links of the news, the time and memes, and
     is used to understand how information spanws, evolves and dies.
@@ -152,45 +149,45 @@ such networks.
 
 Semantic web and RDF engines have a well accepted set of real datasets, used to
 test reasoning engines as well as to use as baselines for the creation of new
-synthetic generators for the semantic web.   
+synthetic generators for the semantic web.
 
 \begin{itemize}
-  \item DbPedia~\cite{Bizer:2009:DCP:1640541.1640848}: The DBPedia project aims at creating
+  \item \textbf{DbPedia}~\cite{Bizer:2009:DCP:1640541.1640848}: The DBPedia project aims at creating
     a structured version of Wikipedia. It allows users to semantically query the
     relationships between the different resources at wikipedia.
-  \item Freebase~\cite{bollacker2008freebase}: Is a collaborative knowledge base
+  \item \textbf{Freebase}~\cite{bollacker2008freebase}: Is a collaborative knowledge base
     made of metadata mainly provided by community members. It contains
     structured data from multiple sources in an attempt to create a global
     resource of information accessible both from persons and machines. The
     project was discontinued in 2014 and replaced by Wikidata.
-  \item Yago~\cite{suchanek2007yago}, Yago2~\cite{hoffart2013yago2} \&
+  \item \textbf{Yago}~\cite{suchanek2007yago}, \textbf{Yago2}~\cite{hoffart2013yago2} \&
     Yago3~\cite{mahdisoltani2013yago3}: These are
     open source knowledge bases developed at the Max Planck Institute of
     Computer Science in Saarbr\"ucken. It contains structured data automatically extracted
     from Wikipedia and other sources.
-  \item Wikidata~\cite{vrandevcic2014wikidata}: This is a knowledge base
+  \item \textbf{Wikidata}~\cite{vrandevcic2014wikidata}: This is a knowledge base
     collaboratively edited by the community and hosted by the Wikimedia
     Foundation. It contains structured data from its sister projects Wikipedia,
     Wikivoyage, Wikisource and others.
-  \item Billion Triple Challenge~\cite{btc-2014}: This is a semantic dataset
+  \item \textbf{Billion Triple Challenge}~\cite{btc-2014}: This is a semantic dataset
     crawled from different sources, including Freebase, DBPedia or the BBC. A
-    detailed description of the crawling process can be found in~\cite{kafer2012towards}.  
+    detailed description of the crawling process can be found in~\cite{kafer2012towards}.
 \end{itemize}
 
-%\begin{itemize} 
+%\begin{itemize}
 %  \item A real-world data set which represents a graph, such as
 %      the Internet Movie Database (IMDb)\footnote{\url{http://www.imdb.com/}} or
 %      various data sets available in the Stanford Large Network Dataset
-%      Collection~\cite{snapnets}, 
+%      Collection~\cite{snapnets},
 %    \item A general graphbase, such as the Open
 %      Graph Archive~\cite{Bachmaier2012}, the Stanford
 %    GraphBase~\cite{Knuth:1993:SGP:164984}, or the
-%  GraphArchive~\cite{GraphArchive}, 
+%  GraphArchive~\cite{GraphArchive},
 %\item A dataset dedicated to specific
 %    experimental goals, such as graph partitioning and graph
 %    clustering~\cite{10dimacs}, shortest paths~\cite{9dimacs}, or graph
-%    coloring~\cite{coloring}, and 
+%    coloring~\cite{coloring}, and
 %  \item A dataset devoted to matrices, such as
 %the SuiteSparse Matrix Collection~\cite{SuiteSparse} or  the Matrix
-%Market~\cite{MatrixMarket}.  
+%Market~\cite{MatrixMarket}.
 %\end{itemize}
