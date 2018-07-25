@@ -2,7 +2,7 @@
 \label{sec:challenges}
 
 In this section, we discuss several of the open challenges in large scale graph
-generation. 
+generation.
 
 \subsection{Single- vs. multi-domain}
 
@@ -78,7 +78,7 @@ the graph grows with time.
 
 
 \subsection{Multi-model Data}
-With the dawn of Big Data and especially its Variety aspect there have emerged
+With the dawn of Big Data and especially its Variety aspect, there have emerged
 also new types of database management systems. One of the most interesting ones
 are so-called \emph{multi-model databases} which enable to store and especially
 query across structurally different data. There exist various types of
@@ -86,9 +86,7 @@ multi-model systems combining  distinct subsets of Big Data structures; hence,
 there naturally exists systems which combine graph data with other data models.
 For example, OrientDB\footnote{\url{http://orientdb.com/orientdb/}} which was
 implemented on the basis of an object DBMS currently supports graph, document,
-key/value, and object models.
-
-Such type of DBMSs also needs a specific benchmark/data generator which enables
+key/value, and object models. Such type of DBMSs also needs a specific benchmark/data generator which enables
 to test new features and analyze efficiency of operations. However, since the
 multi-model systems are in the context of Big Data rather new, there exist only
 a few benchmarks targeting multi-model DBMSs (such as
@@ -128,6 +126,9 @@ to graphs of a fixed size. However, there is still in general several open
 challenges, including the capability of learning from and generating large graphs comparable
 in size to those typically used for benchmarking, and robust generation
 techniques with structural guarantees (e.g. degree distribution, clustering
-coefficient, etc.).  
+coefficient, etc.).
 
 
+\subsection{Streaming Graph Generators}
+Stream computing is a new paradigm that is necessitated by various modern data generation scenarios such as the ubiquity of mobile devices, location services, 
+sensor pervasiveness and emerging Internet-of-Things (IoT) applications. These applications generate the data with \emph{high Velocity}, one of the main 3V characteristics of big data applications~\cite{sakr2016big}. In most of these high speed data generation scenarios, various objects are connected together with different relations and data exchanges  in a graph-structured manner. The Semantic Web community has been considering the aspect of implementing streaming RDF generator and benchmarks, however, there is still a clear lack on considering this aspect on other important and timely domains such as IoT. Thus, there is a crucial need to tackle this aspect. In addition, graph streaming generators should  consider some specific aspects for the stream processing domains such as the out-of-order handling (late arrivals)~\cite{li2008out} and the variety in the schemas and formats of the different data streaming sources. It is also recommended for the streaming graph generators to support the distributed environment as this is the most common scenario for such type of applications. 
