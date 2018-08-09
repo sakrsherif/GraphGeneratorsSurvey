@@ -6,10 +6,10 @@
 %\TODO{The abundance of interconnected data has fueled the design and implementation of graph generators reproducing real-world linking properties, or gauging the effectiveness of graph algorithms, techniques and applications manipulating these data.}
 
 %One of the most popular data structures in the world of computer science are graphs.
-Graphs are ubiquitous data structures that span a wide array of disciplines
-and are subject of study in several subfields of computer science.
+Graphs are ubiquitous data structures that span a wide array of scientific disciplines
+and are a subject of study in several subfields of computer science.
 Nowadays, due to the dawn of numerous tools and applications manipulating
-graphs, they are adopted as a rich data model in many data science use
+graphs, they are adopted as a rich data model in many data-intensive use
 cases involving disparate domain knowledge, mathematical foundations and
 computer science. Interconnected data is oftentimes used to encode domain-specific
 use cases, such as recommendation networks, social networks,
@@ -24,28 +24,39 @@ configurable graph generators that reproduce real-world graph properties and pro
 algorithms and tools handling such data.
 %As a consequence, also in the world of graphs there has appeared a number of graph data generators which enable to  reproduce the respective real-world linking properties and gauge the effectiveness of a particular algorithm.
 
-In this survey, we provide a comprehensive overview of the state-of-the-art graph generators by focusing on those that are pertinent and suitable for data science tasks. Our aim is to cover a wide range of currently popular areas of graph data processing. In particular, we consider graph generation in the areas of graph databases, graph data mining, graph streaming and machine learning communities, alongside community detection, social networks and IoT communities. Despite the disparate requirements of graph generators throughout these communities, we analyze them under a common umbrella, reaching out the functionalities, the practical usage, and the supported operations of graph generators. The reasons for this scope and classification are as follows:
+In this survey, we provide a comprehensive overview of the state-of-the-art
+modern
+graph generators by focusing on those that are pertinent and suitable for
+data-intensive tasks. Our aim is to cover a wide range of currently popular
+areas of graph data processing. In particular, we consider graph generation
+in the areas of graph databases, graph data mining, graph streaming and
+machine learning communities, alongside community detection, social
+networks and IoT communities. Despite the disparate requirements of modern graph generators throughout these communities, we analyze them under a common umbrella, reaching out the functionalities, the practical usage, and the supported operations of graph generators. The reasons for this scope and classification are as follows:
 
 \begin{enumerate}
-  \item Despite the differences of the covered areas, the requirements for the graph data generators can be similar in particular cases. Reusing or learning from tools in other fields can thus bring new opportunities for both researchers and practitioners.
-  \item The selected classification is serving the need of providing data scientists, researchers and practitioners with the right data generator at hand for their work.
+  \item Despite the differences of the covered areas, the requirements for
+modern graph data generators can be similar in particular cases. Reusing or learning from tools in other fields can thus bring new opportunities for both researchers and practitioners.
+  \item The selected classification is serving the need of providing scientists, researchers and practitioners with the right data generator at hand for their work.
 \end{enumerate}
 
-To conclude the comparative study and provide a comprehensive view of the field,  we also discuss open challenges and missing features of graph generators in view of identifying future challenges in data science.
+To conclude the comparative study and provide a comprehensive view of the
+field,  we also discuss open challenges and missing requirements of modern
+graph generators in view of identifying their future extensions to new emerging fields.
 
 
-\paragraph*{Contributions} Our survey reviews the representatives of graph data generators and summarizes their major features. The comprehensive review and analysis make this paper useful for motivating new graph data generation techniques as well as serving as a technical reference for selecting suitable solutions. In particular, the introductory categorization and comparative study enables the reader to quickly get his/her bearings in the field and identify a subset of generators of his/her interest. Since we do not limit the survey to a particular area of graph data management,  the reader can get a broader scope in the field. Hence, while practitioners can find a solution in another previously unexpected area, researchers can identify new target areas or exploit successful results in new fields. Last but not least, we identify general open problems of graph data synthesis and indicate possible solutions to show that it still forms a challenging and promising research area.
+\paragraph*{Contributions} Our survey revisits the representatives of
+modern graph data generators and summarizes their major features. The comprehensive review and analysis make this paper useful for motivating new graph data generation techniques as well as serving as a technical reference for selecting suitable solutions. In particular, the introductory categorization and comparative study enables the reader to quickly get his/her bearings in the field and identify a subset of generators of his/her interest. Since we do not limit the survey to a particular area of graph data management,  the reader can get a broader scope in the field. Hence, while practitioners can find a solution in another previously unexpected area, researchers can identify new target areas or exploit successful results in new fields. Last but not least, we identify general open problems of graph data synthesis and indicate possible solutions to show that it still forms a challenging and promising research area.
 
 \paragraph*{Differences with prior surveys}
 
 To the best of our knowledge, our work is the first surveying the broad
-landscape of graph data generators spanning different data science applications and
-targeting diverse computer science subfields. In particular, we cover graph database
+landscape of graph data generators spanning different data-intensive applications and
+targeting many computer science subfields. In particular, we cover graph database
 generators, graph processing generators, social networks and community detection
 generators, Semantic Web data generators, graph
 analytics generators, IoT, Telecommunication and graph streaming generators,
 and Machine Learning and graph mining generators. A comprehensive study of
-graph generators is missing for many of the specific subfields mentioned
+graph generators is yet missing for many of the specific subfields mentioned
 above.
 
 A limited subset of graph database
@@ -55,13 +66,15 @@ been discussed in a related book chapter
 \cite{BFHI18} while cross-comparing them with respect to input, output,
 supported workload, data model and query language, along with the
 distinguished chokepoints. However, the provided classification is
-inherently data-driven and not meant to serve the purpose of letting any
-researcher or practitioner interested in data science make a guided
-choice of the desired
+inherently database-oriented. 
+In our work, we provide a more comprehensive and broader classification 
+ serving the purpose of letting any
+researcher or practitioner interested in data generation make a wise
+choice of the desired graph 
 generator based on its functional and goal-driven features (such as the application domain,
 the supported operations and the key configuration options).
-Moreover, our work is much broader and targets graph generators of several
-diversified communities, not limiting its scope to few generators of the database
+Moreover, in contrast with \cite{BFHI18}, our work encompasses graph generators of several
+diverse communities, not limiting its scope to a few generators of the database
 and graph processing communities.
 
 Graph generators matching graph patterns used in data mining have been
@@ -74,8 +87,10 @@ involving these properties, whereas we provide here a functionality-driven
 taxonomy across all the categories of graph generators that we consider.
 We also point out that this survey is outdated as it does not consider the
 graph mining generators that fervently appeared in the last decade.
+We fill the gap of more recent social network and graph analytics generators
+respectively in Section 3.4 and 3.5. 
 
-\TODO{Check with Arnau}
+%\TODO{Check with Arnau}
 
 Aggarwal and Subbian \cite{AggarwalS14} have surveyed evolution analysis in
 graphs, by primarily focusing on data mining maintenance methods and on analytical
@@ -86,8 +101,9 @@ the paper. The data generation of evolutionary networks based on
 Densification Power Law (DPL) and shrinking diameters \cite{LeskovecKF05} and community-guided
 attachment properties \cite{LeskovecKF05} is then considered, along with tackling Kronecker
 recursion with recursive tensor multiplication \cite{AkogluMF08}.
-
-\TODO{Better highlight the differences when Sherif's part is in.}
+We refer the reader to this survey for evolutionary network generators and
+we further discuss the open challenges of evolving graph data in Section 5. 
+%\TODO{Better highlight the differences when Sherif's part is in.}
 
 %\TODO{Outreach other surveys in other communities.}
 
