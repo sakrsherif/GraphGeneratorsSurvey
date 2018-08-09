@@ -7,42 +7,44 @@ generation.
 \subsection{Single- vs. multi-domain}
 
 Most of existing graph generators generate graphs that are either not labeled or
-are specific of a given domain (e.g.  Social Networks). Graphs from different
+are specific to a given domain (e.g.  Social Networks). Graphs from different
 domains have different schemas, structural characteristics, property
 distributions, etc. which might have an impact on the performance of the
 application under test. Thus, graph processing engine developers are asking for
-generators or tools to generate graphs flexibily, allowing to configure aspects
-such as the size, the schema, the data distributions and other structural
-characteristics such as the degree distribution, the clustering coefficient,
-etc.
+generators or tools to flexibly and holistically generate multi-domain graphs, allowing to configure aspects
+such as size, schemata, data distributions and other structural
+characteristics such as degree distributions, clustering coefficients, and
+so on. 
 
 
 \subsection{Simple Usage, Simple Parameters}
-Proposal of a data generator (not necessarily for graph data) has to face an
-important schism. On the one hand, there is the aim to provide the user with as
-many parameters as possible in order to enable one to generate any kind of data.
-This approach seems to be reasonable, but it encounters the fact that users are
-usually unwilling to use complex benchmarking tools. This observation can be
+The proposal of a data generator (not necessarily for graph data) has to face an
+important schism. On one hand, it must provide the user with as
+many parameters as possible in order to enable him/her to generate
+arbitrary data.
+This approach seems to be reasonable, but it entails a shortcoming due to
+the fact that ordinary users are
+unwilling to use complex benchmarking tools. This observation can be
 seen, for example, in the case of XML benchmarks -- even though there exist
 robust and complex data generators (such as
 ToXGene~\cite{conf/webdb/BarbosaMKL02}, which supports specification of
 structural aspects, value distributions, references etc.), the most popular
-benchmarking tool is XMark~\cite{Schmidt:2002:XBX:1287369.1287455} which models
+benchmarking tool is XMark~\cite{Schmidt:2002:XBX:1287369.1287455}, which models
 a single use case and enables to specify just the size of the data. Hence, the
 other extreme is to provide a simple data generator which does not require any
-complex settings and thus the benchmarking process is extremely simple and fast.
+complex settings and thus guarantees a simple and fast benchmarking process.
 
 Considering the complex structure of graph data and the variety of applications
-having highly specific types of graphs, the latter solution is difficult to
-implement. A reasonable compromise can thus be seen in a data generator which is
-provided with sample graph data and is capable of automatic analysis of their
-structural and value specifics in order to gain the complex parameters.
+requiring highly specific types of graphs, the latter solution is difficult to
+implement. A reasonable compromise can be found in a data generator which is
+provided with sample graph data and is capable of automatic analysis of its
+structural and value features in order to learn the complex parameters.
 
 \subsection{Evolving Graph Data}
 As user requirements as well as environments change, most of the existing
 applications naturally evolve over time, at least to some extent. This evolution
 usually influences the structure of the data and consequently all the related
-parts of the application (i.e., storage strategies, operations, indices etc.).
+parts of the application (i.e., storage strategies, operations, indexes etc.).
 The respective data generator should hence be able to simulate such a growth
 and/or change in structure.
 
@@ -51,12 +53,13 @@ data is a significant aspect, especially in the activity graphs, that has been
 studied
 extensively~\cite{doreian1997evolution,Kumar:2006:SEO:1150402.1150476,Hellmann2014583,wang2013,Kossinets88,Viswanath:2009:EUI:1592665.1592675}.
 A related problem is \emph{data versioning} and respective ability to query
-across multiple versions of data or in general its analysis. Considering graph
-data this problem is also common, for example  in the area of Linked
-Data~\cite{DBLP:conf/semweb/Papakonstantinou16,DBLP:conf/esws/MeimarisP16,fernandez2015towards,fernandez2015bear}.
+across multiple versions of data or to carry out general analysis. 
+%Considering graph
+%data this problem is also common, for example  in the area of Linked
+This problem has been investigated for instance within the domain of Linked
+Open Data~\cite{DBLP:conf/semweb/Papakonstantinou16,DBLP:conf/esws/MeimarisP16,fernandez2015towards,fernandez2015bear}.
 
-As shown in
-papers~\cite{Leskovec:2005:RMT:2101235.2101254,Leskovec:2005:GOT:1081870.1081893},
+As shown in~\cite{Leskovec:2005:RMT:2101235.2101254,Leskovec:2005:GOT:1081870.1081893},
 evolving graphs have further specific features. For example, some graphs grow
 over time according to a \emph{densification power law} which means that real
 graphs tend to sprout many more edges than nodes, and thus are densifying as
@@ -78,20 +81,28 @@ the graph grows with time.
 
 
 \subsection{Multi-model Data}
-With the dawn of Big Data and especially its Variety aspect, there have emerged
-also new types of database management systems. One of the most interesting ones
-are so-called \emph{multi-model databases} which enable to store and especially
+With the dawn of Big Data and especially its variety aspect, new types of
+database management systems have emerged. One of the most interesting ones
+are the so-called \emph{multi-model databases} that enable to store and
+thus
 query across structurally different data. There exist various types of
-multi-model systems combining  distinct subsets of Big Data structures; hence,
-there naturally exists systems which combine graph data with other data models.
+multi-model systems combining  distinct subsets of Big Data structures,
+such as for instance systems that combine graph data with other data models.
 For example, OrientDB\footnote{\url{http://orientdb.com/orientdb/}} which was
 implemented on the basis of an object DBMS currently supports graph, document,
-key/value, and object models. Such type of DBMSs also needs a specific benchmark/data generator which enables
+key/value, and object models. Such type of DBMSs also needs a specific
+benchmarking data generator that would enable
 to test new features and analyze efficiency of operations. However, since the
 multi-model systems are in the context of Big Data rather new, there exist only
 a few benchmarks targeting multi-model DBMSs (such as
 Bigframe~\cite{journals/pvldb/KunjirKB14} or UniBench~\cite{conf/cidr/lu17})
 with limited capabilities.
+Another interesting approach to multi-model data is to adopt a unifying
+expressive graph data model, known as property graph data
+model~\cite{BFVY18}. Such a model allows to specify multi-edges and list of
+properties for the nodes. Synthetic graph generators for property graphs and its
+companion standard graph query language~\cite{Angles18,AnglesABBFGLPPS18} are also needed in order to boost
+their availability and adoption for different communities.  
 
 \subsection{Large scale graphs with realistic structure}
 
@@ -101,12 +112,12 @@ distribution and the clustering
 coefficient~\cite{kolda2014scalable,edunov2016darwini}. However, there are other
 structural characteristics one might be interested in reproducing for a large
 graph, such the diameter, the size of the largest connected component, or the
-hierarchical community structure. Graph practitioners are intersted in knowing
+hierarchical community structure. Graph practitioners are highly interested in knowing
 how other high-level structural characteristics affect the performance of graph
-queries and graph algorithms. Thus, there is an open challenge to create
-graph generators that allow reproducing many other structural characteristics
-besides the degree or the clustering coefficient, that can also generat graphs
-at a scale.
+queries and graph algorithms. Hence, a compelling open challenge consists
+of creating
+graph generators that allow to reproduce diverse structural characteristics
+of the graphs along with large scale sizes. 
 
 
 \subsection{Machine Learning based graph generation}
@@ -128,6 +139,31 @@ in size to those typically used for benchmarking, and robust generation
 techniques with structural guarantees (e.g. degree distribution, clustering
 coefficient, etc.).
 
+
+\subsection{Generating noisy graphs and graphs with anomalies}
+Injecting noise and/or anomalies and errors into graphs is crucial for
+testing both machine learning algorithms working on this complex data and 
+data quality techniques aiming at detecting anomalies and repairing graph
+data. 
+
+Concerning the former, analyzing and labelling structural networks is
+deemed to be more difficult for graph datasets in the presence of noise. 
+Since denoising graph data is difficult to achieve, several machine learning
+techniques have been adapted to work with noise (i.e. mislabeled
+samples) or outliers, such as 
+imbalanced graph classification \cite{PanZ13} and 
+binary graph classification with positive and negative weights \cite{CheungSML16}.  
+Synthetic graph generators that take into account noisy and missing data 
+have been studied in \cite{NamataG10}, where graph identification is presented in
+order to  model the inference of a cleaned output network from a
+noisy input graph.
+Concerning the latter, data quality techniques handling graph data are recently considering ad-hoc
+generation of graph data and graph quality rules in order to assess the
+effectiveness of error detection and data repairing algorithms \cite{FanWX16a,AriouaB18}. The
+corresponding graph quality rules are typically handcrafted by domain
+experts, whereas an automatic generation of such rules along with the graph
+data generation in tandem would be an interesting future challenge for the
+community. 
 
 \subsection{Streaming Graph Generators}
 Stream computing is a new paradigm that is necessitated by various modern data generation scenarios such as the ubiquity of mobile devices, location services, 
