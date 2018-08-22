@@ -17,7 +17,7 @@ The type of the generator can also be influenced by the benchmark involving it, 
 %\paragraph{HOT} The highly optimized tolerance (HOT)~\cite{PhysRevLett.84.2529} model is introduced  using a ``forest fire'' example as follows: Suppose we have a forest which is prone to forest fires. Each portion of the forest has a different chance of starting the fire. We wish to minimize the damage by assigning (a limited amount of) resources such as firebreaks at different positions in the forest. More precisely, we have $n$ possible events, each with an associated probability $p_i, 1 \le i \le n$. Each event can lead to some loss $l_i$, which is a function of the resources $r_i$ allocated for that event $(l_i = f (r_i))$, whose total number is limited ($\sum_i r_i \le R$ for some given $R$). The aim is to minimize the expected cost $\sum_i p_i l_i$. The authors show that resource placement is related to the probability distribution $p_i$ by a power law and the probability of events which cause a loss greater than some value $k$ is related to $k$ by a power law too.
 %
 %
-%\paragraph{R-MAT} The R-MAT (Recursive MATrix)~\cite{DBLP:conf/sdm/ChakrabartiZF04} model can be used to create graphs with community structure, power law degree distributions, and a small diameter. It generates weighted, directed and bipartite graphs. Graph generation is modeled with a matrix recursion procedure in which the adjacency matrix (empty at the beginning) is recursively subdivided into four equal-sized partitions and edges are distributed across the partitions with unequal probabilities.
+%\paragraph{R-MAT} The R-MAT (Recursive MATrix)~\cite{DBLP:conf/sdm/ChakrabartiZF04} model can be used to create graphs with community structure, power law degree distributions, and a small diameter. It generates weighted, directed and bipartite graphs. Graph generation is modeled with a matrix recursion -procedure in which the adjacency matrix (empty at the beginning) is recursively subdivided into four equal-sized partitions and edges are distributed across the partitions with unequal probabilities.
 
 
 %In Figure~\ref{fig:classification} ...
@@ -29,7 +29,10 @@ The type of the generator can also be influenced by the benchmark involving it, 
 %\label{fig:classification}
 %\end{figure}
 
-We decided to classify the generators primarily on the basis of the respective application domains or communities. In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristicsB}   we overview the key characteristics of the data generators clustered according to the respective application domains. In particular, we show:
+
+At first we classify the generators on the basis of the respective application domains or user communities. The selected classes are not rigorously defined (e.g., they are not disjoint as we will show later), but they correspond to the currently most active research areas. Thus we believe that they form a natural first acquaintance for the reader.
+
+In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristicsB}   we overview the key characteristics of the data generators clustered according to the respective application domains. In particular, we show:
 
 \begin{itemize}
 \item Characteristics of the domain - its \textit{type} (fixed, specified using a schema, or extracted from input data) and the particular \textit{target} domain, or, in case of a generic tool, the chosen sample domain,
