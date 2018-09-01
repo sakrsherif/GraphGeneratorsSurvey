@@ -18,7 +18,7 @@ name a few.
 % ANGELA: I do not think we should cite Neo4J, which is a graph database.
 %They enable to represent complex information in a simple and yet powerful way supported by a strong mathematical background. With the dawn of the new millennium which brought numerous novel technologies and applications, the graphs have become even more popular. There has appeared a number of use cases\footnote{\url{https://neo4j.com/use-cases/}} (such as fraud detection, recommendation engines, social networks etc.) where graphs represent the linked information.
 
-In general, we can distinguish between two broad types of graph data sets: (1) a single large graph (possibly with several components), such as social networks  or Linked Data graphs, and (2) a large set of small graphs, such as chemical compounds\footnote{\url{https://pubchem.ncbi.nlm.nih.gov/}} or linguistics syntax trees\footnote{\url{https://catalog.ldc.upenn.edu/ldc99t42}}. Naturally, the algorithms used in theses two classes differ a lot~\cite{DBLP:books/igi/Sakr2011}. In the former case we can search, e.g., for communities and their features or shortest paths, while in the latter case we usually query for supergraphs, subgraphs or graphs similar to a given graph pattern. Also, as in the other fields, quite often the respective real-world graph data is not publicly available (or simply does not exist when a particular method for data manipulation is proposed).
+In general, we can distinguish between two broad types of graph data sets: (1) a single large graph (possibly with several components), such as social networks  or Linked Data graphs, and (2) a large set of small graphs, such as chemical compounds\footnote{\url{https://pubchem.ncbi.nlm.nih.gov/}} or linguistics syntax trees\footnote{\url{https://catalog.ldc.upenn.edu/ldc99t42}}. Naturally, the algorithms used in theses two classes differ a lot~\cite{DBLP:books/igi/Sakr2011}. In the former case we can search, e.g., for communities and their features or shortest paths, while in the latter case we usually query for supergraphs, subgraphs or graphs similar to a given graph pattern. In both the cases, as in the other fields, quite often the respective real-world graph data is not publicly available (or simply does not exist when a particular method for data manipulation is proposed).
 Even in the cases in which real data is abundant, many algorithms and techniques need to be tested on various order of magnitudes of the graph sizes thus leading to the inception of
 configurable graph generators that reproduce real-world graph properties and provide unique tuning opportunities for
 algorithms and tools handling such data.
@@ -66,11 +66,11 @@ been discussed in a related book chapter
 \cite{BFHI18} while cross-comparing them with respect to input, output,
 supported workload, data model and query language, along with the
 distinguished chokepoints. However, the provided classification is
-inherently database-oriented. 
-In our work, we provide a more comprehensive and broader classification 
+inherently database-oriented.
+In our work, we provide a more comprehensive and broader classification
  serving the purpose of letting any
 researcher or practitioner interested in data generation make a wise
-choice of the desired graph 
+choice of the desired graph
 generator based on its functional and goal-driven features (such as the application domain,
 the supported operations and the key configuration options).
 Moreover, in contrast with \cite{BFHI18}, our work encompasses graph generators of several
@@ -88,7 +88,7 @@ taxonomy across all the categories of graph generators that we consider.
 We also point out that this survey is outdated as it does not consider the
 graph mining generators that fervently appeared in the last decade.
 We fill the gap of more recent social network and graph analytics generators
-respectively in Section 3.4 and 3.5. 
+respectively in Section 3.4 and 3.5.
 
 %\TODO{Check with Arnau}
 
@@ -102,13 +102,13 @@ Densification Power Law (DPL) and shrinking diameters \cite{LeskovecKF05} and co
 attachment properties \cite{LeskovecKF05} is then considered, along with tackling Kronecker
 recursion with recursive tensor multiplication \cite{AkogluMF08}.
 We refer the reader to this survey for evolutionary network generators and
-we further discuss the open challenges of evolving graph data in Section 5. 
+we further discuss the open challenges of evolving graph data in Section 5.
 %\TODO{Better highlight the differences when Sherif's part is in.}
 
 %\TODO{Outreach other surveys in other communities.}
 
 
-\paragraph*{Outline} The rest of the text is structured as follows: 
-In Section~\ref{sec:comparison} we provide the opening categorization and comparison of the generators. In Section~\ref{sec:generators} we overview the existing graph data generators and their main features in the frame of the proposed categories. In Section~\ref{sec:challenges} we discuss challenges and open problems of graph data synthesis and in Section~\ref{sec:conclusion} we conclude.
+\paragraph*{Outline} The rest of the text is structured as follows:
+In Section~\ref{sec:comparison} we provide the opening categorization and comparison of the generators. In Section~\ref{sec:generators} we overview the existing graph data generators and their main features in the frame of the proposed categories. To provide a complete overview, in Section~\ref{sec:data_sets} we list most commonly used testing data sets for the particular categories.  In Section~\ref{sec:challenges} we discuss challenges and open problems of graph data synthesis and in Section~\ref{sec:conclusion} we conclude.
 
 
