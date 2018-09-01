@@ -14,7 +14,7 @@ application under test. Thus, graph processing engine developers are asking for
 generators or tools to flexibly and holistically generate multi-domain graphs, allowing to configure aspects
 such as size, schemata, data distributions and other structural
 characteristics such as degree distributions, clustering coefficients, and
-so on. 
+so on.
 
 
 \subsection{Simple Usage, Simple Parameters}
@@ -45,26 +45,26 @@ As user requirements as well as environments change, most of the existing
 applications naturally evolve over time, at least to some extent. This evolution
 usually influences the structure of the data and consequently all the related
 parts of the application (i.e., storage strategies, operations, indexes etc.).
-The respective data generator should hence be able to simulate such a growth
-and/or change in structure.
+In the world of graph data such graphs that change with time are denoted as \emph{evolving}, \emph{temporal}, \emph{dynamic}, or \emph{time-varying}. They can be viewed as labeled graphs, where the labels capture some measure of time~\cite{Michail2015}.
 
-In some graph applications, such as, e.g., social networks, the evolution of the
-data is a significant aspect, especially in the activity graphs, that has been
-studied
-extensively~\cite{doreian1997evolution,Kumar:2006:SEO:1150402.1150476,Hellmann2014583,wang2013,Kossinets88,Viswanath:2009:EUI:1592665.1592675}.
-A related problem is \emph{data versioning} and respective ability to query
-across multiple versions of data or to carry out general analysis. 
+The evolution of graphs can be considered variously. We can assume a static set of nodes and a varying set of edges.  Or, there are applications where the graphs only ``grow'', i.e., the set of nodes and/or edges is only extended with new items. In the most general case we can assume any changes in both set of nodes and set of edges. Anyway with the evolution aspect the complexity of classical graph problems increases significantly~\cite{Michail2015,Wu:2014:PPT:2732939.2732945}. In some graph applications, such as, e.g., social networks, the evolution of the
+data is a significant aspect, especially in the activity graphs~\cite{doreian1997evolution,Kumar:2006:SEO:1150402.1150476,Hellmann2014583,wang2013,Kossinets88,Viswanath:2009:EUI:1592665.1592675}.
+However, as shown in~\cite{Leskovec:2005:RMT:2101235.2101254,Leskovec:2005:GOT:1081870.1081893},
+evolving graphs have further specific features. For example, some graphs grow over time according to a \emph{densification power law} which means that real graphs tend to sprout many more edges than nodes, and thus are densifying as they grow. Also the effective diameter of graphs tends to shrink or stabilize as the graph grows with time.
+
+A related problem is \emph{data versioning} and respective ability to query across multiple versions of data or to carry out general analysis. 
 %Considering graph
 %data this problem is also common, for example  in the area of Linked
 This problem has been investigated for instance within the domain of Linked
 Open Data~\cite{DBLP:conf/semweb/Papakonstantinou16,DBLP:conf/esws/MeimarisP16,fernandez2015towards,fernandez2015bear}.
 
-As shown in~\cite{Leskovec:2005:RMT:2101235.2101254,Leskovec:2005:GOT:1081870.1081893},
-evolving graphs have further specific features. For example, some graphs grow
-over time according to a \emph{densification power law} which means that real
-graphs tend to sprout many more edges than nodes, and thus are densifying as
-they grow. Also the effective diameter of graphs tends to shrink or stabilize as
-the graph grows with time.
+
+The respective data generator should hence be able to simulate a natural growth and/or changes in the structure of the graph with regards to the various features of distinct use cases. However,  even though the area of dynamic graphs is intensively studied, surprisingly there seem to exist only very few proposals of a respective generator.
+
+In~\cite{GoerkeKlugeSchumm2012_1000029825} the authors focus on \emph{clustering dynamic graphs}, i.e. graphs where the clustering corresponds to the partition of nodes into natural groups based on the paradigm of intra-cluster density versus inter-cluster sparsity of edges. The generator generates a time series of random graphs $G_0, G_1, ... G_n$, where $G_t$ emerges from $G_{t-1}$ via atomic updates, i.e., the insertion or deletion of an edge or vertex. The generator keeps track of a (dynamic) ground truth clustering. The probability of atomic events is chosen in a way that adheres to this clustering, without losing randomness.
+
+A recent proposal of a generator~\cite{mlg2018_42} of temporal graphs results from the observation that small subgraph patterns in networks, called \emph{network motifs} or \emph{graphlets}, are crucial indicators of the structure and the evolution of the graphs~\cite{Paranjape:2017:MTN:3018661.3018731}. For a given graph $G$ and a predefined ordered list of structural atomic motifs $M$ the generator first computes the distribution of the motifs in the graph. The distribution is then used to generate a synthetic graph with the same features.
+
 
 %\paragraph{} Following the same recursion idea,
 %paper~\cite{Leskovec:2005:RMT:2101235.2101254} uses Kronecker multiplication to
@@ -102,7 +102,7 @@ expressive graph data model, known as property graph data
 model~\cite{BFVY18}. Such a model allows to specify multi-edges and list of
 properties for the nodes. Synthetic graph generators for property graphs and its
 companion standard graph query language~\cite{Angles18,AnglesABBFGLPPS18} are also needed in order to boost
-their availability and adoption for different communities.  
+their availability and adoption for different communities.
 
 \subsection{Large scale graphs with realistic structure}
 
@@ -117,7 +117,7 @@ how other high-level structural characteristics affect the performance of graph
 queries and graph algorithms. Hence, a compelling open challenge consists
 of creating
 graph generators that allow to reproduce diverse structural characteristics
-of the graphs along with large scale sizes. 
+of the graphs along with large scale sizes.
 
 
 \subsection{Machine Learning based graph generation}
@@ -142,18 +142,18 @@ coefficient, etc.).
 
 \subsection{Generating noisy graphs and graphs with anomalies}
 Injecting noise and/or anomalies and errors into graphs is crucial for
-testing both machine learning algorithms working on this complex data and 
+testing both machine learning algorithms working on this complex data and
 data quality techniques aiming at detecting anomalies and repairing graph
-data. 
+data.
 
 Concerning the former, analyzing and labelling structural networks is
-deemed to be more difficult for graph datasets in the presence of noise. 
+deemed to be more difficult for graph datasets in the presence of noise.
 Since denoising graph data is difficult to achieve, several machine learning
 techniques have been adapted to work with noise (i.e. mislabeled
-samples) or outliers, such as 
-imbalanced graph classification \cite{PanZ13} and 
-binary graph classification with positive and negative weights \cite{CheungSML16}.  
-Synthetic graph generators that take into account noisy and missing data 
+samples) or outliers, such as
+imbalanced graph classification \cite{PanZ13} and
+binary graph classification with positive and negative weights \cite{CheungSML16}.
+Synthetic graph generators that take into account noisy and missing data
 have been studied in \cite{NamataG10}, where graph identification is presented in
 order to  model the inference of a cleaned output network from a
 noisy input graph.
@@ -163,8 +163,8 @@ effectiveness of error detection and data repairing algorithms \cite{FanWX16a,Ar
 corresponding graph quality rules are typically handcrafted by domain
 experts, whereas an automatic generation of such rules along with the graph
 data generation in tandem would be an interesting future challenge for the
-community. 
+community.
 
 \subsection{Streaming Graph Generators}
-Stream computing is a new paradigm that is necessitated by various modern data generation scenarios such as the ubiquity of mobile devices, location services, 
-sensor pervasiveness and emerging Internet-of-Things (IoT) applications. These applications generate the data with \emph{high Velocity}, one of the main 3V characteristics of big data applications~\cite{sakr2016big}. In most of these high speed data generation scenarios, various objects are connected together with different relations and data exchanges  in a graph-structured manner. The Semantic Web community has been considering the aspect of implementing streaming RDF generator and benchmarks, however, there is still a clear lack on considering this aspect on other important and timely domains such as IoT. Thus, there is a crucial need to tackle this aspect. In addition, graph streaming generators should  consider some specific aspects for the stream processing domains such as the out-of-order handling (late arrivals)~\cite{li2008out} and the variety in the schemas and formats of the different data streaming sources. It is also recommended for the streaming graph generators to support the distributed environment as this is the most common scenario for such type of applications. 
+Stream computing is a new paradigm that is necessitated by various modern data generation scenarios such as the ubiquity of mobile devices, location services,
+sensor pervasiveness and emerging Internet-of-Things (IoT) applications. These applications generate the data with \emph{high Velocity}, one of the main 3V characteristics of big data applications~\cite{sakr2016big}. In most of these high speed data generation scenarios, various objects are connected together with different relations and data exchanges  in a graph-structured manner. The Semantic Web community has been considering the aspect of implementing streaming RDF generator and benchmarks, however, there is still a clear lack on considering this aspect on other important and timely domains such as IoT. Thus, there is a crucial need to tackle this aspect. In addition, graph streaming generators should  consider some specific aspects for the stream processing domains such as the out-of-order handling (late arrivals)~\cite{li2008out} and the variety in the schemas and formats of the different data streaming sources. It is also recommended for the streaming graph generators to support the distributed environment as this is the most common scenario for such type of applications.
