@@ -6,29 +6,30 @@ phenomenon used by billions of people every day and thus providing extremely
 useful information for various domains. However, an analysis of such type of
 graph has to cope with two problems: (1) availability of the data and (2)
 privacy of the data. Hence, data generators which provide realistic synthetic
-social network graphs are in great demand. In general, analyses of social networks identify their various specific
-features~\cite{Chakrabarti:2006:GML:1132952.1132954}. For example, the social
+social network graphs are in a great demand. 
+
+In general, analyses of social networks identify their various specific
+features~\cite{Chakrabarti:2006:GML:1132952.1132954}. For example, a social
 graph has high \emph{clustering coefficient}, i.e. the degree of transitivity of
 a graph. Or, its diameter, i.e. the minimum number of hops in which some
 fraction (e.g., 90\%) of all connected pairs of nodes can reach each other, is
-usually low due to weak ties joining faraway cliques. Another important aspect
+usually low due to weak ties joining faraway cliques. 
+
+Another important aspect
 of social networks is the community effect. A detailed study of structure of
 communities in 70 real-world networks is provided, e.g., in
 paper~\cite{Leskovec:2008:SPC:1367497.1367591}. Authors of
 paper~\cite{Prat-Perez:2014:CSS:2621934.2621942} analyze the structure of
 communities (clustering coefficient, triangle participation ratio, bridges,
-diameter, conductance and size) in both real graphs and output by existing graph
+diameter, conductance and size) in both real-world graphs and outputs of existing graph
 generators LFR~\cite{PhysRevE.78.046110} and the
-LDBC-SNB~\cite{Erling:2015:LSN:2723372.2742786}. %They discover that communities
-found among different graphs follow quite similar distributions and that
-communities in a single graph have diverse nature, and are difficult to fit with
-a single model.
+LDBC-SNB~\cite{Erling:2015:LSN:2723372.2742786}. They discover that communities found in different graphs follow quite similar distributions and that communities in a single graph have diverse nature and are difficult to fit with a single model.
 
-Exhisting, social network generators try to reproduce different aspects of the
-generated network, from high can be categorized into statistical and agent-based.
+The existing social network generators try to reproduce different aspects of the
+generated network. They can be categorized into statistical and agent-based.
 \emph{Statistical
 approaches}~\cite{PhysRevE.78.046110,Yao2011,Armstrong:2013:LDB:2463676.2465296,Pham2013,Sukthankar-SocialInfo2014,Erling:2015:LSN:2723372.2742786,Nettleton2016}
-focus on reproducing aspects of the network statistics. In \emph{agent-based
+focus on reproducing aspects of the network. In \emph{agent-based
 approaches}~\cite{Barrett:2009:GAL:1995456.1995598,Bernstein:2013:SAS:2499604.2499609}
 the networks are constructed by directly simulating the agents' social choices.
 
@@ -175,7 +176,7 @@ It is implemented on top of Hadoop to provide scalability.
 
 %The generated data have become a part if several graph benchmarks, such as GraphBIG~\cite{Nai:2015:GUG:2807591.2807626}.
 
-\paragraph{Towards More Realistic Data} ~\cite{Nettleton2016} argued that the main body of existing work lies in
+\paragraph{Towards More Realistic Data} \cite{Nettleton2016} argued that the main body of existing work lies in
 topology generation which approximate the characteristics of a real social
 network (such as a small graph diameter, small average path length, skew degree
 distribution, and community structures), however without data. Hence, they
