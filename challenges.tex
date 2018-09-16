@@ -165,4 +165,28 @@ in size to those typically used for benchmarking, and robust generation
 techniques with structural guarantees (e.g. degree distribution, clustering
 coefficient, etc.).
 
+\subsection{Privacy-preserving Graph Generation}
 
+A lot of work have been conducted on the topic of privacy-preserving graph
+randomization for publishing social graphs~\cite{wu2010survey}. However, very
+little attention has been put on generating synthetic social graphs with
+privacy-preserving guarantees. 
+
+Existing work focuses on generating graphs with ``differential
+privacy''~\cite{dwork2009differential} guarantees. More specifically, in
+~\cite{wang2013preserving} the authors develop a differential privacy graph
+generation approach based on the dK-graph generation
+model~\cite{mahadevan2006systematic} that outperforms the Stochastic Kronecker
+Graph Model~\cite{LeskovecCKF05} in terms of the produced structural properties,
+eventhough the results show that there is still room for improvement.
+
+More on this line of research, recent work~\cite{qin2017generating} extends the notion of differential privacy
+and propose an `` edge local differential privacy'' based graph generation
+method. The poposed method allows generating privacy preserving synthetic social
+graphs wihtout the need of a centralized data curator, while preserving structural
+properties more accurately than than straw-hat methods such as Randomized
+Neighbor Lists (based on randomized response~\cite{dwork2014algorithmic}) and
+Degree-based Graph Generation (which perturbates the original graph degrees
+using the Laplace mechanism~\cite{dwork2009differential}). Again, eventhough the
+proposed technique outperforms the baselines, the results show that there is
+still room for improvement.
