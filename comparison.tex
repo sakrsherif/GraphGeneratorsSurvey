@@ -76,9 +76,9 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
 \cline{2-10}
    & R-MAt & fixed & & Y & N & Y & power-law & &  N  \\
 \cline{2-10}
-  & GraphGen & & & & & & & &    \\
+  & GraphGen & fixed & N & Y & N & Y&  & & N   \\
 \cline{2-10}
-  & Graph 500  & fixed & & Y & N & Y & power-law & &  Y  \\
+  & Graph 500  & fixed & Various Domains& Y & N & Y & power-law & &  Y  \\
 \cline{2-10}
   & BTER  & N & N &   N &  & N & user-defined &  ? & Y  \\
 \cline{2-10}
@@ -116,7 +116,7 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
 \cline{2-10}
  & LDBC SPB & fixed & media  & mixes & N & Y & power law, skewed values, value correlation &  RDF & N  \\
 \cline{2-10}
- & LinkGen & & & & & & & & \\
+ & LinkGen & schema-driven & user-defined & templates & Y  & N & Gaussian, Zipfian& RDF & N\\
 \hline
 \end{tabular} }
 \label{tab:comparisonCharacteristicsA}
@@ -172,9 +172,9 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
 \hline
 \hline   % ======================   graph analytics
 \multirow{3}{*}{\rot{\textbf{Ana.}}}
-  & HPC Scalable Graph Analysis & & & & & & & &    \\
+  & HPC Scalable Graph Analysis & fixed & & Y & N& N& uniform & & N   \\
 \cline{2-10}
-  & Graphalytics & & & & & & & &    \\
+  & Graphalytics & extracted & social network & Y& N& power law & & & N   \\
 \hline
 \hline   %  ======================  streaming
 \multirow{2}{*}{\rot{\textbf{St.}}}
