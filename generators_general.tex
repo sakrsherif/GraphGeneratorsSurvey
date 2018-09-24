@@ -1,12 +1,12 @@
 \subsection{General Graphs}
 \label{sec:generators_general}
 
-First of all we focus on papers dealing with generation of general graph
-data not aiming at a particular application domain. Currently, there exists a
+We start by focusing on approaches that have been designed for dealing with the generation of general graph
+data that is not aimed at a particular application domain. Currently, there exists a
 number of tools which involve a kind of general graph data generator, such as
 gtools from projects nauty and Traces~\cite{gtools} or the Stanford
 GraphBase~\cite{GraphBase}. We, however, focus on primarily
-generating/benchmarking projects targeting Big Data world.
+generating/benchmarking projects targeting the Big Data world.
 
 
 \paragraph {Preferential Attachment} Barabasi and Albert~\cite{Barabasi99emergenceScaling} introduced a graph generation model that relies on two main mechanisms. The first mechanism is continuously expanding the graphs by adding new vertices. The second mechanism is to preferentially attach the new vertices   to the nodes/regions that are already well connected. So, in this approach, the generation of large graphs is governed by standard, robust self-organizing mechanisms that go beyond the characteristics of individual applications.
@@ -25,7 +25,7 @@ based on the IBM synthetic data generation code for associations and sequential
 patterns\footnote{From 1996, no longer available at
 \url{http://www.almaden.ibm.com/cs/projects/iis/hdb/Projects/data
 mining/mining.shtml}}. GraphGen creates a collection of labeled, undirected and
-connected graphs aiming at performance evaluation of frequent subgraph mining
+connected graphs which focuses on the performance evaluation of frequent subgraph mining
 algorithms and graph query processing algorithms. The result is represented as a
 list of graphs, each consisting of a list of nodes and a list of edges.
 
@@ -51,7 +51,7 @@ symbolic networks.
 \paragraph{BTER} BTER (Block Two-Level
 Erd\"{o}s-R\'{e}ny)~\cite{kolda2014scalable} is a graph generator based on the
 creation of multiple Erd\"{o}s-R\'{e}ny graphs with different connection
-probabilities, connected randomly between them. As the main feature, BTER is able
+probabilities  of which they are connected randomly between them. As the main feature, BTER is able
 to reproduce input degree distributions and average clustering
 coefficient per degree values. The generator starts by grouping the vertices
 by degree $d$, and forming groups of size $d+1$ of nodes with degree $d$. Then, these
@@ -61,7 +61,7 @@ probability, for each node, the excess degree (i.e, the degree that in
 expectation will not be realized internally in the group) is computed and used to connect
 nodes from different groups at random. The authors describe a highly scalable
 MapReduce based implementation that is capable of generating large graphs (with
-billions of nodes) in reasonable amounts of time.
+billions of nodes) in a reasonable amounts of time.
 
 \paragraph{Darwini} Darwini~\cite{edunov2016darwini} is an extension of BTER
 designed to run on Vertex Centric computing frameworks like
@@ -70,10 +70,10 @@ additional feature that it is more accurate when reproducing the clustering
 coefficient of the input graph. Instead of just focusing on the average
 clustering coefficient for each degree, Darwini is able to model the clustering
 coefficient distribution per degree. It achieves this by grouping the vertices
-of the graph into buckets by the expected number of closed triangles they need
+of the graph into buckets by the expected number of closed triangles that they need
 to close in order to attain the expected clustering coefficient, which is
 sampled from the input distributions. Then, the vertices in each bucket are
-connected randomly with a probability that would produce, in expectation, the
+connected randomly with a probability that would produce the expected 
 desired number of triangles for such bucket. Then, as in BTER, the excess degree
 is used to connect the different buckets. The authors report that Darwini is
 able to generate graphs with billions and even trillions of edges.

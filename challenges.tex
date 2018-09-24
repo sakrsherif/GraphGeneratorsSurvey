@@ -13,10 +13,10 @@ the fact that ordinary users are
 unwilling to use complex benchmarking tools. This observation can be
 seen, for example, in the case of XML benchmarks -- even though there exist
 robust and complex data generators (such as
-ToXGene~\cite{conf/webdb/BarbosaMKL02}, which supports specification of
+ToXGene~\cite{conf/webdb/BarbosaMKL02}, which supports the specification of
 structural aspects, value distributions, references etc.), the most popular
 benchmarking tool is XMark~\cite{Schmidt:2002:XBX:1287369.1287455}, which models
-a single use case and enables to specify just the size of the data. Hence, the
+a single use case and enables its users to specify just the size of the data. Hence, the
 other extreme is to provide a simple data generator which does not require any
 complex settings and thus guarantees a simple and fast benchmarking process.
 
@@ -28,27 +28,27 @@ structural and value features in order to learn the complex parameters.
 
 \subsection{Large Scale Graphs with Realistic Structure}
 
-Most of existing graph generators aiming at generating large graphs with realistic
+Most of existing graph generators are focused on generating large graphs with realistic
 structural characteristics focus principally on reproducing the degree
 distribution and the clustering
 coefficient~\cite{kolda2014scalable,edunov2016darwini}. However, there are other
-structural characteristics one might be interested in reproducing for a large
+structural characteristics that one might be interested in reproducing for a large
 graph, such as the diameter, the size of the largest connected component, or the
 hierarchical community structure. Graph practitioners are highly interested in knowing
 how other high-level structural characteristics affect the performance of graph
 queries and graph algorithms. Hence, a compelling open challenge consists
 of creating
-graph generators that allow to reproduce diverse structural characteristics
+graph generators that allow one to reproduce diverse structural characteristics
 of the graphs along with large scale sizes.
 
 \subsection{Single- vs. Multi-domain}
 
-Most of existing graph generators generate graphs that are either not labeled or
+Most of existing graph generators also generate graphs that are either not labeled or
 are specific to a given domain (e.g.  Social Networks). Graphs from different
 domains have different schemas, structural characteristics, property
 distributions, etc. which might have an impact on the performance of the
 application under test. Thus, graph processing engine developers are asking for
-generators or tools to flexibly and holistically generate multi-domain graphs, allowing to configure aspects
+generators or tools to flexibly and holistically generate multi-domain graphs  in a flexible and holistic manner, allowing to configure aspects
 such as size, schemata, data distributions and other structural
 characteristics such as degree distributions, clustering coefficients, and
 so on.
@@ -90,19 +90,19 @@ usually influences the structure of the data and consequently all the related
 parts of the application (i.e., storage strategies, operations, indexes etc.).
 In the world of graph data such graphs that change with time are denoted as \emph{evolving}, \emph{temporal}, \emph{dynamic}, or \emph{time-varying}. They can be modelled as labeled graphs, where the labels capture some measure of time~\cite{Michail2015}.
 
-The evolution of graphs can be considered variously. We can assume a static set of nodes and a varying set of edges.  Or, there are applications where the graphs only ``grow'', i.e., the set of nodes and/or edges is only extended with new items. In the most general case we can assume any changes in both set of nodes and set of edges. Anyway with the evolution aspect the complexity of classical graph problems increases significantly~\cite{Michail2015,Wu:2014:PPT:2732939.2732945}. In some graph applications, such as, e.g., social networks, the evolution of the
+The evolution of graphs can be considered from multiple perspectives. We can assume a static set of nodes and a varying set of edges.  Or, there are applications where the graphs only ``grow'', i.e., the set of nodes and/or edges is only extended with new items. In the most general case we can assume any changes in both set of nodes and set of edges. Anyway with the evolution aspect the complexity of classical graph problems increases significantly~\cite{Michail2015,Wu:2014:PPT:2732939.2732945}. In some graph applications, such as, e.g., social networks, the evolution of the
 data is a significant aspect, especially in the activity graphs~\cite{doreian1997evolution,Kumar:2006:SEO:1150402.1150476,Hellmann2014583,wang2013,Kossinets88,Viswanath:2009:EUI:1592665.1592675}.
 However, as shown in~\cite{Leskovec:2005:RMT:2101235.2101254,Leskovec:2005:GOT:1081870.1081893},
 evolving graphs have further specific features. For example, some graphs grow over time according to a \emph{densification power law} which means that real graphs tend to sprout many more edges than nodes, and thus are densifying as they grow. Also the effective diameter of graphs tends to shrink or stabilize as the graph grows with time.
 
-A related problem is \emph{data versioning} and respective ability to query across multiple versions of data or to carry out general analysis.
+A related problem is \emph{data versioning} and its respective ability to query across multiple versions of data or to carry out general analysis.
 %Considering graph
 %data this problem is also common, for example  in the area of Linked
 This problem has been investigated for instance within the domain of Linked
 Open Data~\cite{DBLP:conf/semweb/Papakonstantinou16,DBLP:conf/esws/MeimarisP16,fernandez2015towards,fernandez2015bear}.
 
 
-The respective data generator should hence be able to simulate a natural growth and/or changes in the structure of the graph with regards to the various features of distinct use cases. However,  even though the area of dynamic graphs is intensively studied, surprisingly there seem to exist only very few proposals of a generator dealing with this area. In~\cite{GoerkeKlugeSchumm2012_1000029825} the authors focus on \emph{clustering dynamic graphs}, i.e. graphs where the clustering corresponds to the partition of nodes into natural groups based on the paradigm of intra-cluster density versus inter-cluster sparsity of edges. The generator generates a time series of random graphs $G_0, G_1, ..., G_n$, where $G_t$ emerges from $G_{t-1}$ via atomic updates, i.e., insertion or deletion of an edge or a vertex. The generator keeps track of a (dynamic) ground truth clustering. The probability of atomic events is chosen in a way that adheres to this clustering, without losing randomness.
+The respective data generator should hence be able to simulate a natural growth and/or changes in the structure of the graph with regards to the various features of distinct use cases. However,  even though the area of dynamic graphs is intensively studied, surprisingly there seem to exist only very few proposals of a generator for dealing with this area. In~\cite{GoerkeKlugeSchumm2012_1000029825} the authors focus on \emph{clustering dynamic graphs}, i.e. graphs where the clustering corresponds to the partition of nodes into natural groups based on the paradigm of intra-cluster density versus inter-cluster sparsity of edges. The generator generates a time series of random graphs $G_0, G_1, ..., G_n$, where $G_t$ emerges from $G_{t-1}$ via atomic updates, i.e., insertion or deletion of an edge or a vertex. The generator keeps track of a (dynamic) ground truth clustering. The probability of atomic events is chosen in a way that adheres to this clustering, without losing randomness.
 
 Another recent proposal of a generator~\cite{mlg2018_42} of temporal graphs results from an observation that small subgraph patterns in networks, called \emph{network motifs} or \emph{graphlets}, are crucial indicators of the structure and the evolution of the graphs~\cite{Paranjape:2017:MTN:3018661.3018731}. For a given graph and a predefined ordered list of structural atomic motifs the generator first computes the distribution of the motifs in the graph. The distribution is then used to generate a synthetic graph with the same features.
 
@@ -132,7 +132,7 @@ implemented on the basis of an object DBMS currently supports graph, document,
 key/value, and object models. Such type of DBMSs also needs a specific
 data generator that would enable
 to test new features and analyze efficiency of operations. However, since the
-multi-model systems are in the context of Big Data rather new, there exist only
+multi-model systems are in the context of Big Data are rather new, there exist only
 a few benchmarks targeting multi-model DBMSs (such as
 Bigframe~\cite{journals/pvldb/KunjirKB14} or UniBench~\cite{conf/cidr/lu17})
 with limited capabilities.
@@ -169,7 +169,7 @@ coefficient, etc.).
 
 A lot of work has been conducted on techniques for publishing social network
 graphs with privacy guarantees~\cite{wu2010survey}. However, the topic of
-generating social graphs with a realistic structure yet private has been barely explored.  
+generating social graphs with a realistic structure yet private has been barely explored.
 
 Most of the existing work falls within the topic of graph generation with ``differential
 privacy''~\cite{dwork2009differential} guarantees. More specifically, in

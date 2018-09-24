@@ -1,0 +1,248 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+The style file: ACM-Reference-Format-Journals.bst
+Database file #1: biblio.bib
+Warning--no key, author, or editor in GraphGen
+Warning--no author, editor, organization, or key in GraphGen
+Warning--to sort, need author, editor, or key in GraphGen
+Warning--no key, author, or editor in Graph500
+Warning--no author, editor, organization, or key in Graph500
+Warning--to sort, need author, editor, or key in Graph500
+Warning--no key, author, or editor in owl
+Warning--no author, editor, organization, or key in owl
+Warning--to sort, need author, editor, or key in owl
+Warning--no key, author, or editor in sql
+Warning--no author, editor, organization, or key in sql
+Warning--to sort, need author, editor, or key in sql
+Warning--no key, author, or editor in dblp
+Warning--no author, editor, organization, or key in dblp
+Warning--to sort, need author, editor, or key in dblp
+Warning--no key, author, or editor in TPC-H
+Warning--no author, editor, organization, or key in TPC-H
+Warning--to sort, need author, editor, or key in TPC-H
+Warning--no key, author, or editor in spb
+Warning--no author, editor, organization, or key in spb
+Warning--to sort, need author, editor, or key in spb
+Warning--no key, author, or editor in HPCgraph
+Warning--no author, editor, organization, or key in HPCgraph
+Warning--to sort, need author, editor, or key in HPCgraph
+Warning--no key, author in dblp
+Warning--no key, author in dblp
+Warning--no key, author in Graph500
+Warning--no key, author in Graph500
+Warning--no key, author in GraphGen
+Warning--no key, author in GraphGen
+Warning--no key, author in HPCgraph
+Warning--no key, author in HPCgraph
+Warning--no key, author in owl
+Warning--no key, author in owl
+Warning--no key, author in DBLP:books/igi/Sakr2011
+Warning--no key, author in DBLP:books/igi/Sakr2011
+Warning--no key, author in spb
+Warning--no key, author in spb
+Warning--no key, author in sql
+Warning--no key, author in sql
+Warning--no key, author in TPC-H
+Warning--no key, author in TPC-H
+Warning--no key, author, or editor in owl
+Warning--no author, editor, organization, or key in owl
+Warning--empty author and editor in owl
+Warning--empty address in owl
+Warning--no key, author, or editor in sql
+Warning--no author, editor, organization, or key in sql
+Warning--empty author and editor in sql
+Warning--empty address in sql
+Warning--no key, author, or editor in HPCgraph
+Warning--no author, editor, organization, or key in HPCgraph
+Warning--empty author and editor in HPCgraph
+Warning--empty address in HPCgraph
+Warning--no key, author, or editor in Graph500
+Warning--no author, editor, organization, or key in Graph500
+Warning--empty author and editor in Graph500
+Warning--empty address in Graph500
+Warning--no key, author, or editor in GraphGen
+Warning--no author, editor, organization, or key in GraphGen
+Warning--empty author and editor in GraphGen
+Warning--empty address in GraphGen
+Warning--no key, author, or editor in spb
+Warning--no author, editor, organization, or key in spb
+Warning--empty author and editor in spb
+Warning--empty address in spb
+Warning--no key, author, or editor in dblp
+Warning--no author, editor, organization, or key in dblp
+Warning--empty author and editor in dblp
+Warning--empty address in dblp
+Warning--no key, author, or editor in TPC-H
+Warning--no author, editor, organization, or key in TPC-H
+Warning--empty author and editor in TPC-H
+Warning--empty publisher in TPC-H
+Warning--empty address in TPC-H
+Warning--empty publisher in adamic2005political
+Warning--empty address in adamic2005political
+Warning--empty address in AkogluMF08
+Warning--empty publisher in Sukthankar-SocialInfo2014
+Warning--page numbers missing in both pages and numpages fields in Sukthankar-SocialInfo2014
+Warning--require articleno with numpages field in Aluc:2014:DST:2717213.2717229
+Warning--empty address in Angles18
+Warning--page numbers missing in both pages and numpages fields in Angles18
+Warning--empty address in AnglesABBFGLPPS18
+Warning--require articleno with numpages field in Angles:2014:LDB:2627692.2627697
+Warning--empty address in AriouaB18
+Warning--require articleno with numpages field in Armstrong:2013:LDB:2463676.2465296
+Warning--require articleno with numpages field in Bader:2005:DIH:2099301.2099360
+Warning--empty publisher in GTgraph
+Warning--empty address in GTgraph
+Warning--empty publisher in 10dimacs
+Warning--no number and no volume in gMark
+Warning--page numbers missing in both pages and numpages fields in gMark
+Warning--empty publisher in conf/webdb/BarbosaMKL02
+Warning--empty address in conf/webdb/BarbosaMKL02
+Warning--empty address in Barrett:2009:GAL:1995456.1995598
+Warning--require articleno with numpages field in Barrett:2009:GAL:1995456.1995598
+Warning--can't use both author and editor fields in Beis2015
+Warning--require articleno with numpages field in Bizer:2009:DCP:1640541.1640848
+Warning--no number and no volume in Bizer09theberlin
+Warning--page numbers missing in both pages and numpages fields in Bizer09theberlin
+Warning--empty publisher in bollacker2008freebase
+Warning--empty address in bollacker2008freebase
+Warning--empty publisher in sib
+Warning--empty address in sib
+Warning--empty address in BFHI18
+Warning--empty address in BFVY18
+Warning--require articleno with numpages field in PhysRevLett.84.2529
+Warning--articleno field, but no numpages field, in Chakrabarti:2006:GML:1132952.1132954
+Warning--page numbers missing in both pages and numpages fields in Chakrabarti:2006:GML:1132952.1132954
+Warning--require pages or numpages fields with articleno field in Chakrabarti:2006:GML:1132952.1132954
+Warning--empty publisher in DBLP:conf/sdm/ChakrabartiZF04
+Warning--empty address in DBLP:conf/sdm/ChakrabartiZF04
+Warning--require articleno with numpages field in Cheng:2007:FTV:1247480.1247574
+Warning--page numbers missing in both pages and numpages fields in CheungSML16
+Warning--require articleno with numpages field in Ciglan:2012:BTO:2374486.2375242
+Warning--require articleno with numpages field in Cooper:2010:BCS:1807128.1807152
+Warning--require articleno with numpages field in Dayarathna:2014:GDB:2676904.2676939
+Warning--require articleno with numpages field in Dominguez-Sal:2010:DDG:1946050.1946053
+Warning--require articleno with numpages field in Dominguez-Sal:2010:SGD:1927585.1927590
+Warning--empty address in doreian1997evolution
+Warning--require articleno with numpages field in Duan:2011:AOC:1989323.1989340
+Warning--no number and no volume in edunov2016darwini
+Warning--page numbers missing in both pages and numpages fields in edunov2016darwini
+Warning--require articleno with numpages field in Erling:2015:LSN:2723372.2742786
+Warning--empty address in FanWX16a
+Warning--no number and no volume in fernandez2015towards
+Warning--no journal in fernandez2015bear
+Warning--no number and no volume in fernandez2015bear
+Warning--page numbers missing in both pages and numpages fields in fernandez2015bear
+Warning--empty address in Ferrara08OM
+Warning--page numbers missing in both pages and numpages fields in Ferrara08OM
+Warning--empty publisher in DBLP:conf/semweb/GarbisKK13
+Warning--empty address in DBLP:conf/semweb/GarbisKK13
+Warning--can't use both author and editor fields in Giatsoglou2011
+Warning--require articleno with numpages field in Gonzalez:2012:PDG:2387880.2387883
+Warning--empty publisher in goodfellow2014generative
+Warning--empty address in goodfellow2014generative
+Warning--empty institution in Grossniklaus2013Towar-24253
+Warning--no number and no volume in grover2018graphite
+Warning--page numbers missing in both pages and numpages fields in grover2018graphite
+Warning--require articleno with numpages field in Iosup:2016:LGB:3007263.3007270
+Warning--no number and no volume in kafer2012towards
+Warning--page numbers missing in both pages and numpages fields in kafer2012towards
+Warning--unusual to have number, but no volume, for kagan2015using
+Warning--empty publisher in kamvar2003eigentrust
+Warning--empty address in kamvar2003eigentrust
+Warning--empty publisher in katz2006social
+Warning--empty address in katz2006social
+Warning--require articleno with numpages field in Kim:2015:CDM:2854006.2854013
+Warning--can't use both author and editor fields in Kim2010
+Warning--no number and no volume in kipf2016variational
+Warning--page numbers missing in both pages and numpages fields in kipf2016variational
+Warning--empty publisher in GraphBase
+Warning--empty address in GraphBase
+Warning--empty publisher in koubarakis2010modeling
+Warning--empty address in koubarakis2010modeling
+Warning--require articleno with numpages field in Kumar:2006:SEO:1150402.1150476
+Warning--empty publisher in kumar2016edge
+Warning--empty address in kumar2016edge
+Warning--empty publisher in kwak2010twitter
+Warning--empty address in kwak2010twitter
+Warning--require articleno with numpages field in PhysRevE.80.016118
+Warning--require articleno with numpages field in PhysRevE.78.046110
+Warning--empty publisher in le2012linked
+Warning--empty address in le2012linked
+Warning--empty publisher in leskovec2009meme
+Warning--empty address in leskovec2009meme
+Warning--require articleno with numpages field in Leskovec:2005:RMT:2101235.2101254
+Warning--require articleno with numpages field in Leskovec:2005:GOT:1081870.1081893
+Warning--empty address in LeskovecKF05
+Warning--require articleno with numpages field in Leskovec:2008:SPC:1367497.1367591
+Warning--no number and no volume in li2018learning
+Warning--page numbers missing in both pages and numpages fields in li2018learning
+Warning--empty publisher in conf/cidr/lu17
+Warning--empty address in conf/cidr/lu17
+Warning--page numbers missing in both pages and numpages fields in conf/cidr/lu17
+Warning--require articleno with numpages field in Ma:2006:TCO:2094613.2094629
+Warning--empty publisher in mahdisoltani2013yago3
+Warning--empty address in mahdisoltani2013yago3
+Warning--page numbers missing in both pages and numpages fields in mahdisoltani2013yago3
+Warning--empty publisher in malewicz2010pregel
+Warning--empty address in malewicz2010pregel
+Warning--empty publisher in maniu2011building
+Warning--empty address in maniu2011building
+Warning--empty publisher in massa2007trust
+Warning--empty address in massa2007trust
+Warning--empty publisher in mauri2016triplewave
+Warning--empty address in mauri2016triplewave
+Warning--empty publisher in gtools
+Warning--empty address in gtools
+Warning--empty publisher in DBLP:conf/esws/MeimarisP16
+Warning--empty address in DBLP:conf/esws/MeimarisP16
+Warning--can't use both author and editor fields in Michail2015
+Warning--require articleno with numpages field in Miller:1995:WLD:219717.219748
+Warning--empty publisher in moore2013beware
+Warning--empty address in moore2013beware
+Warning--empty address in Morsey:2012:UBR:2900929.2901031
+Warning--require articleno with numpages field in Morsey:2012:UBR:2900929.2901031
+Warning--can't use both author and editor fields in Morsey2011
+Warning--empty publisher in PanZ13
+Warning--empty address in PanZ13
+Warning--empty publisher in DBLP:conf/semweb/Papakonstantinou16
+Warning--empty address in DBLP:conf/semweb/Papakonstantinou16
+Warning--page numbers missing in both pages and numpages fields in DBLP:conf/semweb/Papakonstantinou16
+Warning--require articleno with numpages field in Paranjape:2017:MTN:3018661.3018731
+Warning--can't use both author and editor fields in Pham2013
+Warning--can't use both author and editor fields in Pobiedina2014
+Warning--empty publisher in sparql
+Warning--empty address in sparql
+Warning--empty publisher in mlg2018_42
+Warning--empty address in mlg2018_42
+Warning--page numbers missing in both pages and numpages fields in mlg2018_42
+Warning--require articleno with numpages field in Qiao:2015:RAR:2723372.2746479
+Warning--empty publisher in DBLP:conf/www/RiveroSBR12
+Warning--empty address in DBLP:conf/www/RiveroSBR12
+Warning--page numbers missing in both pages and numpages fields in DBLP:conf/www/RiveroSBR12
+Warning--empty address in sakr2016big
+Warning--empty address in DBLP:books/igi/Sakr2011
+Warning--can't use both author and editor fields in Saleem2015
+Warning--empty address in Schmidt:2002:XBX:1287369.1287455
+Warning--require articleno with numpages field in Schmidt:2002:XBX:1287369.1287455
+Warning--can't use both author and editor fields in Schmidt2010
+Warning--require articleno with numpages field in Sevenich:2016:UDL:3007263.3007265
+Warning--no number and no volume in simonovsky2018graphvae
+Warning--page numbers missing in both pages and numpages fields in simonovsky2018graphvae
+Warning--empty publisher in suchanek2007yago
+Warning--empty address in suchanek2007yago
+Warning--empty publisher in tommasini2017rsplab
+Warning--empty address in tommasini2017rsplab
+Warning--require articleno with numpages field in Viswanath:2009:EUI:1592665.1592675
+Warning--empty address in wang2013
+Warning--can't use both author and editor fields in Wang2005
+Warning--no number and no volume in west2014exploiting
+Warning--page numbers missing in both pages and numpages fields in west2014exploiting
+Warning--require articleno with numpages field in Wu:2014:PPT:2732939.2732945
+Warning--can't use both author and editor fields in Yao2011
+Warning--empty publisher in you2018graphrnn
+Warning--empty address in you2018graphrnn
+Warning--empty year in doi:10.1002/wics.1403
+Warning--empty publisher in zhou2008large
+Warning--empty address in zhou2008large
+Warning--empty publisher in ziegler2005improving
+Warning--empty address in ziegler2005improving
+(There were 244 warnings)
