@@ -152,19 +152,19 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
 \hline
 \hline %  ======================   social networks
 \multirow{8}{*}{\rot{\textbf{SNs}}}
- & \cite{Barrett:2009:GAL:1995456.1995598} & & & & & & & &    \\
+ & \cite{Barrett:2009:GAL:1995456.1995598} & fixed & social network & N & N & Y & simulation-driven & -- &  -- \\
 \cline{2-10}
- & \cite{Yao2011} & & & & & & & &    \\
+ & \cite{Yao2011} & fixed & social network & N & N & N & power-law & -- & --  \\
 \cline{2-10}
- & LinkBench & & & & & & & &    \\
+ & LinkBench & fixed & social network & Y & Y & Y & Facebook & -- & -- \\
 \cline{2-10}
- & S3G2 & Y & Y  & N &  & Y & Facebook-like  &  CSV, RDF & Y   \\
+ & S3G2 & Y & Y  & N &  & Y & Facebook  & CSV, RDF & Y   \\
 \cline{2-10}
- & \cite{Sukthankar-SocialInfo2014} & & & & & & & &    \\
+ & \cite{Sukthankar-SocialInfo2014} & schema-driven & social-network & N & N & Y & power-law & CSV & N   \\
 \cline{2-10}
- & LDBC SNB  & Y & Y &   generated &  & Y & Facebook-like &  CSV, RDF & Y     \\
+ & LDBC SNB  & Y & Y &   generated &  & Y & Facebook &  CSV, RDF & Y     \\
 \cline{2-10}
-  & \cite{Nettleton2016} & & & & & & & &    \\
+  & \cite{Nettleton2016} & schema-driven & social network & N & N & Y & power-law & -- & N  \\
 %\cline{2-10}
 % & SNG  & Y & Y &   N &  & Y & power-law & ? &  ?   \\
 %\cline{2-10}
@@ -270,11 +270,11 @@ As we have mentioned, the basic classification that we have used in this paper i
 \cline{2-8}
  & LinkBench  & & & & x & & \\
 \cline{2-8}
- & S3G2  & & & & x & & \\
+ & S3G2  & & x & x & x & & \\
 \cline{2-8}
  & \cite{Sukthankar-SocialInfo2014}  & & & & x & & \\
 \cline{2-8}
- & LDBC SNB   & & & & x & & \\
+ & LDBC SNB   & & x & x & x & & \\
 \cline{2-8}
   & \cite{Nettleton2016}  & & & & x & & \\
 \hline
@@ -296,4 +296,7 @@ As we have mentioned, the basic classification that we have used in this paper i
 \label{tab:overlapping}
 \end{table}
 
-As we can see ... \TODO{Add a summary.}
+As we can see ... \TODO{Add a summary.} LDBC can be also seen as graph databases
+(even tough it is not specific for them, it is clear it was designed for such
+technologies).
+
