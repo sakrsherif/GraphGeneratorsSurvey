@@ -158,11 +158,11 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
 \cline{2-10}
  & LinkBench & fixed & social network & Y & Y & Y & Facebook & -- & -- \\
 \cline{2-10}
- & S3G2 & Y & Y  & N &  & Y & Facebook  & CSV, RDF & Y   \\
+ & S3G2 & fixed & social network  & N & N  & Y & Facebook  & CSV, RDF & Y   \\
 \cline{2-10}
  & \cite{Sukthankar-SocialInfo2014} & schema-driven & social-network & N & N & Y & power-law & CSV & N   \\
 \cline{2-10}
- & LDBC SNB  & Y & Y &   generated &  & Y & Facebook &  CSV, RDF & Y     \\
+ & LDBC SNB  & fixed & social network &  generated & Y  & Y & Facebook &  CSV, RDF & Y     \\
 \cline{2-10}
   & \cite{Nettleton2016} & schema-driven & social network & N & N & Y & power-law & -- & N  \\
 %\cline{2-10}
@@ -192,7 +192,11 @@ As we can see ... \TODO{Add a summary.}
 
 \subsection{Overlapping}
 
-As we have mentioned, the basic classification that we have used in this paper is  based on a relatively vague division of the generators on the basis of the current application domains or research areas. In addition, some of the generators are either general or have features applicable in other domains. So the classes can overlap, as depicted in Table~\ref{tab:overlapping}.
+As we have mentioned, the basic classification that we have used in this paper
+is  based on a relatively vague division of the generators on the basis of the
+current application domains or research areas. In addition, some of the
+generators are either general or have features applicable in other domains. So
+the classes can overlap, as depicted in Table~\ref{tab:overlapping}.
 
 \begin{table}[h]
 \scriptsize
@@ -268,7 +272,7 @@ As we have mentioned, the basic classification that we have used in this paper i
 \cline{2-8}
  & \cite{Yao2011}  & & & & x & & \\
 \cline{2-8}
- & LinkBench  & & & & x & & \\
+ & LinkBench  & & & x & x & & \\
 \cline{2-8}
  & S3G2  & & x & x & x & & \\
 \cline{2-8}
@@ -296,7 +300,15 @@ As we have mentioned, the basic classification that we have used in this paper i
 \label{tab:overlapping}
 \end{table}
 
-As we can see ... \TODO{Add a summary.} LDBC can be also seen as graph databases
-(even tough it is not specific for them, it is clear it was designed for such
-technologies).
+\TODO{Extend summary.}
+For example, some social network graph generators such as the LDBC-SNB, S3G2 or
+LinkBench, can be used to test graph databases. In the case of the first two,
+even though they are designed not to be specific to any type of technology,
+they graph databases are their main target.  Additionally, they also provide serializers for
+RDF, thus they can also be used to test RDF systems. 
+
+In the case of LinkBench, nothing prevents the user to load the generated graph
+in a graph database (Facebook uses a MySQL in that paper) to
+test a workload similar to Facebook and extend and complement it with more
+graphy queries like those in LDBC-SNB. 
 
