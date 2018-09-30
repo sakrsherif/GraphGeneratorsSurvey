@@ -72,17 +72,17 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
                \\ \hline
 \hline   % ====================== general graphs
 \multirow{7}{*}{\rot{\textbf{General}}}
-  & \cite{barabasi1999emergence} & fixed & & Y & N & Y &  & &  N  \\
+  & \cite{barabasi1999emergence} & fixed & & Y & N & Y &  & edge-list &  N  \\
 \cline{2-10}
-   & R-MAt & fixed & & Y & N & Y & power-law & &  N  \\
+   & R-MAt & fixed & & Y & N & Y & power-law & edge-list &  N  \\
 \cline{2-10}
   & GraphGen & fixed & N & Y & N & Y&  & & N   \\
 \cline{2-10}
   & Graph 500  & fixed & Various Domains& Y & N & Y & power-law & &  Y  \\
 \cline{2-10}
-  & BTER  & N & N &   N &  & N & user-defined &  ? & Y  \\
+  & BTER & fixed & N &   N &  & N & user-defined & edge-list & Y  \\
 \cline{2-10}
-  & Darwini  & N & N &   N &  & N & user-defined &  ? & Y   \\
+  & Darwini & fixed & N &   N &  & N & user-defined &  edge-list & Y   \\
 %  & Watts-Strogatz~\cite{watts1998collective} & fixed & & Y & N & Y &  & &  N  \\
 %\cline{2-10}
 \hline
@@ -152,11 +152,11 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
 \hline
 \hline %  ======================   social networks
 \multirow{8}{*}{\rot{\textbf{SNs}}}
- & \cite{Barrett:2009:GAL:1995456.1995598} & fixed & social network & N & N & Y & simulation-driven & -- &  -- \\
+ & \cite{Barrett:2009:GAL:1995456.1995598} & fixed & social network & N & N & Y & simulation-driven & impl. not available &  -- \\
 \cline{2-10}
- & \cite{Yao2011} & fixed & social network & N & N & N & power-law & -- & --  \\
+ & \cite{Yao2011} & fixed & social network & N & N & N & power-law & impl. not available & --  \\
 \cline{2-10}
- & LinkBench & fixed & social network & Y & Y & Y & Facebook & -- & -- \\
+ & LinkBench & fixed & social network & Y & Y & Y & Facebook & impl. not available & -- \\
 \cline{2-10}
  & S3G2 & fixed & social network  & N & N  & Y & Facebook  & CSV, RDF & Y   \\
 \cline{2-10}
@@ -164,7 +164,7 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
 \cline{2-10}
  & LDBC SNB  & fixed & social network &  generated & Y  & Y & Facebook &  CSV, RDF & Y     \\
 \cline{2-10}
-  & \cite{Nettleton2016} & schema-driven & social network & N & N & Y & power-law & -- & N  \\
+  & \cite{Nettleton2016} & schema-driven & social network & N & N & Y & power-law & impl. not available & --  \\
 %\cline{2-10}
 % & SNG  & Y & Y &   N &  & Y & power-law & ? &  ?   \\
 %\cline{2-10}
