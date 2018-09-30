@@ -659,6 +659,26 @@ Issue 11.
 \url{http://dx.doi.org/10.1145/1989323.1989340}}
 
 
+\bibitem[\protect\citeauthoryear{Dwork and Lei}{Dwork and Lei}{2009}]%
+        {dwork2009differential}
+{Cynthia Dwork} {and} {Jing Lei}. 2009.
+\newblock \showarticletitle{Differential privacy and robust statistics}. In
+  {\em Proceedings of the forty-first annual ACM symposium on Theory of
+  computing}. ACM, 371--380.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Dwork, Roth, et~al\mbox{.}}{Dwork
+  et~al\mbox{.}}{2014}]%
+        {dwork2014algorithmic}
+{Cynthia Dwork}, {Aaron Roth}, {and} {others}. 2014.
+\newblock \showarticletitle{The algorithmic foundations of differential
+  privacy}.
+\newblock {\em Foundations and Trends{\textregistered} in Theoretical Computer
+  Science\/} {9}, 3--4 (2014), 211--407.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Edunov, Logothetis, Wang, Ching, and
   Kabiljo}{Edunov et~al\mbox{.}}{2016}]%
         {edunov2016darwini}
@@ -814,10 +834,10 @@ Issue 11.
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Grossniklaus, Leone, and
-  Z??schke}{Grossniklaus et~al\mbox{.}}{2013}]%
+\bibitem[\protect\citeauthoryear{Grossniklaus, Leone, and Zaschke}{Grossniklaus
+  et~al\mbox{.}}{2013}]%
         {Grossniklaus2013Towar-24253}
-{Michael Grossniklaus}, {Stefania Leone}, {and} {Tilmann Z??schke}. 2013.
+{Michael Grossniklaus}, {Stefania Leone}, {and} {Tilmann Zaschke}. 2013.
 \newblock {\em Towards a benchmark for graph data management and processing}.
 \newblock {T}echnical {R}eport.
 \newblock
@@ -1165,10 +1185,21 @@ Issue 11.
 \url{http://dx.doi.org/10.1007/11564126_17}}
 
 
+\bibitem[\protect\citeauthoryear{Leskovec, Chakrabarti, Kleinberg, and
+  Faloutsos}{Leskovec et~al\mbox{.}}{2005b}]%
+        {LeskovecCKF05}
+{Jure Leskovec}, {Deepayan Chakrabarti}, {Jon~M. Kleinberg}, {and} {Christos
+  Faloutsos}. 2005b.
+\newblock \showarticletitle{Realistic, Mathematically Tractable Graph
+  Generation and Evolution, Using Kronecker Multiplication}. In {\em {PKDD}}
+  {\em (Lecture Notes in Computer Science)}, Vol. 3721. Springer, 133--145.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Leskovec, Kleinberg, and Faloutsos}{Leskovec
-  et~al\mbox{.}}{2005b}]%
+  et~al\mbox{.}}{2005c}]%
         {Leskovec:2005:GOT:1081870.1081893}
-{Jure Leskovec}, {Jon Kleinberg}, {and} {Christos Faloutsos}. 2005b.
+{Jure Leskovec}, {Jon Kleinberg}, {and} {Christos Faloutsos}. 2005c.
 \newblock \showarticletitle{Graphs over Time: Densification Laws, Shrinking
   Diameters and Possible Explanations}. In {\em Proceedings of the Eleventh ACM
   SIGKDD International Conference on Knowledge Discovery in Data Mining} {\em
@@ -1180,9 +1211,9 @@ Issue 11.
 
 
 \bibitem[\protect\citeauthoryear{Leskovec, Kleinberg, and Faloutsos}{Leskovec
-  et~al\mbox{.}}{2005c}]%
+  et~al\mbox{.}}{2005d}]%
         {LeskovecKF05}
-{Jure Leskovec}, {Jon~M. Kleinberg}, {and} {Christos Faloutsos}. 2005c.
+{Jure Leskovec}, {Jon~M. Kleinberg}, {and} {Christos Faloutsos}. 2005d.
 \newblock \showarticletitle{Graphs over time: densification laws, shrinking
   diameters and possible explanations}. In {\em {KDD}}. {ACM}, 177--187.
 \newblock
@@ -1264,6 +1295,16 @@ Issue 11.
 \showISBNx{3-540-34544-2, 978-3-540-34544-2}
 \showDOI{%
 \url{http://dx.doi.org/10.1007/11762256_12}}
+
+
+\bibitem[\protect\citeauthoryear{Mahadevan, Krioukov, Fall, and
+  Vahdat}{Mahadevan et~al\mbox{.}}{2006}]%
+        {mahadevan2006systematic}
+{Priya Mahadevan}, {Dmitri Krioukov}, {Kevin Fall}, {and} {Amin Vahdat}. 2006.
+\newblock \showarticletitle{Systematic topology analysis and generation using
+  degree correlations}. In {\em ACM SIGCOMM Computer Communication Review},
+  Vol.~36. ACM, 135--146.
+\newblock
 
 
 \bibitem[\protect\citeauthoryear{Mahdisoltani, Biega, and
@@ -1535,6 +1576,17 @@ Issue 11.
 \url{http://dx.doi.org/10.1145/2723372.2746479}}
 
 
+\bibitem[\protect\citeauthoryear{Qin, Yu, Yang, Khalil, Xiao, and Ren}{Qin
+  et~al\mbox{.}}{2017}]%
+        {qin2017generating}
+{Zhan Qin}, {Ting Yu}, {Yin Yang}, {Issa Khalil}, {Xiaokui Xiao}, {and} {Kui
+  Ren}. 2017.
+\newblock \showarticletitle{Generating synthetic decentralized social graphs
+  with local differential privacy}. In {\em Proceedings of the 2017 ACM SIGSAC
+  Conference on Computer and Communications Security}. ACM, 425--438.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Rivero, Schultz, Bizer, and Ruiz}{Rivero
   et~al\mbox{.}}{2012}]%
         {DBLP:conf/www/RiveroSBR12}
@@ -1713,6 +1765,15 @@ Issue 11.
 \url{http://dx.doi.org/10.1007/11574620_54}}
 
 
+\bibitem[\protect\citeauthoryear{Wang and Wu}{Wang and Wu}{2013}]%
+        {wang2013preserving}
+{Yue Wang} {and} {Xintao Wu}. 2013.
+\newblock \showarticletitle{Preserving differential privacy in
+  degree-correlation based graph generation}.
+\newblock {\em Transactions on data privacy\/} {6}, 2 (2013), 127.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{West, Paskov, Leskovec, and Potts}{West
   et~al\mbox{.}}{2014}]%
         {west2014exploiting}
@@ -1749,6 +1810,16 @@ Issue 11.
 \showISSN{2041-1480}
 \showDOI{%
 \url{http://dx.doi.org/10.1186/2041-1480-5-32}}
+
+
+\bibitem[\protect\citeauthoryear{Wu, Ying, Liu, and Chen}{Wu
+  et~al\mbox{.}}{2010}]%
+        {wu2010survey}
+{Xintao Wu}, {Xiaowei Ying}, {Kun Liu}, {and} {Lei Chen}. 2010.
+\newblock \showarticletitle{A survey of privacy-preservation of graphs and
+  social networks}.
+\newblock In {\em Managing and mining graph data}. Springer, 421--453.
+\newblock
 
 
 \bibitem[\protect\citeauthoryear{Yang and Leskovec}{Yang and Leskovec}{2015}]%

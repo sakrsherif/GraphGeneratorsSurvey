@@ -1,9 +1,11 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
 The style file: ACM-Reference-Format-Journals.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated field_info (elt_size=4) to 11435 items from 5000.
 Database file #1: biblio.bib
-Warning--no key, author, or editor in GraphGen
-Warning--no author, editor, organization, or key in GraphGen
-Warning--to sort, need author, editor, or key in GraphGen
 Warning--no key, author, or editor in Graph500
 Warning--no author, editor, organization, or key in Graph500
 Warning--to sort, need author, editor, or key in Graph500
@@ -22,6 +24,9 @@ Warning--to sort, need author, editor, or key in TPC-H
 Warning--no key, author, or editor in spb
 Warning--no author, editor, organization, or key in spb
 Warning--to sort, need author, editor, or key in spb
+Warning--no key, author, or editor in GraphGen
+Warning--no author, editor, organization, or key in GraphGen
+Warning--to sort, need author, editor, or key in GraphGen
 Warning--no key, author, or editor in HPCgraph
 Warning--no author, editor, organization, or key in HPCgraph
 Warning--to sort, need author, editor, or key in HPCgraph
@@ -43,6 +48,7 @@ Warning--no key, author in sql
 Warning--no key, author in sql
 Warning--no key, author in TPC-H
 Warning--no key, author in TPC-H
+Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--no key, author, or editor in owl
 Warning--no author, editor, organization, or key in owl
 Warning--empty author and editor in owl
@@ -123,6 +129,8 @@ Warning--require articleno with numpages field in Dominguez-Sal:2010:DDG:1946050
 Warning--require articleno with numpages field in Dominguez-Sal:2010:SGD:1927585.1927590
 Warning--empty address in doreian1997evolution
 Warning--require articleno with numpages field in Duan:2011:AOC:1989323.1989340
+Warning--empty publisher in dwork2009differential
+Warning--empty address in dwork2009differential
 Warning--no number and no volume in edunov2016darwini
 Warning--page numbers missing in both pages and numpages fields in edunov2016darwini
 Warning--require articleno with numpages field in Erling:2015:LSN:2723372.2742786
@@ -170,6 +178,7 @@ Warning--empty address in le2012linked
 Warning--empty publisher in leskovec2009meme
 Warning--empty address in leskovec2009meme
 Warning--require articleno with numpages field in Leskovec:2005:RMT:2101235.2101254
+Warning--empty address in LeskovecCKF05
 Warning--require articleno with numpages field in Leskovec:2005:GOT:1081870.1081893
 Warning--empty address in LeskovecKF05
 Warning--require articleno with numpages field in Leskovec:2008:SPC:1367497.1367591
@@ -179,6 +188,9 @@ Warning--empty publisher in conf/cidr/lu17
 Warning--empty address in conf/cidr/lu17
 Warning--page numbers missing in both pages and numpages fields in conf/cidr/lu17
 Warning--require articleno with numpages field in Ma:2006:TCO:2094613.2094629
+Warning--can't use both volume and number fields in mahadevan2006systematic
+Warning--empty publisher in mahadevan2006systematic
+Warning--empty address in mahadevan2006systematic
 Warning--empty publisher in mahdisoltani2013yago3
 Warning--empty address in mahdisoltani2013yago3
 Warning--page numbers missing in both pages and numpages fields in mahdisoltani2013yago3
@@ -215,6 +227,8 @@ Warning--empty publisher in mlg2018_42
 Warning--empty address in mlg2018_42
 Warning--page numbers missing in both pages and numpages fields in mlg2018_42
 Warning--require articleno with numpages field in Qiao:2015:RAR:2723372.2746479
+Warning--empty publisher in qin2017generating
+Warning--empty address in qin2017generating
 Warning--empty publisher in DBLP:conf/www/RiveroSBR12
 Warning--empty address in DBLP:conf/www/RiveroSBR12
 Warning--page numbers missing in both pages and numpages fields in DBLP:conf/www/RiveroSBR12
@@ -237,6 +251,7 @@ Warning--can't use both author and editor fields in Wang2005
 Warning--no number and no volume in west2014exploiting
 Warning--page numbers missing in both pages and numpages fields in west2014exploiting
 Warning--require articleno with numpages field in Wu:2014:PPT:2732939.2732945
+Warning--empty address in wu2010survey
 Warning--can't use both author and editor fields in Yao2011
 Warning--empty publisher in you2018graphrnn
 Warning--empty address in you2018graphrnn
@@ -245,4 +260,45 @@ Warning--empty publisher in zhou2008large
 Warning--empty address in zhou2008large
 Warning--empty publisher in ziegler2005improving
 Warning--empty address in ziegler2005improving
-(There were 244 warnings)
+You've used 165 entries,
+            5290 wiz_defined-function locations,
+            2389 strings with 55505 characters,
+and the built_in function-call counts, 189074 in all, are:
+= -- 23490
+> -- 7712
+< -- 12
++ -- 2432
+- -- 3870
+* -- 13288
+:= -- 20743
+add.period$ -- 833
+call.type$ -- 165
+change.case$ -- 1213
+chr.to.int$ -- 161
+cite$ -- 452
+duplicate$ -- 14233
+empty$ -- 10051
+format.name$ -- 3170
+if$ -- 43881
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 616
+newline$ -- 1503
+num.names$ -- 1255
+pop$ -- 5716
+preamble$ -- 1
+purify$ -- 2033
+quote$ -- 0
+skip$ -- 4061
+stack$ -- 0
+substring$ -- 17475
+swap$ -- 1459
+text.length$ -- 2572
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 2136
+warning$ -- 253
+while$ -- 1195
+width$ -- 0
+write$ -- 3088
+(There were 253 warnings)
