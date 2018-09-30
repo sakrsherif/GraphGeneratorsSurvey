@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.6)  30 SEP 2018 06:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.6.6)  30 SEP 2018 06:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -699,11 +699,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1791--1799
 En-dow. \OT1/pnc/m/n/8 7, 9 (May 2014), 721--732.
  []
 
-) [35] (./main.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- )
+) [35] (./main.aux) )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
@@ -711,7 +707,7 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Here is how much of TeX's memory you used:
  4450 strings out of 492995
  66253 string characters out of 6132705
- 211753 words of memory out of 5000000
+ 211752 words of memory out of 5000000
  7856 multiletter control sequences out of 15000+600000
  28900 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -735,7 +731,7 @@ xmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2017/texmf-di
 st/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/local/texlive/2017/texmf-dist/font
 s/type1/urw/ncntrsbk/uncr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
 /urw/ncntrsbk/uncri8a.pfb>
-Output written on main.pdf (35 pages, 310823 bytes).
+Output written on main.pdf (35 pages, 310839 bytes).
 PDF statistics:
  190 PDF objects out of 1000 (max. 8388607)
  133 compressed objects within 2 object streams
