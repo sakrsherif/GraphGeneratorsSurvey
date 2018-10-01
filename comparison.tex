@@ -214,13 +214,13 @@ the classes can overlap, as depicted in Table~\ref{tab:overlapping}.
                \\ \hline
 \hline   % ====================== general graphs
 \multirow{6}{*}{\rot{\textbf{General}}}
-  & \cite{barabasi1999emergence} & {\bf x} & & & & & \\
+  & \cite{barabasi1999emergence} & {\bf x} & & & & x & \\
 \cline{2-8}
-   & R-MAt    & {\bf x} & & & & & \\
+   & R-MAt    & {\bf x} & & & & x & \\
 \cline{2-8}
   & GraphGen  & {\bf x} & & x & & & \\
 \cline{2-8}
-  & Graph 500 & {\bf x} & & & & & \\
+  & Graph 500 & {\bf x} & & & & x & \\
 \cline{2-8}
   & BTER      & {\bf x} & & & & & \\
 \cline{2-8}
@@ -301,7 +301,14 @@ the classes can overlap, as depicted in Table~\ref{tab:overlapping}.
 \end{table}
 
 \TODO{Extend summary.}
-For example, some social network graph generators such as the LDBC-SNB, S3G2 or
+
+For example, many general or domain-agnostic graph generators such as the
+preferential attachment, RMAT or Graph500, are typically used to test graph
+analytics framweworks when large real graphs are not available. Actually,
+Graphalytics uses RMAT as one as its graph generators for benchmarking graph
+analytics. 
+
+Similarly, some social network graph generators such as the LDBC-SNB, S3G2 or
 LinkBench, can be used to test graph databases. In the case of the first two,
 even though they are designed not to be specific to any type of technology,
 they graph databases are their main target.  Additionally, they also provide serializers for
