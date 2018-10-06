@@ -188,7 +188,12 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
 \label{tab:comparisonCharacteristicsB}
 \end{sidewaystable}
 
-As we can see ... \TODO{Add a summary.}
+As we can see, the biggest set of available generators can be found in the Semantic Web application domain, probably due to its recent popularity and a number of research groups dealing with this topic. On the other hand, none of these generators is natively implemented in a distributed manner, so generating of output at the Big Data scale. The second large group of generators also corresponds to a popular application domain -- social networks. In this case the size of the output graph is also critical if we require realistic features of the output. However, most of the proposals do not provide an implementation and, thus, this aspect cannot be discussed reliably.
+
+If we consider the particular domain of the generators, in most cases it is expectably fixed. However, except for general graphs, in all other cases we can find a representative with schema-driven/extracted application domain. In the group of generators for graph databases we can see two special cases -- graphGen ... \TODO{Explain schema-driven (internal schema)} and graphGen ... \TODO{Explain pattern-driven
+(Cypher schema)}.
+
+\TODO{Extend.}
 
 \subsection{Overlapping}
 
@@ -317,4 +322,4 @@ in a graph database (Facebook uses MySQL in that paper) to
 test a workload similar to Facebook and extend and complement it with more
 graph queries like those in LDBC-SNB.
 
-\TODO{Extend summary.}
+\TODO{Extend.}
