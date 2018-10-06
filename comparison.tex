@@ -31,23 +31,23 @@ The type of the generator can also be influenced by the benchmark involving it, 
 
 \subsection{Classification}
 
-\TODO{Add info to all three tables.}
-
 At first we classify the generators on the basis of the respective application domains or user communities. In particular we distinguish (1) general graphs, (2) Semantic Web, (3) graph databases, (4) social networks, (5) graph analytics, and (6) graph data steaming. The selected classes are not rigorously defined (e.g., they are not disjoint as we will show later), but they correspond to the currently most active research areas. Thus we believe that they form a natural first acquaintance for the reader.
 
-In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristicsB}   we overview the key characteristics of the data generators clustered according to the respective application domains.\footnote{``GDBs'' stands for graph databases, ``SNs'' stands for social networks, ``An.'' stands for graph analytics, ``St.'' stands for graph streaming.} In particular, we show:
+In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristicsB}   we overview the key characteristics of the data generators clustered according to the respective application domains.\footnote{``GDBs'' stands for graph databases, ``SNs'' stands for social networks, ``An.'' stands for graph analytics, ``St.'' stands for graph streaming. Value $-$ means that the information is not available or relevant.} In particular, we show:
 
 \begin{itemize}
 \item Characteristics of the domain -- its \textit{type} (fixed, specified using a schema, or extracted from input data) and the particular \textit{target} domain, or, in case of a generic tool, the chosen sample domain,
 \item Characteristics of \textit{read}/\textit{update} operations (if provided), i.e., whether the set of operations is fixed/generated, if it involves operation mixes (i.e., sets/sequences of operations), or if templates of operations are supported.
 \item Key configuration options:
   \begin{itemize}
-    \item whether the generator deals only with structure, or also with \textit{properties} of the graph,
+    \item whether the generator deals only with structure, or also with \textit{properties} of the graph (Y/N feature),
     \item supported types of \textit{distributions} used for generating of the data,
     \item \textit{output format} of the produced graph, and
-    \item  whether the generator is \textit{distributed} and thus enables more efficient data generation.
+    \item  whether the generator is \textit{distributed} and thus enables more efficient data generation (Y/N feature).
   \end{itemize}
 \end{itemize}
+
+
 
 
 \begin{sidewaystable}
@@ -71,14 +71,14 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
                & \textbf{\rot{Distributed\ }}
                \\ \hline
 \hline   % ====================== general graphs
-\multirow{7}{*}{\rot{\textbf{General}}}
+\multirow{8}{*}{\rot{\textbf{General}}}
   & \cite{barabasi1999emergence} & fixed & & Y & N & Y &  & edge-list &  N  \\
 \cline{2-10}
    & R-MAt & fixed & & Y & N & Y & power-law & edge-list &  N  \\
 \cline{2-10}
   & GraphGen & fixed & N & Y & N & Y&  & & N   \\
 \cline{2-10}
-  & Graph 500  & fixed & Various Domains& Y & N & Y & power-law & &  Y  \\
+  & Graph 500  & fixed & various domains & Y & N & Y & power-law & &  Y  \\
 \cline{2-10}
   & BTER & fixed & N &   N &  & N & user-defined & edge-list & Y  \\
 \cline{2-10}
@@ -90,7 +90,7 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
 \multirow{20}{*}{\rot{\textbf{Semantic web}}}
  & LUBM & fixed & university  & fixed & N & Y & random (LCG) &  RDF & N   \\
 \cline{2-10}
- & LBBM & extracted & Lehigh University BibTeX  & N & N & Y & Monte Carlo &  RDF & N   \\
+ & LBBM & extracted & Lehigh university BibTeX  & N & N & Y & Monte Carlo &  RDF & N   \\
 \cline{2-10}
  & UOBM & fixed & university  & fixed & N & Y & random &  RDF & N   \\
 \cline{2-10}
@@ -116,7 +116,7 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
 \cline{2-10}
  & LDBC SPB & fixed & media  & mixes & N & Y & power law, skewed values, value correlation &  RDF & N  \\
 \cline{2-10}
- & LinkGen & schema-driven & user-defined & templates & Y  & N & Gaussian, Zipfian& RDF & N\\
+ & LinkGen & schema-driven & user-defined & templates & Y  & N & Gaussian, Zipfian & RDF & N\\
 \hline
 \end{tabular} }
 \label{tab:comparisonCharacteristicsA}
@@ -146,12 +146,12 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
 \multirow{7}{*}{\rot{\textbf{GDBs}}}
   & XGDBench & fixed  & social network  & fixed & Y & Y & power-law &  MAG &  Y  \\
 \cline{2-10}
-  & gMark & schema-driven (internal schema) &  user-defined  & generated &  N  & Y & uniform, normal, zipfian &  N-triples & N    \\
+  & gMark & schema-driven (internal schema) &  user-defined  & generated &  N  & Y & uniform, normal, Zipfian &  N-triples & N    \\
 \cline{2-10}
   & graphGen & pattern-driven (Cypher schema) & user-defined  & -- & -- & Y & -- &  property graphs & N   \\
 \hline
 \hline %  ======================   social networks
-\multirow{8}{*}{\rot{\textbf{SNs}}}
+\multirow{11}{*}{\rot{\textbf{SNs}}}
  & \cite{Barrett:2009:GAL:1995456.1995598} & fixed & social network & N & N & Y & simulation-driven & impl. not available &  -- \\
 \cline{2-10}
  & \cite{Yao2011} & fixed & social network & N & N & N & power-law & impl. not available & --  \\
@@ -178,9 +178,9 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
 \hline
 \hline   %  ======================  streaming
 \multirow{2}{*}{\rot{\textbf{St.}}}
-  & S2Gen & schema-driven & Social Network & Y & N & N & user-defined & RDF & N     \\
+  & S2Gen & schema-driven & social network & Y & N & N & user-defined & RDF & N     \\
 \cline{2-10}
-  & RSPLab & schema-driven & Agnostic & Y & Y & N & user-defined & RDF & N     \\
+  & RSPLab & schema-driven & agnostic & Y & Y & N & user-defined & RDF & N     \\
 %\cline{2-10}
 %  & & & & & & & &  &   \\
 \hline
@@ -268,7 +268,7 @@ the classes can overlap, as depicted in Table~\ref{tab:overlapping}.
 \hline
 \hline %  ======================   social networks
 \multirow{7}{*}{\rot{\textbf{SNs}}}
- & \cite{Barrett:2009:GAL:1995456.1995598} & & & & x & & \\
+ & \cite{Barrett:2009:GAL:1995456.1995598} & & & & {\bf x} & & \\
 \cline{2-8}
  & \cite{Yao2011}  & & & & {\bf x} & & \\
 \cline{2-8}
@@ -300,22 +300,21 @@ the classes can overlap, as depicted in Table~\ref{tab:overlapping}.
 \label{tab:overlapping}
 \end{table}
 
-\TODO{Extend summary.}
-
 For example, many general or domain-agnostic graph generators such as the
 preferential attachment, RMAT or Graph500, are typically used to test graph
-analytics framweworks when large real graphs are not available. Actually,
+analytics frameworks when large real graphs are not available. Actually,
 Graphalytics uses RMAT as one as its graph generators for benchmarking graph
-analytics. 
+analytics.
 
-Similarly, some social network graph generators such as the LDBC-SNB, S3G2 or
+Similarly, some social network graph generators such as LDBC-SNB, S3G2 or
 LinkBench, can be used to test graph databases. In the case of the first two,
 even though they are designed not to be specific to any type of technology,
-they graph databases are their main target.  Additionally, they also provide serializers for
-RDF, thus they can also be used to test RDF systems. 
+the graph databases are their main target.  Additionally, they also provide serializers for
+RDF, thus they can also be used to test RDF systems.
 
 In the case of LinkBench, nothing prevents the user to load the generated graph
-in a graph database (Facebook uses a MySQL in that paper) to
+in a graph database (Facebook uses MySQL in that paper) to
 test a workload similar to Facebook and extend and complement it with more
-graphy queries like those in LDBC-SNB. 
+graph queries like those in LDBC-SNB.
 
+\TODO{Extend summary.}
