@@ -114,7 +114,7 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
 \cline{2-10}
  & RBench & extracted & DBLP, Yago  & templates & N & Y & from real-world data &  RDF & N  \\
 \cline{2-10}
- & LDBC SPB & fixed & media  & mixes & N & Y & power law, skewed values, value correlation &  RDF & N  \\
+ & LDBC SPB & fixed & media  & mixes & N & Y & power-law, skewed values, value correlation &  RDF & N  \\
 \cline{2-10}
  & LinkGen & schema-driven & user-defined & templates & Y  & N & Gaussian, Zipfian & RDF & N\\
 \hline
@@ -174,7 +174,7 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
 \multirow{3}{*}{\rot{\textbf{Ana.}}}
   & HPC Scalable Graph Analysis & fixed & & Y & N& N& uniform & & N   \\
 \cline{2-10}
-  & Graphalytics & extracted & social network & Y& N& N & power law & CSV, RDF & N   \\
+  & Graphalytics & extracted & social network & Y& N& N & power-law & CSV, RDF & N   \\
 \hline
 \hline   %  ======================  streaming
 \multirow{2}{*}{\rot{\textbf{St.}}}
@@ -188,28 +188,27 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
 \label{tab:comparisonCharacteristicsB}
 \end{sidewaystable}
 
-\paragraph{Number of Generators, Size of the Data}
-As we can see, the biggest set of available generators can be found in the Semantic Web application domain, probably due to its recent popularity and a number of research groups dealing with this topic. On the other hand, none of these generators is natively implemented in a distributed manner and thus generating  output at the Big Data scale. Linked Open Data (LOD) are expected to be large in general, however this is the case of the whole \emph{LOD Cloud}\footnote{\url{https://lod-cloud.net/}}, but not necessarily of the particular data sets forming it.
+\paragraph{Number of Generators, Size and Output Format of the Data}
+As we can see, the biggest set of available generators can be found in the Semantic Web application domain, probably due to its recent popularity and a number of research groups dealing with this topic. None of these generators is natively implemented in a distributed manner and thus generating  output at the Big Data scale. On the other hand, Linked Open Data (LOD) is expected to be large in general, however this is the case of the whole \emph{LOD Cloud}\footnote{\url{https://lod-cloud.net/}}, but not necessarily of the particular data sets forming it.
 
-The second large group of generators also corresponds to a popular application domain -- social networks. In this case the size of the output graph is important if we require realistic features of the output. However, most of the proposals do not provide an implementation and, thus, this aspect cannot be discussed reliably.
+The second large group of generators also corresponds to a popular application domain -- social networks. In this case the size of the output graph is important if we require realistic features of the output. However, most of the proposals do not provide an implementation at all and, thus, this aspect cannot be discussed reliably.
 
-In case of the other application-specific domains the amount of generators is not that significant. As we will show in Section~\ref{sec:overlapping}, the situation is not that critical. Some of the application-specific generators can be re-used also in other application domains or the general graph generators can be used as well.
+In case of the other application-specific domains the amount of generators is relatively small. As we will show in Section~\ref{sec:overlapping}, the situation is not so critical. Some of the application-specific generators can be re-used also in other application domains or the general graph generators can be used.
+
+Considering the output format of the data, most commonly the generators produce data in a standard format (e.g., RDF) or in a reasonable graph-related form (e.g., edge list).
 
 \paragraph{Domain}
 
-If we consider the features of the domain of the generators, in most cases it is expectably fixed which is the simplest option and which may, however, also mean that the generator focuses on other complex aspects of the output. Except for general graphs without any domain, in all other cases we can find a representative with schema-driven domain or a domain extracted from sample data. In the group of generators for graph databases we can see two special cases -- gMark ... \TODO{Explain schema-driven (internal schema)} and graphGen ... \TODO{Explain pattern-driven
-(Cypher schema)}.
-
-The particular target (in case of fixed) or sample (in case of schema-driven or extracted) domains do not provide very rich areas. They either correspond to the respective application domains (like in the case of social networks), or they are based on well-known and commonly used data sets (such as, e.g., DBLP or DBpedia). This narrow scope can can, however, be solved by using one of the representatives with schema-driven or extracted target domains.
+If we consider the features of the particular domain of the generators, in most cases it is expectably fixed. It is the simplest option, but it does mean that the generator is simple too -- it can still focus on other complex aspects of the output. The particular target (in case of fixed) or sample (in case of schema-driven or extracted) domains do not provide very rich areas. They either correspond to the respective application domains (like in the case of social networks), or they are based on well-known and commonly used data sets (such as, e.g., DBLP or DBpedia). Except for general graphs without any domain, in all other cases we can find a flexible representative with schema-driven domain or a domain extracted from sample data. In the group of generators for graph databases we can see two special cases -- gMark ... and graphGen ... \TODO{Explain schema-driven (internal schema) and pattern-driven (Cypher schema) or unify it with other generators and remove this sentence.}.
+ 
 
 \paragraph{Operations}
-While the read operations are quite commonly provided, in case of updates
+In the case of operations, most commonty the respective generators are accompanied with a set of fixed read operations or sequences of operations representing typical behavior of a user. In some cases this aspect is more flexible -- either query templates are used or the operations are generated, e.g., in order to access most of the data. \TODO{Replace "Y" in the tables with more precise information, i.e., fixed/generated/mix(es)/templates (all groups).}
 
-\TODO{...}
+On the other hand, update operations are provided only in a small amount of cases. As we will discuss in Section~\ref{sec:evolving}, the more general problem of evolving graphs is still an open issue.
 
 \paragraph{Configuration}
-
-\TODO{...}
+A natural feature of the generators is to provide as realistic result as possible. Hence, most of them focus not only on the structure of the output graph, but also the properties. For the purpose of generating graphs with near real-world characteristics various distributions are used, such as power-law, Zipfian etc. Especially interesting are distributions extracted from real-wold data (such as, e.g., Facebook in case of social network domain).
 
 \subsection{Overlapping}
 \label{sec:overlapping}
