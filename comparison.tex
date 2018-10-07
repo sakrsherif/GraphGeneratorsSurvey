@@ -33,12 +33,12 @@ The type of the generator can also be influenced by the benchmark involving it, 
 
 At first we classify the generators on the basis of the respective application domains or user communities. In particular we distinguish (1) general graphs, (2) Semantic Web, (3) graph databases, (4) social networks, (5) graph analytics, and (6) graph data steaming. The selected classes are not rigorously defined (e.g., they are not disjoint as we will show later), but they correspond to the currently most active research areas. Thus we believe that they form a natural first acquaintance for the reader.
 
-In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristicsB}   we overview the key characteristics of the data generators clustered according to the respective application domains.\footnote{``GDBs'' stands for graph databases, ``SNs'' stands for social networks, ``An.'' stands for graph analytics, ``St.'' stands for graph streaming. Value $-$ means that the information is not available or relevant.} In particular, we show:
+In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristicsB}   we overview the key characteristics of the data generators clustered according to the respective application domains.\footnote{``GDBs'' stands for graph databases, ``SNs'' stands for social networks, ``An.'' stands for graph analytics, ``St.'' stands for graph streaming. Value ``$-$'' means that the information is not available or relevant.} In particular, we show:
 
 \begin{itemize}
-\item Characteristics of the domain -- its \textit{type} (fixed, specified using a schema, or extracted from input data) and the particular \textit{target} domain, or, in case of a generic tool, the chosen sample domain,
-\item Characteristics of \textit{read}/\textit{update} operations (if provided), i.e., whether the set of operations is fixed/generated, if it involves operation mixes (i.e., sets/sequences of operations), or if templates of operations are supported.
-\item Key configuration options:
+\item Characteristics of the \textbf{domain} -- its \textit{type} (fixed, specified using a schema, or extracted from input data) and the particular \textit{target} domain, or, in case of a generic tool, the chosen sample domain,
+\item Characteristics of \textit{read}/\textit{update} \textbf{operations} (if provided), i.e., whether the set of operations is fixed/generated, if it involves operation mixes (i.e., sets/sequences of operations), or if templates of operations are supported.
+\item Key \textbf{configuration} options:
   \begin{itemize}
     \item whether the generator deals only with structure, or also with \textit{properties} of the graph (Y/N feature),
     \item supported types of \textit{distributions} used for generating of the data,
@@ -72,17 +72,17 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
                \\ \hline
 \hline   % ====================== general graphs
 \multirow{8}{*}{\rot{\textbf{General}}}
-  & \cite{barabasi1999emergence} & fixed & & Y & N & Y &  & edge-list &  N  \\
+  & \cite{barabasi1999emergence} & -- & & Y & N & Y &  & edge-list &  N  \\
 \cline{2-10}
-   & R-MAt & fixed & & Y & N & Y & power-law & edge-list &  N  \\
+   & R-MAt & -- & & Y & N & Y & power-law & edge-list &  N  \\
 \cline{2-10}
-  & GraphGen & fixed & N & Y & N & Y&  & & N   \\
+  & GraphGen & -- & N & Y & N & Y&  & & N   \\
 \cline{2-10}
-  & Graph 500  & fixed & various domains & Y & N & Y & power-law & &  Y  \\
+  & Graph 500  & -- & various domains & Y & N & Y & power-law & &  Y  \\
 \cline{2-10}
-  & BTER & fixed & N &   N &  & N & user-defined & edge-list & Y  \\
+  & BTER & -- & N &   N &  & N & user-defined & edge-list & Y  \\
 \cline{2-10}
-  & Darwini & fixed & N &   N &  & N & user-defined &  edge-list & Y   \\
+  & Darwini & -- & N &   N &  & N & user-defined &  edge-list & Y   \\
 %  & Watts-Strogatz~\cite{watts1998collective} & fixed & & Y & N & Y &  & &  N  \\
 %\cline{2-10}
 \hline
@@ -188,14 +188,31 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
 \label{tab:comparisonCharacteristicsB}
 \end{sidewaystable}
 
-As we can see, the biggest set of available generators can be found in the Semantic Web application domain, probably due to its recent popularity and a number of research groups dealing with this topic. On the other hand, none of these generators is natively implemented in a distributed manner, so generating of output at the Big Data scale. The second large group of generators also corresponds to a popular application domain -- social networks. In this case the size of the output graph is also critical if we require realistic features of the output. However, most of the proposals do not provide an implementation and, thus, this aspect cannot be discussed reliably.
+\paragraph{Number of Generators, Size of the Data}
+As we can see, the biggest set of available generators can be found in the Semantic Web application domain, probably due to its recent popularity and a number of research groups dealing with this topic. On the other hand, none of these generators is natively implemented in a distributed manner and thus generating  output at the Big Data scale. Linked Open Data (LOD) are expected to be large in general, however this is the case of the whole \emph{LOD Cloud}\footnote{\url{https://lod-cloud.net/}}, but not necessarily of the particular data sets forming it.
 
-If we consider the particular domain of the generators, in most cases it is expectably fixed. However, except for general graphs, in all other cases we can find a representative with schema-driven/extracted application domain. In the group of generators for graph databases we can see two special cases -- graphGen ... \TODO{Explain schema-driven (internal schema)} and graphGen ... \TODO{Explain pattern-driven
+The second large group of generators also corresponds to a popular application domain -- social networks. In this case the size of the output graph is important if we require realistic features of the output. However, most of the proposals do not provide an implementation and, thus, this aspect cannot be discussed reliably.
+
+In case of the other application-specific domains the amount of generators is not that significant. As we will show in Section~\ref{sec:overlapping}, the situation is not that critical. Some of the application-specific generators can be re-used also in other application domains or the general graph generators can be used as well.
+
+\paragraph{Domain}
+
+If we consider the features of the domain of the generators, in most cases it is expectably fixed which is the simplest option and which may, however, also mean that the generator focuses on other complex aspects of the output. Except for general graphs without any domain, in all other cases we can find a representative with schema-driven domain or a domain extracted from sample data. In the group of generators for graph databases we can see two special cases -- gMark ... \TODO{Explain schema-driven (internal schema)} and graphGen ... \TODO{Explain pattern-driven
 (Cypher schema)}.
 
-\TODO{Extend.}
+The particular target (in case of fixed) or sample (in case of schema-driven or extracted) domains do not provide very rich areas. They either correspond to the respective application domains (like in the case of social networks), or they are based on well-known and commonly used data sets (such as, e.g., DBLP or DBpedia). This narrow scope can can, however, be solved by using one of the representatives with schema-driven or extracted target domains.
+
+\paragraph{Operations} 
+While the read operations are quite commonly provided, in case of updates 
+
+\TODO{...}
+
+\paragraph{Configuration}
+
+\TODO{...}
 
 \subsection{Overlapping}
+\label{sec:overlapping}
 
 As we have mentioned, the basic classification that we have used in this paper
 is  based on a relatively vague division of the generators on the basis of the
@@ -322,4 +339,4 @@ in a graph database (Facebook uses MySQL in that paper) to
 test a workload similar to Facebook and extend and complement it with more
 graph queries like those in LDBC-SNB.
 
-\TODO{Extend.}
+\TODO{...}
