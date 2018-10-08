@@ -11,11 +11,11 @@ generating/benchmarking projects targeting the Big Data world.
 
 \paragraph {Preferential Attachment} Barabasi and Albert~\cite{Barabasi99emergenceScaling} introduced a graph generation model that relies on two main mechanisms. The first mechanism is continuously expanding the graphs by adding new vertices. The second mechanism is to preferentially attach the new vertices   to the nodes/regions that are already well connected. So, in this approach, the generation of large graphs is governed by standard, robust self-organizing mechanisms that go beyond the characteristics of individual applications.
 
-\paragraph {R-Mat} (\emph{R}ecursive \emph{Mat}rix) R-Mat is a procedural synthetic graph generator which is designed to generate power-law degree
+\paragraph {R-MAT} (\emph{R}ecursive \emph{Mat}rix) R-MAT is a procedural synthetic graph generator which is designed to generate power-law degree
 distributions~\cite{DBLP:conf/sdm/ChakrabartiZF04}.
 The generator is recursive and uses only a small number of parameters.
 In principle, the strategy of this generator is to find simple mechanisms to generate graphs that match
-the properties of the real graphs. In particular, the design goals of R-Mat is to generate graphs that match the degree distributions, imitate a community structure and have a small diameter. R-Mat can generate weighted, directed and bipartite graphs.
+the properties of the real graphs. In particular, the design goals of R-MAT is to generate graphs that match the degree distributions, imitate a community structure and have a small diameter. R-MAT can generate weighted, directed and bipartite graphs.
 
 \paragraph{GraphGen} For the purpose of testing the scalability of an indexing
 technique called FG-index~\cite{Cheng:2007:FTV:1247480.1247574} on the size of the
@@ -74,7 +74,7 @@ coefficient distribution per degree. It achieves this by grouping the vertices
 of the graph into buckets by the expected number of closed triangles that they need
 to close in order to attain the expected clustering coefficient, which is
 sampled from the input distributions. Then, the vertices in each bucket are
-connected randomly with a probability that would produce the expected 
+connected randomly with a probability that would produce the expected
 desired number of triangles for such bucket. Then, as in BTER, the excess degree
 is used to connect the different buckets. The authors report that Darwini is
 able to generate graphs with billions and even trillions of edges.

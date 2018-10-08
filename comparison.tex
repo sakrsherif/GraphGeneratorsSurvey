@@ -36,7 +36,7 @@ At first we classify the generators on the basis of the respective application d
 In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristics of the data generators clustered according to the respective application domains.\footnote{``GDBs'' stands for graph databases, ``SNs'' stands for social networks, ``An.'' stands for graph analytics, ``St.'' stands for graph streaming. Value ``$-$'' means that the information is not available or relevant.} In particular, we show:
 
 \begin{itemize}
-\item Characteristics of the \textbf{domain} -- its \textit{type} (fixed, specified using a schema, or extracted from input data) and the particular \textit{target} domain, or, in case of a generic tool, the chosen sample domain,
+\item Characteristics of the \textbf{domain} -- its \textit{type} (column ``Type''), i.e.,  fixed, specified using a schema, or extracted from input data and the particular \textit{target} domain, or, in case of a generic tool, the chosen sample domain (column ``Target/sample''),
 \item Characteristics of \textit{read}/\textit{update} \textbf{operations} (columns ``Read'' and ``Upd.''), i.e., whether the set of operations is fixed/generated, if it involves operation mixes (i.e., sets/sequences of operations), or if templates of operations are supported.
 \item Key \textbf{configuration} options:
   \begin{itemize}
@@ -72,7 +72,7 @@ In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristi
 \multirow{7}{*}{\rot{\textbf{General}}}
   & \cite{Barabasi99emergenceScaling} & -- & -- & Y & N & Y & power-law & edge-list &  N  \\
 \cline{2-10}
-   & R-Mat & -- & -- & Y & N & Y & power-law & edge-list &  N  \\
+   & R-MAT & -- & -- & Y & N & Y & power-law & edge-list &  N  \\
 \cline{2-10}
   & GraphGen & -- & -- & Y & N & Y& user-defined  & JSON & N   \\
 \cline{2-10}
@@ -146,7 +146,7 @@ In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristi
 \hline
 \hline   % ======================   graph analytics
 \multirow{2}{*}{\rot{\textbf{An.}}}
-  & HPC Scal. Graph Anal. & fixed & & Y & N& N& uniform &edge-list & N   \\
+  & HPC Scal. Graph Anal. & fixed & -- & Y & N& N& uniform &edge-list & N   \\
 \cline{2-10}
   & Graphalytics & extracted & social network & Y& N& N & power-law & CSV, RDF & N   \\
 \hline
@@ -165,9 +165,9 @@ In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristi
 
 
 \paragraph{Number of Generators, Size and Output Format of the Data}
-As we can see, the biggest set of available generators can be found in the Semantic Web application domain, probably due to its recent popularity and a number of research groups dealing with this topic. None of these generators is natively implemented in a distributed manner and thus generating  output at the Big Data scale. On the other hand, Linked Open Data (LOD) is expected to be large in general, however this is the case of the whole \emph{LOD Cloud}\footnote{\url{https://lod-cloud.net/}}, but not necessarily of the particular data sets forming it.
+As we can see, the biggest set of available generators can be found in the Semantic Web application domain, probably due to its recent popularity and a number of research groups dealing with this topic. None of these generators is natively implemented in a distributed manner and thus primarily generating  output at the Big Data scale. On the other hand, Linked Open Data (LOD) is expected to be large in general, however this is the case of the whole \emph{LOD Cloud}\footnote{\url{https://lod-cloud.net/}}, but not necessarily of the particular data sets forming it.
 
-The second large group of generators also corresponds to a popular application domain -- social networks. In this case the size of the output graph is important if we require realistic features of the output. However, most of the proposals do not provide an implementation at all and, thus, this aspect cannot be discussed reliably.
+The second large group of generators also corresponds to a popular application domain -- social networks. In this case the size of the output graph is important if we require realistic features of the result. However, most of the proposals do not provide an implementation at all and, thus, unfortunately this aspect cannot be discussed reliably.
 
 In case of the other application-specific domains the amount of generators is relatively small. As we will show in Section~\ref{sec:overlapping}, the situation is not so critical. Some of the application-specific generators can be re-used also in other application domains or the general graph generators can be used.
 
@@ -179,10 +179,10 @@ If we consider the features of the particular domain of the generators, in most 
 
 
 \paragraph{Operations}
-In the case of operations, most commonly the respective generators are accompanied with a set of fixed read operations or sequences of operations representing typical behavior of a user. In some cases this aspect is more flexible -- either query templates are used or the operations are generated, e.g., in order to access most of the data. On the other hand, update operations are provided only in a small amount of cases. As we will discuss in Section~\ref{sec:evolving}, the more general problem of evolving graphs is still an open issue.
+In the case of operations, most commonly the respective generators are accompanied with a set of fixed read operations or sequences of operations (query mixes) representing typical behavior of a user. In some cases this aspect is more flexible -- either query templates are used or the operations are generated, e.g., in order to access most of the data in the generated graph. On the other hand, update operations are provided only in a small amount of cases. As we will discuss in Section~\ref{sec:evolving}, the more general problem of evolving graphs is still an open issue.
 
 \paragraph{Configuration}
-A natural feature of the generators is to provide as realistic result as possible. Hence, most of them focus not only on the structure of the output graph, but also the properties. For the purpose of generating graphs with near real-world characteristics various distributions are used, such as power-law, Zipfian etc. Especially interesting are distributions extracted from real-wold data (such as, e.g., Facebook in case of social network domain).
+A natural feature of the generators is to provide as realistic result as possible. Hence, most of them focus not only on the structure of the output graph, but also the properties. For the purpose of generating graphs with near real-world characteristics various distributions are used, such as power-law, Zipfian etc. Especially interesting are distributions extracted from real-wold data (such as, e.g., Facebook in case of the social network domain).
 
 \subsection{Overlapping}
 \label{sec:overlapping}
@@ -211,7 +211,7 @@ the classes can overlap, as depicted in Table~\ref{tab:overlapping}.
 \multirow{6}{*}{\rot{\textbf{General}}}
   & \cite{Barabasi99emergenceScaling} & {\bf x} & & & & x & \\
 \cline{2-8}
-   & R-Mat    & {\bf x} & & & & x & \\
+   & R-MAT    & {\bf x} & & & & x & \\
 \cline{2-8}
   & GraphGen  & {\bf x} & & x & & & \\
 \cline{2-8}
@@ -296,9 +296,9 @@ the classes can overlap, as depicted in Table~\ref{tab:overlapping}.
 \end{table}
 
 For example, many general or domain-agnostic graph generators such as the
-preferential attachment, RMAT or Graph500, are typically used to test graph
+preferential attachment~\cite{Barabasi99emergenceScaling}, R-MAT or Graph 500, are typically used to test graph
 analytics frameworks when large real graphs are not available. Actually,
-Graphalytics uses RMAT as one as its graph generators for benchmarking graph
+Graphalytics uses R-MAT as one as its graph generators for benchmarking graph
 analytics.
 
 Similarly, some social network graph generators such as LDBC-SNB, S3G2 or
