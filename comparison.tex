@@ -52,7 +52,7 @@ In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristi
 \scriptsize
 \centering
 \tbl{Key characteristics of the generators} {
-\begin{tabular}{| c | p{3.3cm} | p{2cm} |  p{2cm} | p{1.3cm} |  l | l | p{3.2cm} | p{2cm} | l | }
+\begin{tabular}{| c | p{3cm} | p{2cm} |  p{2cm} | p{1.3cm} |  l | l | p{3.2cm} | p{2cm} | l | }
  \hline
            &   & \multicolumn{2}{c}{\textbf{Domain}}
                & \multicolumn{2}{|c|}{\textbf{Operations}}
@@ -98,7 +98,7 @@ In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristi
 \cline{2-10}
  & SP$^2$Bench & fixed & DBLP  & fixed & N & Y & based on DBLP  & RDF & N   \\
 \cline{2-10}
- & \cite{Duan:2011:AOC:1989323.1989340} & extracted & -- & N & Y &N & -- &  RDF & N    \\
+ & \cite{Duan:2011:AOC:1989323.1989340} & extracted & -- & N & N & Y & -- &  RDF & N    \\
 \cline{2-10}
  & DBPSB & extracted & DBpedia &  templates & N & Y & random &  RDF & N   \\
 \cline{2-10}
@@ -114,11 +114,11 @@ In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristi
 \cline{2-10}
  & LDBC SPB & fixed & media  & mixes & N & Y & power-law, skewed values, value correlation &  RDF & N  \\
 \cline{2-10}
- & LinkGen & schema-driven & user-defined & templates & Y  & N & Gaussian, Zipfian & RDF & N\\
+ & LinkGen & schema-driven & user-defined & templates & N  & N & Gaussian, Zipfian & RDF & N\\
 \hline
 \hline  % ======================  graph databases
 \multirow{4}{*}{\rot{\textbf{GDBs}}}
-  & XGDBench & fixed  & social network  & fixed & Y & Y & power-law &  MAG &  Y  \\
+  & XGDBench & fixed  & social network  & generated & generated & Y & power-law &  MAG &  Y  \\
 \cline{2-10}
   & gMark & schema-driven &  user-defined  & generated &  N  & Y & uniform, normal, Zipfian &  N-triples & N    \\
 \cline{2-10}
@@ -130,13 +130,13 @@ In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristi
 \cline{2-10}
  & \cite{Yao2011} & fixed & social network & N & N & N & power-law & impl. NA & --  \\
 \cline{2-10}
- & LinkBench & fixed & social network & Y & Y & Y & Facebook & impl. NA & -- \\
+ & LinkBench & fixed & social network & generated & generated & Y & Facebook & impl. NA & -- \\
 \cline{2-10}
  & S3G2 & fixed & social network  & N & N  & Y & Facebook  & CSV, RDF & Y   \\
 \cline{2-10}
  & \cite{Sukthankar-SocialInfo2014} & schema-driven & social-network & N & N & Y & power-law & CSV & N   \\
 \cline{2-10}
- & LDBC SNB  & fixed & social network &  generated & Y  & Y & Facebook &  CSV, RDF & Y     \\
+ & LDBC SNB  & fixed & social network &  generated & generated  & Y & Facebook &  CSV, RDF & Y     \\
 \cline{2-10}
   & \cite{Nettleton2016} & schema-driven & social network & N & N & Y & power-law & impl. NA & --  \\
 %\cline{2-10}
@@ -146,9 +146,9 @@ In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristi
 \hline
 \hline   % ======================   graph analytics
 \multirow{2}{*}{\rot{\textbf{An.}}}
-  & HPC Scal. Graph Anal. & fixed & -- & Y & N& N& uniform &edge-list & N   \\
+  & HPC Scal. Graph Anal. & fixed & -- & fixed & N& N& uniform &edge-list & N   \\
 \cline{2-10}
-  & Graphalytics & extracted & social network & Y& N& N & power-law & CSV, RDF & N   \\
+  & Graphalytics & extracted & social network & fixed& N& N & power-law & CSV, RDF & N   \\
 \hline
 \hline   %  ======================  streaming
 \multirow{2}{*}{\rot{\textbf{St.}}}
