@@ -33,17 +33,17 @@ The type of the generator can also be influenced by the benchmark involving it, 
 
 At first we classify the generators on the basis of the respective application domains or user communities. In particular we distinguish (1) general graphs, (2) Semantic Web, (3) graph databases, (4) social networks, (5) graph analytics, and (6) graph data steaming. The selected classes are not rigorously defined (e.g., they are not disjoint as we will show later), but they correspond to the currently most active research areas. Thus we believe that they form a natural first acquaintance for the reader.
 
-In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristicsB}   we overview the key characteristics of the data generators clustered according to the respective application domains.\footnote{``GDBs'' stands for graph databases, ``SNs'' stands for social networks, ``An.'' stands for graph analytics, ``St.'' stands for graph streaming. Value ``$-$'' means that the information is not available or relevant.} In particular, we show:
+In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristics of the data generators clustered according to the respective application domains.\footnote{``GDBs'' stands for graph databases, ``SNs'' stands for social networks, ``An.'' stands for graph analytics, ``St.'' stands for graph streaming. Value ``$-$'' means that the information is not available or relevant.} In particular, we show:
 
 \begin{itemize}
 \item Characteristics of the \textbf{domain} -- its \textit{type} (fixed, specified using a schema, or extracted from input data) and the particular \textit{target} domain, or, in case of a generic tool, the chosen sample domain,
-\item Characteristics of \textit{read}/\textit{update} \textbf{operations} (if provided), i.e., whether the set of operations is fixed/generated, if it involves operation mixes (i.e., sets/sequences of operations), or if templates of operations are supported.
+\item Characteristics of \textit{read}/\textit{update} \textbf{operations} (columns ``Read'' and ``Upd.''), i.e., whether the set of operations is fixed/generated, if it involves operation mixes (i.e., sets/sequences of operations), or if templates of operations are supported.
 \item Key \textbf{configuration} options:
   \begin{itemize}
-    \item whether the generator deals only with structure, or also with \textit{properties} of the graph (Y/N feature),
-    \item supported types of \textit{distributions} used for generating of the data,
-    \item \textit{output format} of the produced graph, and
-    \item  whether the generator is \textit{distributed} and thus enables more efficient data generation (Y/N feature).
+    \item whether the generator deals only with structure, or also with \emph{properties} (column ``Pro.'') of the graph (Y/N feature),
+    \item supported types of \emph{distributions} (column ``Distributions'') used for generating of the data,
+    \item \textit{output format} (column ``Output'') of the produced graph, and
+    \item  whether the generator is \textit{distributed} (column ``Dis.'') and thus enables more efficient data generation (Y/N feature).
   \end{itemize}
 \end{itemize}
 
@@ -54,7 +54,7 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
 \scriptsize
 \centering
 \tbl{Key characteristics of the generators (part A)} {
-\begin{tabular}{| c | p{2.2cm} | p{2cm} |  p{2.2cm} | l |  l | l | p{3cm} | p{1.4cm} | l | }
+\begin{tabular}{| c | p{2.9cm} | p{2cm} |  p{2.2cm} | p{1.5cm} |  l | l | p{3.3cm} | p{1.4cm} | l | }
  \hline
            &   & \multicolumn{2}{c}{\textbf{Domain}}
                & \multicolumn{2}{|c|}{\textbf{Operations}}
@@ -64,17 +64,17 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
                & \textbf{Type}
                & \textbf{Target / sample}
                & \textbf{Read}
-               & \textbf{Update}
-               & \textbf{\rot{Properties}}
+               & \textbf{Upd.}
+               & \textbf{Pro.}
                & \textbf{Distributions}
 			   & \textbf{Output}
-               & \textbf{\rot{Distributed\ }}
+               & \textbf{Dis.}
                \\ \hline
 \hline   % ====================== general graphs
 \multirow{8}{*}{\rot{\textbf{General}}}
   & \cite{barabasi1999emergence} & -- & -- & Y & N & Y & power-law & edge-list &  N  \\
 \cline{2-10}
-   & R-MAt & -- & -- & Y & N & Y & power-law & edge-list &  N  \\
+   & R-Mat & -- & -- & Y & N & Y & power-law & edge-list &  N  \\
 \cline{2-10}
   & GraphGen & -- & -- & Y & N & Y& user-defined  & JSON & N   \\
 \cline{2-10}
@@ -118,30 +118,6 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
 \cline{2-10}
  & LinkGen & schema-driven & user-defined & templates & Y  & N & Gaussian, Zipfian & RDF & N\\
 \hline
-\end{tabular} }
-\label{tab:comparisonCharacteristicsA}
-\end{sidewaystable}
-
-\begin{sidewaystable}
-\scriptsize
-\centering
-\tbl{Key characteristics of the generators (part B)} {
-\begin{tabular}{| c | p{2.2cm}| p{2cm} |  p{2.2cm} | l |  l | l | p{3cm} | p{1.4cm} | l | }
- \hline
-           &   & \multicolumn{2}{c}{\textbf{Domain}}
-               & \multicolumn{2}{|c|}{\textbf{Operations}}
-               & \multicolumn{4}{c|}{\textbf{Configuration}}
-               \\ \hline
-           &  \textbf{Generator}
-               & \textbf{Type}
-               & \textbf{Target / sample}
-               & \textbf{Read}
-               & \textbf{Update}
-               & \textbf{\rot{Properties}}
-               & \textbf{Distributions}
-			   & \textbf{Output}
-               & \textbf{\rot{Distributed\ }}
-               \\ \hline
 \hline  % ======================  graph databases
 \multirow{7}{*}{\rot{\textbf{GDBs}}}
   & XGDBench & fixed  & social network  & fixed & Y & Y & power-law &  MAG &  Y  \\
@@ -152,11 +128,11 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
 \hline
 \hline %  ======================   social networks
 \multirow{11}{*}{\rot{\textbf{SNs}}}
- & \cite{Barrett:2009:GAL:1995456.1995598} & fixed & social network & N & N & Y & simulation-driven & impl. not available &  -- \\
+ & \cite{Barrett:2009:GAL:1995456.1995598} & fixed & social network & N & N & Y & simulation-driven & impl. NA &  -- \\
 \cline{2-10}
- & \cite{Yao2011} & fixed & social network & N & N & N & power-law & impl. not available & --  \\
+ & \cite{Yao2011} & fixed & social network & N & N & N & power-law & impl. NA & --  \\
 \cline{2-10}
- & LinkBench & fixed & social network & Y & Y & Y & Facebook & impl. not available & -- \\
+ & LinkBench & fixed & social network & Y & Y & Y & Facebook & impl. NA & -- \\
 \cline{2-10}
  & S3G2 & fixed & social network  & N & N  & Y & Facebook  & CSV, RDF & Y   \\
 \cline{2-10}
@@ -164,7 +140,7 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
 \cline{2-10}
  & LDBC SNB  & fixed & social network &  generated & Y  & Y & Facebook &  CSV, RDF & Y     \\
 \cline{2-10}
-  & \cite{Nettleton2016} & schema-driven & social network & N & N & Y & power-law & impl. not available & --  \\
+  & \cite{Nettleton2016} & schema-driven & social network & N & N & Y & power-law & impl. NA & --  \\
 %\cline{2-10}
 % & SNG  & Y & Y &   N &  & Y & power-law & ? &  ?   \\
 %\cline{2-10}
@@ -185,7 +161,7 @@ In Tables~\ref{tab:comparisonCharacteristicsA},~\ref{tab:comparisonCharacteristi
 %  & & & & & & & &  &   \\
 \hline
 \end{tabular} }
-\label{tab:comparisonCharacteristicsB}
+\label{tab:comparisonCharacteristics}
 \end{sidewaystable}
 
 \paragraph{Number of Generators, Size and Output Format of the Data}
@@ -199,7 +175,7 @@ Considering the output format of the data, as expected, the generators produce d
 
 \paragraph{Domain}
 
-If we consider the features of the particular domain of the generators, in most cases it is expectably fixed. It is the simplest option, but it does mean that the generator is simple too -- it can still focus on other complex aspects of the output. The particular target (in case of fixed) or sample (in case of schema-driven or extracted) domains do not provide very rich areas. They either correspond to the respective application domains (like in the case of social networks), or they are based on well-known and commonly used data sets (such as, e.g., DBLP or DBpedia). Except for general graphs without any domain, in all other cases we can find a flexible representative with schema-driven/pattern-driven domain or a domain extracted from sample data. 
+If we consider the features of the particular domain of the generators, in most cases it is expectably fixed. It is the simplest option, but it does mean that the generator is simple too -- it can still focus on other complex aspects of the output. The particular target (in case of fixed) or sample (in case of schema-driven or extracted) domains do not provide very rich areas. They either correspond to the respective application domains (like in the case of social networks), or they are based on well-known and commonly used data sets (such as, e.g., DBLP or DBpedia). Except for general graphs without any domain, in all other cases we can find a flexible representative with schema-driven/pattern-driven domain or a domain extracted from sample data.
 
 
 \paragraph{Operations}
@@ -235,7 +211,7 @@ the classes can overlap, as depicted in Table~\ref{tab:overlapping}.
 \multirow{6}{*}{\rot{\textbf{General}}}
   & \cite{barabasi1999emergence} & {\bf x} & & & & x & \\
 \cline{2-8}
-   & R-MAt    & {\bf x} & & & & x & \\
+   & R-Mat    & {\bf x} & & & & x & \\
 \cline{2-8}
   & GraphGen  & {\bf x} & & x & & & \\
 \cline{2-8}
