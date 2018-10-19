@@ -52,7 +52,7 @@ In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristi
 \scriptsize
 \centering
 \tbl{Key characteristics of the generators} {
-\begin{tabular}{| c | p{3cm} | p{2cm} |  p{2cm} | p{1.3cm} |  l | l | p{3.2cm} | p{2cm} | l | }
+\begin{tabular}{| c | l | p{2cm} |  p{2cm} | p{1.3cm} |  l | l | p{3.2cm} | p{2cm} | l | }
  \hline
            &   & \multicolumn{2}{c}{\textbf{Domain}}
                & \multicolumn{2}{|c|}{\textbf{Operations}}
@@ -69,8 +69,8 @@ In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristi
                & \textbf{Dis.}
                \\ \hline
 \hline   % ====================== general graphs
-\multirow{6}{*}{\rot{\textbf{General}}}
-  & \cite{Barabasi99emergenceScaling} & -- & -- & Y & N & Y & power-law & edge-list &  N  \\
+\multirow{5}{*}{\rot{\textbf{General}}}
+  & Preferential attachment & -- & -- & Y & N & Y & power-law & edge-list &  N  \\
 \cline{2-10}
    & R-MAT & -- & -- & Y & N & Y & power-law & edge-list &  N  \\
 \cline{2-10}
@@ -151,8 +151,10 @@ In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristi
 %  & Graphalytics & extracted & social network & fixed& N& N & power-law & CSV, RDF & N   \\
 \hline
 \hline   %  ======================  community detection
-\multirow{2}{*}{\rot{\textbf{Co}}}
+\multirow{3}{*}{\rot{\textbf{Co}}}
   &  &  &  &  &  &  &  &  &      \\
+\cline{2-10}
+  &  &  & &  &  &  & &  &      \\
 \cline{2-10}
   &  &  & &  &  &  & &  &      \\
 \hline
@@ -216,7 +218,7 @@ the classes can overlap, as depicted in Table~\ref{tab:overlapping}.
                \\ \hline
 \hline   % ====================== general graphs
 \multirow{5}{*}{\rot{\textbf{General}}}
-  & \cite{Barabasi99emergenceScaling} & {\bf x} & & & & x & & \\
+  & Preferential attachment & {\bf x} & & & & x & & \\
 \cline{2-9}
    & R-MAT    & {\bf x} & & & & x & & \\
 \cline{2-9}
@@ -291,8 +293,10 @@ the classes can overlap, as depicted in Table~\ref{tab:overlapping}.
 %  & Graphalytics & & & & & {\bf x} & & \\
 \hline
 \hline   %  ======================  community detection
-\multirow{2}{*}{\rot{\textbf{Co}}}
+\multirow{3}{*}{\rot{\textbf{Co}}}
   &  & & & & & & {\bf x} &\\
+\cline{2-9}
+  &  & & & & & & {\bf x} & \\
 \cline{2-9}
   &  & & & & & & {\bf x} & \\
 %\cline{2-9}
