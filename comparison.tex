@@ -31,9 +31,9 @@ The type of the generator can also be influenced by the benchmark involving it, 
 
 \subsection{Classification}
 
-At first we classify the generators on the basis of the respective application domains or user communities. In particular we distinguish (1) general graphs, (2) Semantic Web, (3) graph databases, (4) social networks, (5) graph analytics, and (6) graph data steaming. The selected classes are not rigorously defined (e.g., they are not disjoint as we will show later), but they correspond to the currently most active research areas. Thus we believe that they form a natural first acquaintance for the reader.
+At first we classify the generators on the basis of the respective application domains or user communities. In particular we distinguish (1) general graphs, (2) Semantic Web, (3) graph databases, (4) social networks, (5) graph analytics, (6) community detection, and (7) graph data steaming. The selected classes are not rigorously defined (e.g., they are not disjoint as we will show later), but they correspond to the currently most active research areas. Thus we believe that they form a natural first acquaintance for the reader.
 
-In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristics of the data generators clustered according to the respective application domains.\footnote{``GDBs'' stands for graph databases, ``SNs'' stands for social networks, ``An.'' stands for graph analytics, ``St.'' stands for graph streaming. Value ``$-$'' means that the information is not available or relevant.} In particular, we show:
+In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristics of the data generators clustered according to the respective application domains.\footnote{``GDBs'' stands for graph databases, ``SNs'' stands for social networks, ``A'' stands for graph analytics, ``Co'' stands for community detection, and ``St'' stands for graph streaming. Value ``$-$'' means that the information is not available or relevant.} In particular, we show:
 
 \begin{itemize}
 \item Characteristics of the \textbf{domain} -- its \textit{type} (column ``Type''), i.e.,  fixed, specified using a schema, or extracted from input data and the particular \textit{target} domain, or, in case of a generic tool, the chosen sample domain (column ``Target/sample''),
@@ -69,15 +69,15 @@ In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristi
                & \textbf{Dis.}
                \\ \hline
 \hline   % ====================== general graphs
-\multirow{7}{*}{\rot{\textbf{General}}}
+\multirow{6}{*}{\rot{\textbf{General}}}
   & \cite{Barabasi99emergenceScaling} & -- & -- & Y & N & Y & power-law & edge-list &  N  \\
 \cline{2-10}
    & R-MAT & -- & -- & Y & N & Y & power-law & edge-list &  N  \\
 \cline{2-10}
   & GraphGen & -- & -- & Y & N & Y& user-defined  & node/edge-list & N   \\
 \cline{2-10}
-  & Graph 500  & -- & -- & Y & N & Y & power-law & edge-list &  Y  \\
-\cline{2-10}
+%  & Graph 500  & -- & -- & Y & N & Y & power-law & edge-list &  Y  \\
+%\cline{2-10}
   & BTER & -- & -- &   N & N & N & user-defined & edge-list & Y  \\
 \cline{2-10}
   & Darwini & -- & -- &   N & N & N & user-defined &  edge-list & Y   \\
@@ -145,13 +145,19 @@ In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristi
 % & Forest Fire  & N & Y   & N &  & N & power-law &  ? & N   \\
 \hline
 \hline   % ======================   graph analytics
-\multirow{2}{*}{\rot{\textbf{An.}}}
+\multirow{1}{*}{\rot{\textbf{A}}}
   & HPC Scal. Graph Anal. & fixed & -- & fixed & N& N& uniform &edge-list & N   \\
+%\cline{2-10}
+%  & Graphalytics & extracted & social network & fixed& N& N & power-law & CSV, RDF & N   \\
+\hline
+\hline   %  ======================  community detection
+\multirow{2}{*}{\rot{\textbf{Co}}}
+  &  &  &  &  &  &  &  &  &      \\
 \cline{2-10}
-  & Graphalytics & extracted & social network & fixed& N& N & power-law & CSV, RDF & N   \\
+  &  &  & &  &  &  & &  &      \\
 \hline
 \hline   %  ======================  streaming
-\multirow{2}{*}{\rot{\textbf{St.}}}
+\multirow{2}{*}{\rot{\textbf{St}}}
   & S2Gen & schema-driven & social network & Y & N & N & user-defined & RDF & N     \\
 \cline{2-10}
   & RSPLab & schema-driven & agnostic & Y & Y & N & user-defined & RDF & N     \\
@@ -197,7 +203,7 @@ the classes can overlap, as depicted in Table~\ref{tab:overlapping}.
 \scriptsize
 \centering
 \tbl{Overlapping of classes of generators} {
-\begin{tabular}{| c | l | l | l | l | l | l | l | }
+\begin{tabular}{| c | l | l | l | l | l | l | l | l | }
  \hline
            &  \textbf{Generator}
                & \textbf{\rot{General}}
@@ -205,98 +211,107 @@ the classes can overlap, as depicted in Table~\ref{tab:overlapping}.
                & \textbf{\rot{Graph databases\ }}
                & \textbf{\rot{Social networks}}
                & \textbf{\rot{Analytics}}
+               & \textbf{\rot{Community detection}}
                & \textbf{\rot{Steaming}}
                \\ \hline
 \hline   % ====================== general graphs
-\multirow{6}{*}{\rot{\textbf{General}}}
-  & \cite{Barabasi99emergenceScaling} & {\bf x} & & & & x & \\
-\cline{2-8}
-   & R-MAT    & {\bf x} & & & & x & \\
-\cline{2-8}
-  & GraphGen  & {\bf x} & & x & & & \\
-\cline{2-8}
-  & Graph 500 & {\bf x} & & & & x & \\
-\cline{2-8}
-  & BTER      & {\bf x} & & & & & \\
-\cline{2-8}
-  & Darwini   & {\bf x} & & & & & \\
+\multirow{5}{*}{\rot{\textbf{General}}}
+  & \cite{Barabasi99emergenceScaling} & {\bf x} & & & & x & & \\
+\cline{2-9}
+   & R-MAT    & {\bf x} & & & & x & & \\
+\cline{2-9}
+  & GraphGen  & {\bf x} & & x & & & & \\
+\cline{2-9}
+%  & Graph 500 & {\bf x} & & & & x & & \\
+%\cline{2-9}
+  & BTER      & {\bf x} & & & & & & \\
+\cline{2-9}
+  & Darwini   & {\bf x} & & & & & & \\
 \hline
 \hline %  ======================  Semantic web
 \multirow{15}{*}{\rot{\textbf{Semantic web}}}
- & LUBM  & & {\bf x} & & & & \\
-\cline{2-8}
- & LBBM  & & {\bf x} & & & & \\
-\cline{2-8}
- & UOBM  & & {\bf x} & & & & \\
-\cline{2-8}
- & IIMB & & {\bf x} & & & & \\
-\cline{2-8}
- & BSBM & & {\bf x} & & & & \\
-\cline{2-8}
- & SP$^2$Bench & & {\bf x} & & & & \\
-\cline{2-8}
- & \cite{Duan:2011:AOC:1989323.1989340} & & {\bf x} & & & & \\
-\cline{2-8}
- & DBPSB & & {\bf x} & & & & \\
-\cline{2-8}
- & LODIB & & {\bf x} & & & & \\
-\cline{2-8}
- & SIB & & {\bf x} & & & & \\
-\cline{2-8}
- & Geographica & & {\bf x} & & & & \\
-\cline{2-8}
- & WatDiv & & {\bf x} & & & & \\
-\cline{2-8}
- & RBench & & {\bf x} & & & & \\
-\cline{2-8}
- & LDBC SPB & & {\bf x} & & & & \\
-\cline{2-8}
- & LinkGen & & {\bf x} & & & & \\
+ & LUBM  & & {\bf x} & & & & & \\
+\cline{2-9}
+ & LBBM  & & {\bf x} & & & & & \\
+\cline{2-9}
+ & UOBM  & & {\bf x} & & & & & \\
+\cline{2-9}
+ & IIMB & & {\bf x} & & & & & \\
+\cline{2-9}
+ & BSBM & & {\bf x} & & & & & \\
+\cline{2-9}
+ & SP$^2$Bench & & {\bf x} & & & & & \\
+\cline{2-9}
+ & \cite{Duan:2011:AOC:1989323.1989340} & & {\bf x} & & & & & \\
+\cline{2-9}
+ & DBPSB & & {\bf x} & & & & & \\
+\cline{2-9}
+ & LODIB & & {\bf x} & & & & & \\
+\cline{2-9}
+ & SIB & & {\bf x} & & & & & \\
+\cline{2-9}
+ & Geographica & & {\bf x} & & & & & \\
+\cline{2-9}
+ & WatDiv & & {\bf x} & & & & & \\
+\cline{2-9}
+ & RBench & & {\bf x} & & & & & \\
+\cline{2-9}
+ & LDBC SPB & & {\bf x} & & & & & \\
+\cline{2-9}
+ & LinkGen & & {\bf x} & & & & & \\
 \hline
 \hline  % ======================  graph databases
 \multirow{3}{*}{\rot{\textbf{GDBs}}}
-  & XGDBench & & & {\bf x} & x & & \\
-\cline{2-8}
-  & gMark & & x & {\bf x} & x & & \\
-\cline{2-8}
-  & graphGen & & & {\bf x} & & & \\
+  & XGDBench & & & {\bf x} & x & & & \\
+\cline{2-9}
+  & gMark & & x & {\bf x} & x & & & \\
+\cline{2-9}
+  & graphGen & & & {\bf x} & & & & \\
 \hline
 \hline %  ======================   social networks
 \multirow{7}{*}{\rot{\textbf{SNs}}}
- & \cite{Barrett:2009:GAL:1995456.1995598} & & & & {\bf x} & & \\
-\cline{2-8}
- & \cite{Yao2011}  & & & & {\bf x} & & \\
-\cline{2-8}
- & LinkBench  & & & x & {\bf x} & & \\
-\cline{2-8}
- & S3G2  & & x & x & {\bf x} & & \\
-\cline{2-8}
- & \cite{Sukthankar-SocialInfo2014}  & & & & {\bf x} & & \\
-\cline{2-8}
- & LDBC SNB   & & x & x & {\bf x} & & \\
-\cline{2-8}
-  & \cite{Nettleton2016}  & & & & {\bf x} & & \\
+ & \cite{Barrett:2009:GAL:1995456.1995598} & & & & {\bf x} & & & \\
+\cline{2-9}
+ & \cite{Yao2011}  & & & & {\bf x} & & & \\
+\cline{2-9}
+ & LinkBench  & & & x & {\bf x} & & & \\
+\cline{2-9}
+ & S3G2  & & x & x & {\bf x} & & & \\
+\cline{2-9}
+ & \cite{Sukthankar-SocialInfo2014}  & & & & {\bf x} & & & \\
+\cline{2-9}
+ & LDBC SNB   & & x & x & {\bf x} & & & \\
+\cline{2-9}
+  & \cite{Nettleton2016}  & & & & {\bf x} & & & \\
 \hline
 \hline   % ======================   graph analytics
-\multirow{2}{*}{\rot{\textbf{An.}}}
-  & HPC Scal. Graph Anal.  & & & & & {\bf x} & \\
-\cline{2-8}
-  & Graphalytics & & & & & {\bf x} & \\
+\multirow{1}{*}{\rot{\textbf{A}}}
+  & HPC Scal. Graph Anal.  & & & & & {\bf x} & & \\
+%\cline{2-9}
+%  & Graphalytics & & & & & {\bf x} & & \\
+\hline
+\hline   %  ======================  community detection
+\multirow{2}{*}{\rot{\textbf{Co}}}
+  &  & & & & & & {\bf x} &\\
+\cline{2-9}
+  &  & & & & & & {\bf x} & \\
+%\cline{2-9}
+%  & & & & & & \\
 \hline
 \hline   %  ======================  streaming
-\multirow{2}{*}{\rot{\textbf{St.}}}
-  & S2Gen & & & & & & {\bf x}\\
-\cline{2-8}
-  & RSPLab & & & & & & {\bf x} \\
-%\cline{2-8}
-%  & & & & & & \\
+\multirow{2}{*}{\rot{\textbf{St}}}
+  & S2Gen & & & & & & & {\bf x}\\
+\cline{2-9}
+  & RSPLab & & & & & & & {\bf x} \\
+%\cline{2-9}
+%  & & & & & & & \\
 \hline
 \end{tabular} }
 \label{tab:overlapping}
 \end{table}
 
-For example, many general or domain-agnostic graph generators such as the
-preferential attachment~\cite{Barabasi99emergenceScaling}, R-MAT or Graph 500, are typically used to test graph
+For example, many general or domain-agnostic graph generators, such as the
+preferential attachment~\cite{Barabasi99emergenceScaling} or R-MAT, are typically used to test graph
 analytics frameworks when large real graphs are not available. Actually,
 Graphalytics uses R-MAT as one as its graph generators for benchmarking graph
 analytics.
