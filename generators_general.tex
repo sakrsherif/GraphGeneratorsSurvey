@@ -11,7 +11,7 @@ generating/benchmarking projects targeting the Big Data world.
 
 \paragraph {Preferential Attachment} Barabasi and Albert~\cite{Barabasi99emergenceScaling} introduced a graph generation model that relies on two main mechanisms. The first mechanism is continuously expanding the graphs by adding new vertices. The second mechanism is to preferentially attach the new vertices   to the nodes/regions that are already well connected. So, in this approach, the generation of large graphs is governed by standard, robust self-organizing mechanisms that go beyond the characteristics of individual applications.
 
-\paragraph {R-MAT} (\emph{R}ecursive \emph{Mat}rix) R-MAT is a procedural synthetic graph generator which is designed to generate power-law degree
+\paragraph {R-MAT} R-MAT (\emph{R}ecursive \emph{Mat}rix) is a procedural synthetic graph generator which is designed to generate power-law degree
 distributions~\cite{DBLP:conf/sdm/ChakrabartiZF04}.
 The generator is recursive and uses only a small number of parameters.
 In principle, the strategy of this generator is to find simple mechanisms to generate graphs that match
@@ -33,21 +33,21 @@ list of graphs, each consisting of a list of nodes and a list of edges.
 
 
 
-\paragraph{Graph 500 Benchmark} The Graph 500 Benchmark~\cite{Graph500} includes
-a scalable data generator which produces weighted, undirected graph as a list of
-edge tuples containing the label of start vertex and end vertex together with a
-weight that represents data assigned to the edge. The space of vertex  labels is
-the set of integers beginning with 0. The input values required to describe the
-graph are (1) scale, i.e., the logarithm base two of the number of vertices, and
-(2) edge factor, i.e., the ratio of the graph's edge count to its vertex count
-(i.e., half the average degree of a vertex in the graph). The graph generator is
-a Kronecker generator similar to R-MAT. The data must not exhibit any locality,
-so in the final step the vertex labels and order of edges are randomly shuffled.
-The covered operations currently involve BFS; however, the authors intend to
-involve also two more types -- optimization (single source shortest path) and
-edge-oriented (maximal independent set) -- and five graph-related business areas:
-cybersecurity, medical informatics, data enrichment, social networks, and
-symbolic networks.
+%\paragraph{Graph 500 Benchmark} The Graph 500 Benchmark~\cite{Graph500} includes
+%a scalable data generator which produces weighted, undirected graph as a list of
+%edge tuples containing the label of start vertex and end vertex together with a
+%weight that represents data assigned to the edge. The space of vertex  labels is
+%the set of integers beginning with 0. The input values required to describe the
+%graph are (1) scale, i.e., the logarithm base two of the number of vertices, and
+%(2) edge factor, i.e., the ratio of the graph's edge count to its vertex count
+%(i.e., half the average degree of a vertex in the graph). The graph generator is
+%a Kronecker generator similar to R-MAT. The data must not exhibit any locality,
+%so in the final step the vertex labels and order of edges are randomly shuffled.
+%The covered operations currently involve BFS; however, the authors intend to
+%involve also two more types -- optimization (single source shortest path) and
+%edge-oriented (maximal independent set) -- and five graph-related business areas:
+%cybersecurity, medical informatics, data enrichment, social networks, and
+%symbolic networks.
 
 \paragraph{BTER} BTER (Block Two-Level
 Erd\"{o}s-R\'{e}ny)~\cite{kolda2014scalable} is a graph generator based on the
