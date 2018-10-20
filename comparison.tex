@@ -1,7 +1,7 @@
 \section{Classification and Comparative Study}
 \label{sec:comparison}
 
-In order to provide the reader with a quick preview of the generators and thus to enable finding the target solutions easily, we start the survey with a  classification and comparative study of the existing tools. In general, there are various ways to classify them. We first provide an overview of the approaches used in related work after which we then introduce our approach. As mentioned in the Introduction, since this survey is unique especially in terms of scope, our classification and comparative strategy would differ as well.
+In order to provide the reader with a quick preview of the generators and thus to enable finding the target solutions easily, we start the survey with a  classification and comparative study of the existing tools. In general, there are various ways to classify them. We first provide an overview of the approaches used in related work after which we then introduce our approach. As mentioned in the Introduction, since this survey is unique especially in terms of scope, our classification and comparative strategy differs as well.
 
 The graph data generators can be classified according to various criteria. For example,~\cite{DBLP:conf/sdm/ChakrabartiZF04} introduces two categories -- degree-based and procedural generators. Given a degree distribution (typically following a power law), \emph{degree-based generators} (e.g., Barabasi-Albert model~\cite{Barabasi99emergenceScaling}) try to find a graph that matches it, but without giving any insights about the graph or trying to match other criteria (like, e.g., small diameter, eigenvalues etc.). On the other hand, \emph{procedural generators} (e.g., R-MAT~\cite{DBLP:conf/sdm/ChakrabartiZF04}) try to find simple mechanisms to generate graphs that match a property of the real graphs and, typically, the power law degree distribution.
 
@@ -37,7 +37,7 @@ In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristi
 
 \begin{itemize}
 \item Characteristics of the \textbf{domain} -- its \textit{type} (column ``Type''), i.e.,  fixed, specified using a schema, or extracted from input data and the particular \textit{target} domain, or, in case of a generic tool, the chosen sample domain (column ``Target/sample''),
-\item Characteristics of \textit{read}/\textit{update} \textbf{operations} (columns ``Read'' and ``Upd.''), i.e., whether the set of operations is fixed/generated, if it involves operation mixes (i.e., sets/sequences of operations), or if templates of operations are supported.
+\item Characteristics of \textit{read}/\textit{update} \textbf{operations} (columns ``Read'' and ``Update''), i.e., whether the set of operations is fixed/generated, if it involves operation mixes (i.e., sets/sequences of operations), or if templates of operations are supported.
 \item Key \textbf{configuration} options:
   \begin{itemize}
     \item whether the generator deals only with structure, or also with \emph{properties} (column ``Pro.'') of the graph (Y/N feature),
@@ -62,7 +62,7 @@ In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristi
                & \textbf{Type}
                & \textbf{Target/sample}
                & \textbf{Read}
-               & \textbf{Upd.}
+               & \textbf{Update}
                & \textbf{Pro.}
                & \textbf{Distributions}
 			   & \textbf{Output}
@@ -173,7 +173,7 @@ In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristi
 
 
 \paragraph{Number of Generators, Size and Output Format of the Data}
-As we can see, the biggest set of available generators can be found in the Semantic Web application domain, probably due to its recent popularity and a number of research groups dealing with this topic. None of these generators is natively implemented in a distributed manner and thus primarily generating  output at the Big Data scale. On the other hand, Linked Open Data (LOD) is expected to be large in general, however this is the case of the whole \emph{LOD Cloud}\footnote{\url{https://lod-cloud.net/}}, but not necessarily of the particular data sets forming it.
+As we can see, the biggest set of available generators can be found in the Semantic Web application domain, probably due to its recent popularity and a number of research groups dealing with this topic. None of these generators is natively implemented in a distributed manner and thus primarily generating  output at the Big Data scale. On the other hand, the \emph{Linked Open Data} (LOD) is expected to be large in general, however this is the case of the whole \emph{LOD Cloud}\footnote{\url{https://lod-cloud.net/}}, but not necessarily of the particular data sets forming it.
 
 The second large group of generators also corresponds to a popular application domain -- social networks. In this case the size of the output graph is important if we require realistic features of the result. However, most of the proposals do not provide an implementation at all and, thus, unfortunately this aspect cannot be discussed reliably.
 
@@ -183,7 +183,7 @@ Considering the output format of the data, as expected, the generators produce d
 
 \paragraph{Domain}
 
-If we consider the features of the particular domain of the generators, in most cases it is expectably fixed. It is the simplest option, but it does mean that the generator is simple too -- it can still focus on other complex aspects of the output. The particular target (in case of fixed) or sample (in case of schema-driven or extracted) domains do not provide very rich areas. They either correspond to the respective application domains (like in the case of social networks), or they are based on well-known and commonly used data sets (such as, e.g., DBLP or DBpedia). Except for general graphs without any domain, in all other cases we can find a flexible representative with schema-driven/pattern-driven domain or a domain extracted from sample data.
+If we consider the features of the particular domain of the generators, in most cases it is expectably fixed. It is the simplest option, but it does mean that the generator is simple too -- it can still focus on other complex aspects of the output. The particular target (in case of fixed) or sample (in case of schema-driven or extracted) domains do not provide very rich areas. They either correspond to the respective application domains (like in the case of social networks), or they are based on well-known and commonly used data sets (such as, e.g., DBLP~\cite{dblp} or DBpedia~\cite{Bizer:2009:DCP:1640541.1640848}). Except for general graphs without any domain, in all other cases we can find a flexible representative with schema-driven/pattern-driven domain or a domain extracted from sample data.
 
 
 \paragraph{Operations}
@@ -329,8 +329,8 @@ test a workload similar to Facebook and extend and complement it with more
 graph queries like those in LDBC-SNB.
 
 Generators for community detection aim, in general, at creating graphs with a
-more realistic strcture (graphs with communities of nodes where the density of
+more realistic structure (graphs with communities of nodes where the density of
 edges is larger internally than externally). Even though these generators are,
-in general used to test community detection algorithms (they generate also the
+in general, used to test community detection algorithms (they generate also the
 expected communities in the graph), some studies also use them for general graph
 purposes or to test graph analytics algorithms besides community detection.
