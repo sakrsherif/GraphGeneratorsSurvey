@@ -152,11 +152,11 @@ In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristi
 \hline
 \hline   %  ======================  community detection
 \multirow{3}{*}{\rot{\textbf{Co}}}
-  &  &  &  &  &  &  &  &  &      \\
+  & Danon et al. & -- & -- & Y & N & N & uniform & edge-list &  N    \\
 \cline{2-10}
-  &  &  & &  &  &  & &  &      \\
+  & LFR & -- & -- & Y & N & N & power-law & edge-list  & N      \\
 \cline{2-10}
-  &  &  & &  &  &  & &  &      \\
+  & LFR-Overlapping & -- & -- & Y & N & N & power-law & edge-list & N     \\
 \hline
 \hline   %  ======================  streaming
 \multirow{2}{*}{\rot{\textbf{St}}}
@@ -294,11 +294,11 @@ the classes can overlap, as depicted in Table~\ref{tab:overlapping}.
 \hline
 \hline   %  ======================  community detection
 \multirow{3}{*}{\rot{\textbf{Co}}}
-  &  & & & & & & {\bf x} &\\
+  & Danon et al. & x & & & & x & {\bf x} &\\
 \cline{2-9}
-  &  & & & & & & {\bf x} & \\
+  & LFR & x & & & & x & {\bf x} & \\
 \cline{2-9}
-  &  & & & & & & {\bf x} & \\
+  & LFR-Overlapping & x & & & & x & {\bf x} & \\
 %\cline{2-9}
 %  & & & & & & \\
 \hline
@@ -327,3 +327,10 @@ In the case of LinkBench, nothing prevents the user to load the generated graph
 in a graph database (Facebook uses MySQL in that paper) to
 test a workload similar to Facebook and extend and complement it with more
 graph queries like those in LDBC-SNB.
+
+Generators for community detection aim, in general, at creating graphs with a
+more realistic strcture (graphs with communities of nodes where the density of
+edges is larger internally than externally). Even though these generators are,
+in general used to test community detection algorithms (they generate also the
+expected communities in the graph), some studies also use them for general graph
+purposes or to test graph analytics algorithms besides community detection. 
