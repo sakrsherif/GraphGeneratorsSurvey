@@ -12,8 +12,8 @@ instance to discover functionally equivalent proteins in protein-protein
 interaction networks, or persons with similar interests in social networks. Such
 applications have made community detection a hot topic during the last fifteen
 years with tens of developed algorithms and detection
-strategies~\cite{doi:10.1002/wics.1403,Kim:2015:CDM:2854006.2854013}. In order
-to compare the quality of the different proposed techniques, one needs graphs
+strategies~\cite{doi:10.1002/wics.1403,Kim:2015:CDM:2854006.2854013}. For
+comparing the quality of the different proposed techniques, one needs graphs
 with \emph{reference communities}, that is, communities known beforehand. Since
 it is very difficult to have large real graphs with reference communities
 (mainly because these would require a manual labeling), graphs for benchmarking
@@ -33,8 +33,8 @@ graphs for community detection where communities are of different sizes and
 densities. The generator generates communities of different sizes following a
 power-law distribution whose parameters can be configured. The degree of the
 nodes is also sampled from a power-law distribution. Additionally, the generator
-introduces the concept of the ``mixing factor'', which specifies the fraction of
-its links connecting nodes belonging to different communities. Such parameter
+introduces the concept of the ``mixing factor'', which consists of the fraction of
+edges in the graph connecting nodes that belong to different communities. Such parameter
 allows  the degree of modularity of the generated graph  to be tuned, thus
 testing the robustness of the algorithms under different conditions. The
 generation process starts with an empty graph and incrementally fills in the

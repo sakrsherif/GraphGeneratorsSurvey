@@ -1,7 +1,10 @@
 \section{Graph Datasets}
 \label{sec:data_sets}
 
-Besides graph data generators, many graph algorithms and systems are benchmarked using real-world graph data sets, including new graph data generation techniques. In this section, we review the most widely used graph datasets in the literature and their purpose.
+Besides graph data generators, many graph algorithms and systems are benchmarked
+using real-world graph data sets, including new graph data generation
+techniques. In this section, we review those graph datasets most widely used in
+the literature and their purpose.
 
 %In general, there exist several types of testing graph data
 %sets~\cite{Bachmaier2012}:
@@ -19,14 +22,14 @@ repositories~\cite{snapnets,lawalgo}) are:
     researchers from DBLP are represented as vertices and there exists an edge
     between them if they have published a paper together.
   \item \textbf{Amazon}~\cite{yang2015defining}: Represents a product co-purchasing
-    network, such that each vertex is a product and an edge between two products
-    exists if a person has bought the two products.
+    network, such that each vertex represents a product while edges between two products
+    exists if a person bought both of them.
   \item \textbf{Road networks}~\cite{leskovec2009community}: Consist of a set of road
     networks from the US.
   \item \textbf{LiveJournal}~\cite{yang2015defining}: A social network where vertices
-    represent the users and the edges represent the acquitances between them.
+    represent the users and the edges the acquitances between them.
   \item \textbf{Orkut}~\cite{yang2015defining}: Like LiveJournal, this is a social network
-    where vertices represent persons and the edges represent their friendships.
+    where vertices represent persons and the edges their friendships.
   \item \textbf{Twitter}~\cite{kwak2010twitter}: This is a directed network representing
     the follower-followee interaction of Twitter.
   \item \textbf{Friendster}~\cite{yang2015defining}: A social network like LiveJournal and
@@ -76,8 +79,8 @@ examples:
       several Bitcoin exchanges, where users are able to rate other users after
       their transactions. Here, the vertices represent the users and the edges,
       which are labelled, the ratings between them.
-    \item \textbf{Wikipedia RFA}~\cite{west2014exploiting}: This is a network extracted
-      from Wikipedia, where the vertices represent users  and the
+    \item \textbf{Wikipedia RFA}~\cite{west2014exploiting}: This network is extracted
+      from Wikipedia and the vertices represent users  while the
       edges, which are labelled, the votes emitted by administrators for the
       user to become an administrator.  Each vote is accompained with a text
       explaining the vote's sign.
@@ -123,9 +126,9 @@ applications. Here, we summarize the most widely used in the literature:
   \item \textbf{PolBooks}~\cite{10dimacs}: Is a network of books of Amazon that talk
     about politics, and edges between two books exist if they are co-purchased
     together. The books have labels of whether they are left or right oriented.
-  \item \textbf{Football}~\cite{girvan2002network}: A network of American university
-    football teams. Each node represents a football team and the edges represent
-    the matches between them during the season. Each team is associated to a
+  \item \textbf{Football}~\cite{girvan2002network}: This network represent American university
+    football teams. Each node is a football team and the edges are those 
+    games between teams during the season. Each team is associated to a
     division.
 \end{itemize}
 
@@ -157,7 +160,7 @@ synthetic generators for the semantic web.
     a structured version of Wikipedia. It allows users to semantically query the
     relationships between the different resources at Wikipedia.
   \item \textbf{Freebase}~\cite{bollacker2008freebase}: This is a collaborative knowledge base
-    made of metadata that is mainly provided by community members. It contains
+    made of metadata maintained by community members. It contains
     structured data from multiple sources in an attempt to create a global
     resource of information accessible both from persons and machines. The
     project was discontinued in 2014 and replaced by Wikidata.
@@ -168,8 +171,8 @@ synthetic generators for the semantic web.
     from Wikipedia and other sources.
   \item \textbf{Wikidata}~\cite{vrandevcic2014wikidata}: This is a knowledge base
     collaboratively edited by the community and hosted by the Wikimedia
-    Foundation. It contains structured data from its sister projects Wikipedia,
-    Wikivoyage, Wikisource and others.
+    Foundation. It contains structured data from other related projects such as Wikipedia,
+    Wikivoyage or Wikisource.
   \item \textbf{Billion Triple Challenge}~\cite{btc-2014}: This is a semantic dataset
     crawled from different sources, including Freebase, DBPedia or the BBC. A
     detailed description of the crawling process can be found in~\cite{kafer2012towards}.

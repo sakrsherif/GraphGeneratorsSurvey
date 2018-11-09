@@ -1,7 +1,31 @@
 \subsection{Graph Data Streaming}
 \label{sec:generators_streaming}
-One way for dealing with big graphs is to process them using the \emph{streaming} mode where the data stream could consist of the edges of the graph. In this mode, the graph processing algorithms can process the input stream in the order it arrives while using only a limited amount of memory~\cite{mcgregor2014graph}. 
+One way for dealing with big graphs is to process them using the
+\emph{streaming} mode where the data stream could consist of the edges of the
+graph. In this mode, the graph processing algorithms can process the input
+stream in the order it arrives while using only a limited amount of
+memory~\cite{mcgregor2014graph}. 
 
-\paragraph{S2Gen}  The streaming mode has mainly  attracted the attention of the RDF and Semantic Web community. Thus, Phuoc et al.~\cite{le2012linked} presented an evaluation framework for linked stream data processing engines. The framework uses a data generator for the Stream Social network data Generator (S2Gen) that simulates what users continuously generate on their social network activities (e.g., posts) in addition to the  user metadata such as users' profile information, social network relationships, posts, photos and GPS information. The data generator of this framework provides the users the flexibility to control the characteristics of the generated data by tanning a range of parameters including the period in which the social activities are generated (generating period), the maximum number of posts/comments/photos for each user per week and the correlation probabilities between the different objects (e.g., users) in the social network.
+\paragraph{S2Gen}  The streaming mode has mainly  attracted the attention of the
+RDF and Semantic Web community. Thus, Phuoc et al.~\cite{le2012linked} presented
+an evaluation framework for linked stream data processing engines. The framework
+uses a datasets generated with the Stream Social network data Generator
+(S2Gen), which 
+simulates streams of user interactions (or events) in social networks 
+(e.g., posts) in addition to the  user metadata such as users' profile
+information, social network relationships, posts, photos and GPS information.
+The data generator of this framework provides the users the flexibility to
+control the characteristics of the generated stream by tanning a range of
+parameters, which includes the frequency at which interactions are generated, 
+limits such as the maximum number of messages per user
+and week, and the correlation probabilities between the different objects (e.g.,
+users) in the social network.
 
-\paragraph{RSPLab} Tommasini et al.~\cite{tommasini2017rsplab} introduced another framework for benchmarking RDF Stream Processing systems, RSPLab. The Streamer component of this framework is designed to publish RDF streams from the various existing RDF benchmarks (e.g., BSBM, LUBM) (see Section~\ref{sec:generators_LinkedData}). In particular, the Streamer  component uses TripleWave\footnote{\url{http://streamreasoning.github.io/TripleWave/}}, an open-source framework for publishing and sharing RDF streams on the Web~\cite{mauri2016triplewave}.   TripleWave acts as a mean for plugging-in diverse Web data sources and for consuming streams in both push and pull mode.
+\paragraph{RSPLab} Tommasini et al.~\cite{tommasini2017rsplab} introduced
+another framework for benchmarking RDF Stream Processing systems, RSPLab. The
+Streamer component of this framework is designed to publish RDF streams from the
+various existing RDF benchmarks (e.g., BSBM, LUBM) (see Section~\ref{sec:generators_LinkedData}).
+In particular, the Streamer  component uses TripleWave\footnote{\url{http://streamreasoning.github.io/TripleWave/}}, an
+open-source framework for publishing and sharing RDF streams on the
+Web~\cite{mauri2016triplewave}.   TripleWave acts as a means for plugging-in
+and combining streams from multiple Web data sources, in both push and pull mode.
