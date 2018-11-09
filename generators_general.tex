@@ -13,24 +13,21 @@ generating/benchmarking projects targeting the Big Data world.
 
 \paragraph {R-MAT} R-MAT (\emph{R}ecursive \emph{Mat}rix) is a procedural synthetic graph generator which is designed to generate power-law degree
 distributions~\cite{DBLP:conf/sdm/ChakrabartiZF04}.
-The generator is recursive and uses only a small number of parameters.
-In principle, the strategy of this generator is to find simple mechanisms to generate graphs that match
+The generator is recursive and employs a fairly small number of parameters.
+In principle, the strategy of this generator is to achieve simple means to generate graphs that match
 the properties of the real graphs. In particular, the design goals of R-MAT is to generate graphs that match the degree distributions, imitate a community structure and have a small diameter. R-MAT can generate weighted, directed and bipartite graphs.
 
 \paragraph{GraphGen} For the purpose of testing the scalability of an indexing
 technique called FG-index~\cite{Cheng:2007:FTV:1247480.1247574} on the size of the
 database of graphs, their average size and average density, the authors have
 also implemented a synthetic generator called
-GraphGen\footnote{https://www.cse.ust.hk/graphgen/}. It is
-based on the IBM synthetic data generation code for associations and sequential
-patterns\footnote{From 1996, no longer available at
+GraphGen\footnote{https://www.cse.ust.hk/graphgen/}. It relies on data generation code for associations and sequential
+patterns provided by IBM \footnote{From 1996, no longer available at
 \url{http://www.almaden.ibm.com/cs/projects/iis/hdb/Projects/data
-mining/mining.shtml}}. GraphGen creates a collection of labeled, undirected and
-connected graphs which focuses on the performance evaluation of frequent subgraph mining
+mining/mining.shtml}}. GraphGen yields a collection of undirected, labeled and
+connected graphs. It addresses the performance evaluation of frequent subgraph mining
 algorithms and graph query processing algorithms. The result is represented as a
-list of graphs, each consisting of a list of nodes and a list of edges.
-
-
+list of graphs, each consisting of a list of nodes along with a list of edges.
 
 
 %\paragraph{Graph 500 Benchmark} The Graph 500 Benchmark~\cite{Graph500} includes
@@ -70,12 +67,12 @@ Pregel~\cite{malewicz2010pregel} or Apache Giraph~\cite{ching2015one}, with the
 additional feature that it is more accurate when reproducing the clustering
 coefficient of the input graph. Instead of just focusing on the average
 clustering coefficient for each degree, Darwini is able to model the clustering
-coefficient distribution per degree. It achieves this by grouping the vertices
-of the graph into buckets by the expected number of closed triangles that they need
-to close in order to attain the expected clustering coefficient, which is
+coefficient distribution per degree. It achieves this by gathering the vertices
+of the graph into buckets based on the expected number of closed triangles that they need
+to close in order to attain the expected clustering coefficient. The latter is
 sampled from the input distributions. Then, the vertices in each bucket are
 connected randomly with a probability that would produce the expected
-desired number of triangles for such bucket. Then, as in BTER, the excess degree
+desired number of triangles for each bucket. Then, as in BTER, the excess degree
 is used to connect the different buckets. The authors report that Darwini is
 able to generate graphs with billions and even trillions of edges.
 
