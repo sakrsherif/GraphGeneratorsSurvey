@@ -63,16 +63,6 @@
 \url{http://www.graphanalysis.org/benchmark/}}
 
 
-\bibitem[\protect\citeauthoryear{??}{Gra}{2010}]%
-        {Graph500}
- 2010.
-\newblock {\em {Graph 500 Benchmark}}.
-\newblock Cray User's Group (CUG).
-\newblock
-\showURL{%
-\url{http://www.graph500.org/}}
-
-
 \bibitem[\protect\citeauthoryear{??}{Gra}{2015}]%
         {GraphGen}
  2015.
@@ -106,7 +96,7 @@
 \bibitem[\protect\citeauthoryear{??}{TPC}{2016}]%
         {TPC-H}
  2016.
-\newblock {\em The TPC Benchmark?H}.
+\newblock {\em The TPC Benchmark -- H}.
 \newblock
 \showURL{%
 \url{http://www.tpc.org/tpch/}}
@@ -293,15 +283,6 @@
 \newblock
 \showDOI{%
 \url{http://dx.doi.org/10.1126/science.286.5439.509}}
-
-
-\bibitem[\protect\citeauthoryear{Barab{\'a}si and Albert}{Barab{\'a}si and
-  Albert}{1999}]%
-        {barabasi1999emergence}
-{Albert-L{\'a}szl{\'o} Barab{\'a}si} {and} {R{\'e}ka Albert}. 1999.
-\newblock \showarticletitle{Emergence of scaling in random networks}.
-\newblock {\em science\/} {286}, 5439 (1999), 509--512.
-\newblock
 
 
 \bibitem[\protect\citeauthoryear{Barbosa, Mendelzon, Keenleyside, and
@@ -748,7 +729,7 @@ Issue 11.
   2008.
 \newblock \showarticletitle{Towards a Benchmark for Instance Matching}. In {\em
   Ontology Matching (OM 2008)} {\em (CEUR Workshop Proceedings)}, {Pavel
-  Shvaiko}, {J?r?me Euzenat}, {Fausto Giunchiglia}, {and} {Heiner
+  Shvaiko}, {Jerome Euzenat}, {Fausto Giunchiglia}, {and} {Heiner
   Stuckenschmidt} (Eds.), Vol. 431. CEUR-WS.org.
 \newblock
 
@@ -879,14 +860,14 @@ Issue 11.
 \newblock \showarticletitle{LUBM: A benchmark for \{OWL\} knowledge base
   systems}.
 \newblock {\em Web Semantics: Science, Services and Agents on the World Wide
-  Web\/} {3}, 2???3 (2005), 158 -- 182.
+  Web\/} {3}, 2--3 (2005), 158 -- 182.
 \newblock
 \showISSN{1570-8268}
 \showDOI{%
 \url{http://dx.doi.org/10.1016/j.websem.2005.06.005}}
 \newblock
 \shownote{Selcted Papers from the International Semantic Web Conference, 2004
-  ISWC, 20043rd. International Semantic Web Conference, 2004.}
+  ISWC, 43rd. International Semantic Web Conference, 2004.}
 
 
 \bibitem[\protect\citeauthoryear{Hellmann and Staudigl}{Hellmann and
@@ -1185,21 +1166,10 @@ Issue 11.
 \url{http://dx.doi.org/10.1007/11564126_17}}
 
 
-\bibitem[\protect\citeauthoryear{Leskovec, Chakrabarti, Kleinberg, and
-  Faloutsos}{Leskovec et~al\mbox{.}}{2005b}]%
-        {LeskovecCKF05}
-{Jure Leskovec}, {Deepayan Chakrabarti}, {Jon~M. Kleinberg}, {and} {Christos
-  Faloutsos}. 2005b.
-\newblock \showarticletitle{Realistic, Mathematically Tractable Graph
-  Generation and Evolution, Using Kronecker Multiplication}. In {\em {PKDD}}
-  {\em (Lecture Notes in Computer Science)}, Vol. 3721. Springer, 133--145.
-\newblock
-
-
 \bibitem[\protect\citeauthoryear{Leskovec, Kleinberg, and Faloutsos}{Leskovec
-  et~al\mbox{.}}{2005c}]%
+  et~al\mbox{.}}{2005b}]%
         {Leskovec:2005:GOT:1081870.1081893}
-{Jure Leskovec}, {Jon Kleinberg}, {and} {Christos Faloutsos}. 2005c.
+{Jure Leskovec}, {Jon Kleinberg}, {and} {Christos Faloutsos}. 2005b.
 \newblock \showarticletitle{Graphs over Time: Densification Laws, Shrinking
   Diameters and Possible Explanations}. In {\em Proceedings of the Eleventh ACM
   SIGKDD International Conference on Knowledge Discovery in Data Mining} {\em
@@ -1208,15 +1178,6 @@ Issue 11.
 \showISBNx{1-59593-135-X}
 \showDOI{%
 \url{http://dx.doi.org/10.1145/1081870.1081893}}
-
-
-\bibitem[\protect\citeauthoryear{Leskovec, Kleinberg, and Faloutsos}{Leskovec
-  et~al\mbox{.}}{2005d}]%
-        {LeskovecKF05}
-{Jure Leskovec}, {Jon~M. Kleinberg}, {and} {Christos Faloutsos}. 2005d.
-\newblock \showarticletitle{Graphs over time: densification laws, shrinking
-  diameters and possible explanations}. In {\em {KDD}}. {ACM}, 177--187.
-\newblock
 
 
 \bibitem[\protect\citeauthoryear{Leskovec and Krevl}{Leskovec and
@@ -1278,9 +1239,13 @@ Issue 11.
 \bibitem[\protect\citeauthoryear{Lu}{Lu}{2017}]%
         {conf/cidr/lu17}
 {Jiaheng Lu}. 2017.
-\newblock \showarticletitle{{Towards Benchmarking Multi-Model Databases
-  \url{http://udbms.cs.helsinki.fi/?projects/ubench}}}. In {\em {CIDR}}.
+\newblock \showarticletitle{Towards Benchmarking Multi-Model Databases}. In
+  {\em {CIDR} 2017, 8th Biennial Conference on Innovative Data Systems
+  Research, Chaminade, CA, USA, January 8-11, 2017, Online Proceedings}.
+  www.cidrdb.org.
 \newblock
+\showURL{%
+\url{http://cidrdb.org/cidr2017/gongshow/abstracts/cidr2017\_20.pdf}}
 
 
 \bibitem[\protect\citeauthoryear{Ma, Yang, Qiu, Xie, Pan, and Liu}{Ma
@@ -1864,13 +1829,13 @@ Issue 11.
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Zhao}{Zhao}{}]%
+\bibitem[\protect\citeauthoryear{Zhao}{Zhao}{2017}]%
         {doi:10.1002/wics.1403}
-{Yunpeng Zhao}.
+{Yunpeng Zhao}. 2017.
 \newblock \showarticletitle{A survey on theoretical advances of community
   detection in networks}.
 \newblock {\em Wiley Interdisciplinary Reviews: Computational Statistics\/}
-  {9}, 5 (????), e1403.
+  {9}, 5 (2017).
 \newblock
 \showDOI{%
 \url{http://dx.doi.org/10.1002/wics.1403}}
