@@ -25,12 +25,12 @@ subgraphs, connected more internally than externally~\cite{danon2005comparing}.
 Each of these subgraphs has the same size and the same internal/external density
 of edges. However, such graphs miss the realism observed in real graphs, where
 communities are of different sizes and densities, thus several proposals exist
-to overcome such an issue. 
+to overcome such an issue.
 
 \paragraph{LFR} Lancichinetti, Fortunato
 and Radicchi (hence LFR)~\cite{PhysRevE.78.046110} propose a class of benchmark
 graphs for community detection where communities are of different sizes and
-densities. The generator generates communities of different sizes following a
+densities. The generator generates communities of various sizes following a
 power-law distribution whose parameters can be configured. The degree of the
 nodes is also sampled from a power-law distribution. Additionally, the generator
 introduces the concept of the ``mixing factor'', which consists of the fraction of
@@ -38,7 +38,7 @@ edges in the graph connecting nodes that belong to different communities. Such p
 allows  the degree of modularity of the generated graph  to be tuned, thus
 testing the robustness of the algorithms under different conditions. The
 generation process starts with an empty graph and incrementally fills in the
-adjacency matrix by obeying the described constraints. 
+adjacency matrix by considering the described constraints.
 
 \paragraph{LFR-Overlapping} Lancichinetti, Fortunato and
 Radicchi~\cite{PhysRevE.80.016118} extended LFR to support the notion of
