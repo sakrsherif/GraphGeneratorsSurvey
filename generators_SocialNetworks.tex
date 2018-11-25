@@ -21,7 +21,7 @@ communities in 70 real-world networks is provided, e.g., in
 communities (clustering coefficient, triangle participation ratio, bridges,
 diameter, conductance and size) in both real-world graphs and outputs of existing graph
 generators LFR~\cite{PhysRevE.78.046110} and the
-LDBC-SNB~\cite{Erling:2015:LSN:2723372.2742786}. They discover that communities found in different graphs follow quite similar distributions and that communities in a single graph have diverse nature and are difficult to fit with a single model.
+LDBC-SNB~\cite{Erling:2015:LSN:2723372.2742786}. They found out that discovered communities  in different graphs have common distributions and that communities in a single graph have diverse nature and are difficult to fit with a single model.
 
 The existing social network generators try to reproduce different aspects of the
 generated network. They can be categorized into statistical and agent-based.
@@ -65,8 +65,8 @@ benchmark~\cite{Armstrong:2013:LDB:2463676.2465296} has been designed for the pu
 \paragraph{S3G2} The Scalable Structure-correlated Social Graph Generator (S3G2)~\cite{Pham2013} is a general framework which produces a directed labeled graph whose vertices represent objects having property values. The respective classes determine the structure of the properties. S3G2 does not aim at generating near real-world data, but at generating synthetic graphs with a correlated structure. Hence, the existing data values influence the probability of choosing a certain property value from a pre-defined dictionary, or the probability of connecting two nodes. For example, the degree distribution can be correlated with the properties of a node and thus, e.g., people having many friend relationships typically post more comments and pictures. The data generation process starts with generating a number of nodes with property values generated according to specified property value correlations and then adding respective edges according to specified correlation dimensions. It has multiple phases, each focusing on one correlation dimension. Data is generated in a Map phase corresponding to a pass along one correlation dimension. Then the data are sorted along the correlation dimension in the following Reduce phase. A heuristic observation that ``the probability that two nodes are connected is typically skewed with respect to some similarity between the nodes'' enables to focus only on sliding window of most probable candidates. The core idea of the framework is demonstrated using an example of a social network (consisting of persons and social activities).  The dictionaries for property values are inspired by DBpedia and provided with 20 property value correlations. The edges are generated according to 3 correlation dimensions.
 
 
-\paragraph{Cloning of Social Networks} Paper~\cite{Sukthankar-SocialInfo2014}
-introduces a synthetic network generator designed for cloning social network
+\paragraph{Cloning of Social Networks} ~\cite{Sukthankar-SocialInfo2014}
+introduced a synthetic network generator designed for cloning social network
 statistics of an existing dataset. The network starts with a small number of
 nodes, and new nodes are added until the network reaches the required number. It
 has two basic parameters: homophily and link density. A high \emph{homophily}
