@@ -91,9 +91,18 @@ usually influences the structure of the data and consequently all the related
 parts of the application (i.e., storage strategies, operations, indexes etc.).
 In the world of graph data such graphs that change with time are denoted as \emph{evolving}, \emph{temporal}, \emph{dynamic}, or \emph{time-varying}. They can be modeled as labeled graphs, where the labels capture some measure of time~\cite{Michail2015}.
 
-The evolution of graphs can be considered from multiple perspectives. We can assume a static set of nodes and a varying set of edges.  Or, there are applications where the graphs only ``grow'', i.e., the set of nodes and/or edges is only extended with new items. In the most general case we can assume any changes in both set of nodes and set of edges. Anyway with the evolution aspect the complexity of classical graph problems increases significantly~\cite{Michail2015,Wu:2014:PPT:2732939.2732945}. In some graph applications, such as, e.g., social networks, the evolution of the
-data is a significant aspect, especially in the activity graphs~\cite{doreian1997evolution,Kumar:2006:SEO:1150402.1150476,Hellmann2014583,wang2013,Kossinets88,Viswanath:2009:EUI:1592665.1592675}.
-However, as shown in~\cite{Leskovec:2005:RMT:2101235.2101254,Leskovec:2005:GOT:1081870.1081893},
+The evolution of graphs can be considered from multiple perspectives. We can
+assume a static set of nodes and a varying set of edges.  Or, there are
+applications where the graphs only ``grow'', i.e., the set of nodes and/or edges
+is only extended with new items. In the most general case we can assume any
+changes in both set of nodes and set of edges. Anyway with the evolution aspect
+the complexity of classical graph problems increases
+significantly~\cite{Michail2015,Wu:2014:PPT:2732939.2732945}. In some graph
+applications, such as, e.g., social networks, the evolution of the data is a
+significant aspect, especially in the activity
+graphs~\cite{doreian1997evolution,Kumar:2006:SEO:1150402.1150476,Hellmann2014583,wang2013,Kossinets88,Viswanath:2009:EUI:1592665.1592675}.
+However, as shown
+in~\cite{Leskovec:2005:RMT:2101235.2101254,Leskovec:2005:GOT:1081870.1081893},
 evolving graphs have further specific features. For example, some graphs grow
 over time according to a \emph{densification power law} which means that in real
 graphs, edges tend to appear at a higher pace than vertices, meaning that these
@@ -114,15 +123,22 @@ is intensively studied, surprisingly there seem to exist only very few proposals
 of a generator for dealing with this area.
 In~\cite{GoerkeKlugeSchumm2012_1000029825} the authors focus on \emph{clustering
 dynamic graphs}, i.e. graphs where the clustering corresponds to the partition
-of nodes into natural groups based on the paradigm of intra-cluster density
-versus inter-cluster sparsity of edges. The generator generates a time series
+of nodes into natural groups based on the concept of intra-cluster
+versus inter-cluster density of edges. The generator generates a time series
 of random graphs $G_0, G_1, ..., G_n$, where $G_t$ emerges from $G_{t-1}$ via
 successive atomic updates like for instance, the insertion of a vertex or the removal of an
-edge. The generator monitors the (dynamic) ground truth clustering and the probability
-of the atomic events is chosen in such a way that the ground truth clustering is
+edge. The generator dynamically monitors the ground truth clustering, and the probability
+of the updates is chosen in such a way that the ground truth is
 maintained while the randomness of the generated graph is kept.
 
-Another recent proposal of a generator~\cite{mlg2018_42} of temporal graphs results from an observation that small subgraph patterns in networks, called \emph{network motifs} or \emph{graphlets}, are crucial indicators of the structure and the evolution of the graphs~\cite{Paranjape:2017:MTN:3018661.3018731}. For a given graph and a predefined ordered list of structural atomic motifs the generator first computes the distribution of the motifs in the graph. The distribution is then used to generate a synthetic graph with the same features.
+Another recent proposal of a generator~\cite{mlg2018_42} of temporal graphs
+results from an observation that small subgraph patterns in networks, called
+\emph{network motifs} or \emph{graphlets}, are crucial indicators of the
+structure and the evolution of the
+graphs~\cite{Paranjape:2017:MTN:3018661.3018731}. For a given graph and a
+predefined ordered list of structural atomic motifs the generator first computes
+the distribution of the motifs in the graph. The distribution is then used to
+generate a synthetic graph with the same features.
 
 
 %\paragraph{} Following the same recursion idea,
@@ -206,5 +222,5 @@ Neighbor Lists (based on randomized response~\cite{dwork2014algorithmic}) and
 Degree-based Graph Generation (which perturbates the original graph degrees
 using the Laplace mechanism~\cite{dwork2009differential}). Again, even though the
 proposed technique outperforms the baselines, the results show that there is
-still room for improvement in terms of the structural properties of the
+still room for improving the structural properties of the
 generated graph.

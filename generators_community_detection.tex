@@ -28,16 +28,15 @@ to overcome such an issue.
 
 \paragraph{LFR} Lancichinetti, Fortunato
 and Radicchi (hence LFR)~\cite{PhysRevE.78.046110} propose a class of benchmark
-graphs for community detection where communities are of different sizes and
-densities. The generator generates communities of various sizes with a
-power-law distribution whose parameters can be configured. The degree of the
+graphs for community detection where communities are of diverse sizes and
+densities. The generated communities follow a power-law distribution whose parameters can be configured. The degree of the
 nodes is also sampled from a power-law distribution. Additionally, the generator
 introduces the concept of the ``mixing factor'', which consists of the percentage of
 edges in the graph connecting nodes that belong to different communities. Such parameter
 allows  the degree of modularity of the generated graph  to be tuned, thus
 testing the robustness of the algorithms under different conditions. The
-generation process starts with an empty graph and incrementally fills in the
-adjacency matrix by considering the described constraints.
+generation process is implemented as an optimization process starting with an empty graph and 
+progressively filling it with nodes and edges guided by the specified constraints.
 
 \paragraph{LFR-Overlapping} Lancichinetti, Fortunato and
 Radicchi~\cite{PhysRevE.80.016118} extended LFR to support the notion of
