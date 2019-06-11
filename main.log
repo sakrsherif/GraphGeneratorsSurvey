@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.11)  9 NOV 2018 09:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.11)  11 JUN 2019 06:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -342,31 +342,31 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Excluding 'CCSXML' comment.
-LaTeX Font Info:    Try loading font information for OMS+pnc on input line 182.
+LaTeX Font Info:    Try loading font information for OMS+pnc on input line 183.
 
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omspnc.fd
 File: omspnc.fd 
 )
 LaTeX Font Info:    Font shape `OMS/pnc/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 182.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 184.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 183.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 185.
 
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 184.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 185.
 LaTeX Font Info:    Font shape `OT1/pnc/bx/n' in size <8> not available
-(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 184.
+(Font)              Font shape `OT1/pnc/b/n' tried instead on input line 185.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 184.
+(Font)              <8> on input line 185.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 184.
+(Font)              <6> on input line 185.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 184.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 184.
+(Font)              <5> on input line 185.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 185.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
@@ -422,36 +422,36 @@ Underfull \vbox (badness 1895) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7])
-(./generators.tex (./generators_general.tex [8]) (./generators_LinkedData.tex
-[9]
+(./generators.tex (./generators_general.tex
+Underfull \vbox (badness 2142) has occurred while \output is active []
+
+ [8])
+(./generators_LinkedData.tex [9]
 Underfull \hbox (badness 1189) in paragraph at lines 16--18
 []  \OT1/pnc/m/it/10 BSBM[]. \OT1/pnc/m/n/10 The Berlin SPARQL Bench-mark (BSBM
 )[], is cen-tered around an e-
  []
 
 [10] [11]
-Underfull \hbox (badness 1454) in paragraph at lines 39--40
+Underfull \hbox (badness 1454) in paragraph at lines 38--39
 []  \OT1/pnc/m/it/10 Ge-o-graph-ica[]. \OT1/pnc/m/n/10 The Ge-o-graph-ica bench
 -mark[] has been de-signed to tar-get the
  []
 
-[12]) (./generators_GraphDatabases.tex [13] [14])
+[12]) (./generators_GraphDatabases.tex [13])
 Underfull \hbox (badness 1796) in paragraph at lines 23--12
 []  \OT1/pnc/m/it/10 Graph-Gen[]. \OT1/pnc/m/n/10 GraphAware Graph-Gen[] is a g
 raph gen-er-a-tion en-gine based on
  []
 
-(./generators_SocialNetworks.tex [15] [16] [17]) (./generators_analytics.tex)
-(./generators_others.tex (./generators_community_detection.tex [18])
-(./generators_streaming.tex
-Underfull \vbox (badness 2245) has occurred while \output is active []
-
- [19])))
-(./data_sets.tex [20] [21] [22]) (./challenges.tex
+[14] (./generators_SocialNetworks.tex [15] [16]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23]
-[24] [25]) (./conclusion.tex [26]) (./main.bbl
+ [17])
+(./generators_analytics.tex) (./generators_others.tex
+(./generators_community_detection.tex [18]) (./generators_streaming.tex
+[19]))) (./data_sets.tex [20] [21] [22]) (./challenges.tex [23] [24] [25])
+(./conclusion.tex [26]) (./main.bbl
 Underfull \hbox (badness 3189) in paragraph at lines 58--64
 []\OT1/pnc/m/n/8 2009. \OT1/pnc/m/it/8 HPC Scal-able Graph Anal-y-sis Bench-mar
 k\OT1/pnc/m/n/8 . Graph-Anal-y-sis.org. $http : / / www . graphanalysis . org /
@@ -465,15 +465,15 @@ aud-jee. 2014. Di-ver-si-fied Stress Test-
  []
 
 
-Underfull \vbox (badness 6675) has occurred while \output is active []
-
- [27]
 Underfull \hbox (badness 1400) in paragraph at lines 231--240
 \OT1/pnc/m/n/8 y-sis Bench-mark on Sym-met-ric Mul-ti-pro-ces-sors. In \OT1/pnc
 /m/it/8 Pro-ceed-ings of the 12th In-ter-na-tional Con-
  []
 
 
+Underfull \vbox (badness 7981) has occurred while \output is active []
+
+ [27]
 Underfull \hbox (badness 6063) in paragraph at lines 327--335
 \OT1/pnc/m/it/8 on the Prob-lem of Com-mu-nity De-tec-tion\OT1/pnc/m/n/8 . Spri
 nger In-ter-na-tional Pub-lish-ing, Cham, 3--14.
@@ -492,9 +492,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 441--449
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [28]
 Underfull \hbox (badness 5231) in paragraph at lines 478--487
 []\OT1/pnc/m/n/8 James Cheng, Yip-ing Ke, Wil-fred Ng, and An Lu. 2007. Fg-inde
 x: To-wards Verification-free
@@ -507,6 +504,9 @@ ed-ings of the 2007 ACM SIG-MOD In-ter-na-
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [28]
 Underfull \hbox (badness 2538) in paragraph at lines 513--522
 \OT1/pnc/m/it/8 gi-neer-ing Work-shops (ICDEW '12)\OT1/pnc/m/n/8 . IEEE Com-put
 er So-ci-ety, Wash-ing-ton, DC, USA, 186--189.
@@ -542,15 +542,15 @@ i-del-berg, Berlin, Hei-del-berg, 19--58.
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [30]
 Underfull \hbox (badness 3849) in paragraph at lines 948--952
 []\OT1/pnc/m/n/8 Tobias K[]afer and An-dreas Harth. 2014. Bil-lion Triples Chal
 -lenge data set. Down-loaded from
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30]
 Underfull \hbox (badness 10000) in paragraph at lines 1006--1013
 []\OT1/pnc/m/n/8 Myunghwan Kim and Jure Leskovec. 2010. \OT1/pnc/m/it/8 Mul-ti-
 plica-tive At-tribute Graph Model
@@ -682,7 +682,7 @@ Here is how much of TeX's memory you used:
  8345 multiletter control sequences out of 15000+600000
  27014 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,14n,37p,2028b,346s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,14n,37p,2018b,346s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8
 r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10
 .pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.p
@@ -701,7 +701,7 @@ live/2018/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/20
 18/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/local/texlive/2018/texm
 f-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/local/texlive/2018/texmf-dist/
 fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on main.pdf (34 pages, 303036 bytes).
+Output written on main.pdf (34 pages, 298248 bytes).
 PDF statistics:
  183 PDF objects out of 1000 (max. 8388607)
  128 compressed objects within 2 object streams
