@@ -250,36 +250,36 @@ Warning--empty publisher in ziegler2005improving
 Warning--empty address in ziegler2005improving
 You've used 162 entries,
             5290 wiz_defined-function locations,
-            2376 strings with 55317 characters,
-and the built_in function-call counts, 186279 in all, are:
-= -- 23165
-> -- 7635
+            2375 strings with 55301 characters,
+and the built_in function-call counts, 186254 in all, are:
+= -- 23163
+> -- 7634
 < -- 11
-+ -- 2406
++ -- 2407
 - -- 3880
-* -- 13141
-:= -- 20487
+* -- 13139
+:= -- 20485
 add.period$ -- 819
 call.type$ -- 162
 change.case$ -- 1196
-chr.to.int$ -- 160
+chr.to.int$ -- 159
 cite$ -- 433
-duplicate$ -- 13899
-empty$ -- 9821
-format.name$ -- 3136
-if$ -- 43105
-int.to.chr$ -- 3
+duplicate$ -- 13896
+empty$ -- 9819
+format.name$ -- 3135
+if$ -- 43100
+int.to.chr$ -- 4
 int.to.str$ -- 0
 missing$ -- 601
 newline$ -- 1481
-num.names$ -- 1241
+num.names$ -- 1240
 pop$ -- 5554
 preamble$ -- 1
-purify$ -- 2003
+purify$ -- 2002
 quote$ -- 0
-skip$ -- 3968
+skip$ -- 3966
 stack$ -- 0
-substring$ -- 17358
+substring$ -- 17354
 swap$ -- 1414
 text.length$ -- 2647
 text.prefix$ -- 0

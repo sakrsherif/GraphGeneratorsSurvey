@@ -416,10 +416,10 @@
 
 
 \bibitem[\protect\citeauthoryear{Bonifati, Fletcher, Hidders, and
-  Iosup}{Bonifati et~al\mbox{.}}{2018}]%
+  Iosup}{Bonifati et~al\mbox{.}}{2018a}]%
         {BFHI18}
 {Angela Bonifati}, {George Fletcher}, {Jan Hidders}, {and} {Alexandre Iosup}.
-  2018.
+  2018a.
 \newblock \showarticletitle{A Survey of Benchmarks for Graph-Processing
   Systems}.
 \newblock In {\em Graph Data Management}. Springer.
@@ -427,10 +427,10 @@
 
 
 \bibitem[\protect\citeauthoryear{Bonifati, Fletcher, Voigt, and
-  Yakovets}{Bonifati et~al\mbox{.}}{pear}]%
+  Yakovets}{Bonifati et~al\mbox{.}}{2018b}]%
         {BFVY18}
 {Angela Bonifati}, {George Fletcher}, {Hannes Voigt}, {and} {Nikolay Yakovets}.
-  2018 (to appear).
+  2018b.
 \newblock {\em Querying Graphs}.
 \newblock Morgan {\&} Claypool Publishers.
 \newblock
