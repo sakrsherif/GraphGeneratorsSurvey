@@ -448,6 +448,15 @@ Issue 11.
 \url{http://dx.doi.org/10.1103/PhysRevLett.84.2529}}
 
 
+\bibitem[\protect\citeauthoryear{Chafi, Crawford, Green, and Hare}{Chafi
+  et~al\mbox{.}}{2018}]%
+        {gql-2018}
+{Hassan Chafi}, {Jason Crawford}, {Alastair Green}, {and} {Keith Hare}. 2018.
+\newblock {Graph Query Language} GQL.
+\newblock https://www.gqlstandards.org//.   (2018).
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Chakrabarti and Faloutsos}{Chakrabarti and
   Faloutsos}{2006}]%
         {Chakrabarti:2006:GML:1132952.1132954}
