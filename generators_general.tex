@@ -1,21 +1,38 @@
 \subsection{General Graphs}
 \label{sec:generators_general}
 
-We start by focusing on approaches that have been designed for dealing with the generation of general graph
-data that is not aimed at a particular application domain. Currently, there exists a
-number of tools which involve a kind of general graph data generator, such as
-gtools from projects nauty and Traces~\cite{gtools} or the Stanford
-GraphBase~\cite{GraphBase}. We, however, focus on primarily
-generating/benchmarking projects targeting the Big Data world.
+We start by focusing on approaches that have been designed for dealing with the
+generation of general graph data that is not aimed at a particular application
+domain. In general, such generators focus on reproducing properties observed in
+real graphs regardless of their domain such as the degree distribution, the
+diameter, the presence of a large connected component, a community structure or
+a significantly large clustering coefficient. 
+
+%Currently, there exists a number of tools which involve a kind of
+%general graph data generator, such as gtools from projects nauty and
+%Traces~\cite{gtools} or the Stanford GraphBase~\cite{GraphBase}. We, however,
+%focus on primarily generating/benchmarking projects targeting the Big Data
+%world.
 
 
-\paragraph {Preferential Attachment} Barabasi and Albert~\cite{Barabasi99emergenceScaling} introduced a graph generation model that relies on two main mechanisms. The first mechanism is continuously expanding the graphs by adding new vertices. The second mechanism is to preferentially attach the new vertices   to the nodes/regions that are already well connected. So, in this approach, the generation of large graphs is governed by standard, robust self-organizing mechanisms that go beyond the characteristics of individual applications.
+\paragraph {Preferential Attachment} Barabasi and
+Albert~\cite{Barabasi99emergenceScaling} introduced a graph generation model
+that relies on two main mechanisms. The first mechanism is continuously
+expanding the graphs by adding new vertices. The second mechanism is to
+preferentially attach the new vertices   to the nodes/regions that are already
+well connected. So, in this approach, the generation of large graphs is governed
+by standard, robust self-organizing mechanisms that go beyond the
+characteristics of individual applications.
 
-\paragraph {R-MAT} R-MAT (\emph{R}ecursive \emph{Mat}rix) is a procedural synthetic graph generator which is designed to generate power-law degree
-distributions~\cite{DBLP:conf/sdm/ChakrabartiZF04}.
-The generator is recursive and employs a fairly small number of parameters.
-In principle, the strategy of this generator is to achieve simple means to produce graphs that are matching
-the properties of the real graphs. In particular, the design goal of R-MAT is to produce graphs which mimics the degree distributions, imitate a community structure and have a small diameter. R-MAT can generate weighted, directed and bipartite graphs.
+\paragraph {R-MAT} R-MAT (\emph{R}ecursive \emph{Mat}rix) is a procedural
+synthetic graph generator which is designed to generate power-law degree
+distributions~\cite{DBLP:conf/sdm/ChakrabartiZF04}.  The generator is recursive
+and employs a fairly small number of parameters.  In principle, the strategy of
+this generator is to achieve simple means to produce graphs that are matching
+the properties of the real graphs. In particular, the design goal of R-MAT is to
+produce graphs which mimics the degree distributions, imitate a community
+structure and have a small diameter. R-MAT can generate weighted, directed and
+bipartite graphs.
 
 \paragraph{GraphGen} For the purpose of testing the scalability of an indexing
 technique called FG-index~\cite{Cheng:2007:FTV:1247480.1247574} on the size of the
@@ -82,5 +99,20 @@ able to generate graphs with billions and even trillions of edges.
 %suite of programs called gtools which involve generators for non-isomorphic
 %graphs, bipartite graphs, digraphs, and multigraphs.
 
+\paragraph{Strengths and Weaknesses of General Graph Generators}
+In general, existing general graph generators produce graphs with the following
+properties: skewed degree distribution (e.g. powerlay), small diameter, large
+clustering coefficient, a large largest connected component and some degree of
+community structure. Degree distribution can be typically configured while other
+properties are just a result of the genration process and cannot be controlled
+by any means. 
 
-
+This is not the case of BTER and Darwini which besides the degree distribution,
+they also allow tunning the clustering coefficient. However, some use cases
+demand for more control on the characteristics of the generated graphs.
+This is the case, for instance, of benchmarking, where the underlying graph
+structure has direct implications to the performance of the graph algorithms
+to run. For this reason, the design of graph generators with the capability of fine
+tunning the characteristics of the generated graphs still remains as an open
+challenge. The question that remains though is what characteristics to tune,
+and which are the algorithms whose depends on such characteristics. 
