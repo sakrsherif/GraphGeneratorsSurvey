@@ -31,7 +31,7 @@ The type of the generator can also be influenced by the benchmark involving it, 
 
 \subsection{Classification}
 
-At first we classify the generators on the basis of the respective application domains or user communities. In particular we distinguish (1) general graphs, (2) Semantic Web, (3) graph databases, (4) social networks, (5) graph analytics, (6) community detection, and (7) graph data steaming. The selected classes are not rigorously defined (e.g., they are not disjoint as we will show later), but they correspond to the currently most active research areas. Thus we believe that they form a natural first acquaintance for the reader.
+At first we classify the generators on the basis of the respective application domains or user communities. In particular we distinguish (1) general graphs, (2) Semantic Web, (3) graph databases, (4) social networks, (5) graph analytics, (6) community detection, and (7) graph data streaming. The selected classes are not rigorously defined (e.g., they are not disjoint as we will show later), but they correspond to the currently most active research areas. Thus we believe that they form a natural first acquaintance for the reader.
 
 In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristics of the data generators clustered according to the respective application domains.\footnote{``GDBs'' stands for graph databases, ``SNs'' stands for social networks, ``A'' stands for graph analytics, ``Co'' stands for community detection, and ``St'' stands for graph streaming. Value ``$-$'' means that the information is not available or relevant.} In particular, we show:
 
@@ -183,7 +183,7 @@ Considering the output format of the data, as expected, the generators produce d
 
 \paragraph{Domain}
 
-If we consider the features of the particular domain of the generators, in most cases it is expectably fixed. It is the simplest option, but it does mean that the generator is simple too -- it can still focus on other complex aspects of the output. The particular target (in case of fixed) or sample (in case of schema-driven or extracted) domains do not provide very rich areas. They either correspond to the respective application domains (like in the case of social networks), or they are based on well-known and commonly used data sets (such as, e.g., DBLP~\cite{dblp} or DBpedia~\cite{Bizer:2009:DCP:1640541.1640848}). Except for general graphs without any domain, in all other cases we can find a flexible representative with schema-driven/pattern-driven domain or a domain extracted from sample data.
+If we consider the features of the particular domain of the generators, in most cases it is expectably \emph{fixed}, i.e., it is pre-defined (describing, e.g., a social network) and cannot be modified. It is the simplest option, but it does mean that the generator is simple too -- it can still focus on other complex aspects of the output. While the \emph{schema-driven} approaches enable to influence the target domain using a user-supplied schema, there also exist approaches where the domain is \emph{extracted} from sample data. The particular target (in case of fixed) or sample (in case of schema-driven or extracted) domains do not provide very rich areas. They either correspond to the respective application domains (like in the case of social networks), or they are based on well-known and commonly used data sets (such as, e.g., DBLP~\cite{dblp} or DBpedia~\cite{Bizer:2009:DCP:1640541.1640848}). Except for general graphs without any domain, in all other cases we can find a flexible representative with schema-driven/pattern-driven domain or a domain extracted from sample data.
 
 
 \paragraph{Operations}
@@ -195,11 +195,7 @@ A natural feature of the generators is to provide as realistic result as possibl
 \subsection{Overlapping}
 \label{sec:overlapping}
 
-As we have mentioned, the basic classification that we have used in this paper
-is  based on a relatively vague division of the generators on the basis of the
-current application domains or research areas. In addition, some of the
-generators are either general or have features applicable in other domains. So
-the classes can overlap, as depicted in Table~\ref{tab:overlapping}.
+As we have mentioned, the basic classification of the generators that we have used in this paper is relatively vaguely based on the current application domains or research areas. In addition, some of the generators are either general, and thus can be used universally, or have features applicable in more than one domain/research area. So the classes we use can overlap, as depicted in Table~\ref{tab:overlapping}.
 
 \begin{table}
 \scriptsize
@@ -214,7 +210,7 @@ the classes can overlap, as depicted in Table~\ref{tab:overlapping}.
                & \textbf{\rot{Social networks}}
                & \textbf{\rot{Analytics}}
                & \textbf{\rot{Community detection}}
-               & \textbf{\rot{Steaming}}
+               & \textbf{\rot{Streaming}}
                \\ \hline
 \hline   % ====================== general graphs
 \multirow{5}{*}{\rot{\textbf{General}}}
@@ -324,7 +320,7 @@ the graph databases are their main target.  Additionally, they also provide seri
 RDF, thus they can also be used to test RDF systems.
 
 In the case of LinkBench, nothing prevents the user to load the generated graph
-in a graph database (Facebook uses MySQL in that paper) to
+in a (graph) database (e.g., Facebook uses MySQL in~\cite{Armstrong:2013:LDB:2463676.2465296}) to
 test a workload similar to Facebook and extend and complement it with more
 graph queries like those in LDBC-SNB.
 
