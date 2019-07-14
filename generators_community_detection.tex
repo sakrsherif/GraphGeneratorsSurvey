@@ -46,6 +46,27 @@ belong to more than one community. This extended generator allows controlling
 the same parameters of LFR, as well as the amount of overlap of
 the generated communities.
 
+\paragraph{Stochastic Block Models} Another popular famility of generators
+widely use in the community detection field are the stochastic block
+models~\cite{holland1983stochastic}. In such models, the community structure of
+the graph is typically defined as an array of $n$ community or clusters sizes,
+and a density square matrix of size $nxn$ containing the density of
+intra-cluster edges (in the diagonal of the matrix) and the density of
+inter-cluster edges. Then, an stochastic procedure is run to sample graphs
+from such array and matrix, using the sizes to compute the possible edges
+and the densities as probabilities of such edges to exist. The popularity of
+these methods stem from its simplicity and scalability, which makes them
+suitable for generating large graphs fast and in a distributed environments,
+provided that the density matrix is sparse (as it happens in most of real
+                                            world graphs). Moreover, given
+that the generation process of such models is mathematically tractable, they
+are typically used to analyze the limitations of community detection
+algorithms such as those based on modularity
+optimization~\cite{fortunato2007resolution} or based on
+triads~\cite{prat2016put}. Extensions of such models exist, such as the
+Mixed Membership Stochastic Block Model~\cite{arioldi2008mixed}, for
+overlapping communities.
+
 \paragraph{Strengths and Weaknesses of Community Detection Generators}
 Besides synthetic graph generators, Yang and Leskovec~\cite{yang2015defining}
 proposed the use of real-world graphs with explicit group annotations (e.g.,
