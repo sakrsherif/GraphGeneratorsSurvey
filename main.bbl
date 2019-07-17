@@ -32,76 +32,6 @@
 \ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
 \ifx \showURL      \undefined \def \showURL       #1{#1}          \fi
 
-\bibitem[\protect\citeauthoryear{??}{owl}{2004}]%
-        {owl}
- 2004.
-\newblock {\em {OWL Web Ontology Language Overview}}.
-\newblock W3C.
-\newblock
-\showURL{%
-\url{http://www.w3.org/TR/owl-features/}}
-
-
-\bibitem[\protect\citeauthoryear{??}{sql}{2008}]%
-        {sql}
- 2008.
-\newblock {\em {ISO/IEC 9075-1:2008 Information technology -- Database
-  languages -- SQL -- Part 1: Framework (SQL/Framework)}}.
-\newblock ISO.
-\newblock
-\showURL{%
-\url{http://www.iso.org/iso/catalogue_detail.htm?csnumber=45498}}
-
-
-\bibitem[\protect\citeauthoryear{??}{HPC}{2009}]%
-        {HPCgraph}
- 2009.
-\newblock {\em {HPC Scalable Graph Analysis Benchmark}}.
-\newblock GraphAnalysis.org.
-\newblock
-\showURL{%
-\url{http://www.graphanalysis.org/benchmark/}}
-
-
-\bibitem[\protect\citeauthoryear{??}{Gra}{2015}]%
-        {GraphGen}
- 2015.
-\newblock {\em {GraphGen: Graph generator for Neo4j}}.
-\newblock Graph Aware Ltd.
-\newblock
-\showURL{%
-\url{http://graphgen.graphaware.com/}}
-
-
-\bibitem[\protect\citeauthoryear{??}{spb}{2015}]%
-        {spb}
- 2015.
-\newblock {\em {Semantic Publishing Benchmark v2.0}}.
-\newblock LDBC.
-\newblock
-\showURL{%
-\url{http://ldbcouncil.org/developer/spb}}
-
-
-\bibitem[\protect\citeauthoryear{??}{dbl}{2016}]%
-        {dblp}
- 2016.
-\newblock {\em {DBLP Computer Science Bibliography}}.
-\newblock DBLP team.
-\newblock
-\showURL{%
-\url{http://dblp.uni-trier.de/}}
-
-
-\bibitem[\protect\citeauthoryear{??}{TPC}{2016}]%
-        {TPC-H}
- 2016.
-\newblock {\em The TPC Benchmark -- H}.
-\newblock
-\showURL{%
-\url{http://www.tpc.org/tpch/}}
-
-
 \bibitem[\protect\citeauthoryear{Abadi, Marcus, Madden, and Hollenbach}{Abadi
   et~al\mbox{.}}{2007}]%
         {barton-benchmark}
@@ -109,15 +39,6 @@
   2007.
 \newblock {\em Using The Barton Libraries Dataset As An RDF Benchmark}.
 \newblock {T}echnical {R}eport MIT-CSAIL-TR-2007-036. MIT.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Adamic and Glance}{Adamic and Glance}{2005}]%
-        {adamic2005political}
-{Lada~A Adamic} {and} {Natalie Glance}. 2005.
-\newblock \showarticletitle{The political blogosphere and the 2004 US election:
-  divided they blog}. In {\em Proceedings of the 3rd international workshop on
-  Link discovery}. ACM, 36--43.
 \newblock
 
 
@@ -237,27 +158,6 @@
 \showISBNx{3-540-30936-5978-3-540-30936-9}
 \showDOI{%
 \url{http://dx.doi.org/10.1007/11602569_48}}
-
-
-\bibitem[\protect\citeauthoryear{Bader and Madduri}{Bader and Madduri}{2006}]%
-        {GTgraph}
-{David~A. Bader} {and} {Kamesh Madduri}. 2006.
-\newblock {\em {GTgraph -- A Suite of Synthetic Random Graph Generators}}.
-\newblock
-\showURL{%
-\url{http://www.cse.psu.edu/~kxm85/software/GTgraph/index.html}}
-
-
-\bibitem[\protect\citeauthoryear{Bader, Meyerhenke, Sanders, and Wagner}{Bader
-  et~al\mbox{.}}{2012}]%
-        {10dimacs}
-{David~A. Bader}, {Henning Meyerhenke}, {Peter Sanders}, {and} {Dorothea
-  Wagner}. 2012.
-\newblock {\em {10th DIMACS Implementation Challenge Workshop}}.
-\newblock Georgia Institute of Technology, Atlanta, GA, USA.
-\newblock
-\showURL{%
-\url{http://www.cc.gatech.edu/dimacs10/}}
 
 
 \bibitem[\protect\citeauthoryear{Bagan, Bonifati, Ciucanu, Fletcher, Lemay, and
@@ -382,26 +282,6 @@
 \newblock
 \showURL{%
 \url{http://stacks.iop.org/1742-5468/2008/i=10/a=P10008}}
-
-
-\bibitem[\protect\citeauthoryear{Boldi, Santini, and Vigna}{Boldi
-  et~al\mbox{.}}{2008}]%
-        {delis}
-{Paolo Boldi}, {Massimo Santini}, {and} {Sebastiano Vigna}. 2008.
-\newblock \showarticletitle{A Large Time-Aware Graph}.
-\newblock {\em SIGIR Forum\/} {42}, 2 (2008), 33--38.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Bollacker, Evans, Paritosh, Sturge, and
-  Taylor}{Bollacker et~al\mbox{.}}{2008}]%
-        {bollacker2008freebase}
-{Kurt Bollacker}, {Colin Evans}, {Praveen Paritosh}, {Tim Sturge}, {and} {Jamie
-  Taylor}. 2008.
-\newblock \showarticletitle{Freebase: a collaboratively created graph database
-  for structuring human knowledge}. In {\em Proceedings of the 2008 ACM SIGMOD
-  international conference on Management of data}. AcM, 1247--1250.
-\newblock
 
 
 \bibitem[\protect\citeauthoryear{Boncz, Pham, Erling, Mikhailov, and
@@ -567,27 +447,6 @@ Issue 11.
 \url{http://dx.doi.org/10.1007/s10515-013-0138-7}}
 
 
-\bibitem[\protect\citeauthoryear{De~Domenico, Lima, Mougel, and
-  Musolesi}{De~Domenico et~al\mbox{.}}{2013}]%
-        {de2013anatomy}
-{Manlio De~Domenico}, {Antonio Lima}, {Paul Mougel}, {and} {Mirco Musolesi}.
-  2013.
-\newblock \showarticletitle{The anatomy of a scientific rumor}.
-\newblock {\em Scientific reports\/}  {3} (2013), 2980.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{degli studio~di Milano}{degli studio~di
-  Milano}{2018}]%
-        {lawalgo}
-{Universita degli studio~di Milano}. 2018.
-\newblock Laboratory of Web Algorithmics.
-\newblock \url{http://law.di.unimi.it/}.   (2018).
-\newblock
-\newblock
-\shownote{[Online; accessed 03-July-2018].}
-
-
 \bibitem[\protect\citeauthoryear{Dominguez-Sal, Martinez-Bazan, Muntes-Mulero,
   Baleta, and Larriba-Pay}{Dominguez-Sal et~al\mbox{.}}{2011}]%
         {Dominguez-Sal:2010:DDG:1946050.1946053}
@@ -743,6 +602,16 @@ Issue 11.
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{Fortunato and Barthelemy}{Fortunato and
+  Barthelemy}{2007}]%
+        {fortunato2007resolution}
+{Santo Fortunato} {and} {Marc Barthelemy}. 2007.
+\newblock \showarticletitle{Resolution limit in community detection}.
+\newblock {\em Proceedings of the national academy of sciences\/} {104}, 1
+  (2007), 36--41.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Garbis, Kyzirakos, and Koubarakis}{Garbis
   et~al\mbox{.}}{2013}]%
         {DBLP:conf/semweb/GarbisKK13}
@@ -768,15 +637,6 @@ Issue 11.
 \url{http://dx.doi.org/10.1007/978-3-642-17551-0_2}}
 
 
-\bibitem[\protect\citeauthoryear{Girvan and Newman}{Girvan and Newman}{2002}]%
-        {girvan2002network}
-{M Girvan} {and} {MEJ Newman}. 2002.
-\newblock \showarticletitle{Network of american football games between division
-  ia colleges during regular season fall 2000}.
-\newblock {\em Proc. Natl. Acad. Sci. USA\/}  {99} (2002), 7821--7826.
-\newblock
-
-
 \bibitem[\protect\citeauthoryear{Goerke, Kluge, Schumm, Staudt, and
   Wagner}{Goerke et~al\mbox{.}}{2012}]%
         {GoerkeKlugeSchumm2012_1000029825}
@@ -786,31 +646,6 @@ Issue 11.
 \newblock {T}echnical {R}eport~17. {Karlsruhe}.
 \newblock
 \showISSN{2190-4782}
-
-
-\bibitem[\protect\citeauthoryear{Goldberg, Roeder, Gupta, and Perkins}{Goldberg
-  et~al\mbox{.}}{2001}]%
-        {goldberg2001eigentaste}
-{Ken Goldberg}, {Theresa Roeder}, {Dhruv Gupta}, {and} {Chris Perkins}. 2001.
-\newblock \showarticletitle{Eigentaste: A constant time collaborative filtering
-  algorithm}.
-\newblock {\em information retrieval\/} {4}, 2 (2001), 133--151.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Gonzalez, Low, Gu, Bickson, and
-  Guestrin}{Gonzalez et~al\mbox{.}}{2012}]%
-        {Gonzalez:2012:PDG:2387880.2387883}
-{Joseph~E. Gonzalez}, {Yucheng Low}, {Haijie Gu}, {Danny Bickson}, {and}
-  {Carlos Guestrin}. 2012.
-\newblock \showarticletitle{PowerGraph: Distributed Graph-parallel Computation
-  on Natural Graphs}. In {\em Proceedings of the 10th USENIX Conference on
-  Operating Systems Design and Implementation} {\em (OSDI'12)}. USENIX
-  Association, Berkeley, CA, USA, 17--30.
-\newblock
-\showISBNx{978-1-931971-96-6}
-\showURL{%
-\url{http://dl.acm.org/citation.cfm?id=2387880.2387883}}
 
 
 \bibitem[\protect\citeauthoryear{Goodfellow, Pouget-Abadie, Mirza, Xu,
@@ -824,6 +659,15 @@ Issue 11.
 \newblock
 
 
+\bibitem[\protect\citeauthoryear{GraphAnalysis.org}{GraphAnalysis.org}{2009}]%
+        {HPCgraph}
+{GraphAnalysis.org}. 2009.
+\newblock {\em {HPC Scalable Graph Analysis Benchmark}}.
+\newblock
+\showURL{%
+\url{http://www.graphanalysis.org/benchmark/}}
+
+
 \bibitem[\protect\citeauthoryear{Grossniklaus, Leone, and Zaschke}{Grossniklaus
   et~al\mbox{.}}{2013}]%
         {Grossniklaus2013Towar-24253}
@@ -831,26 +675,6 @@ Issue 11.
 \newblock {\em Towards a benchmark for graph data management and processing}.
 \newblock {T}echnical {R}eport.
 \newblock
-
-
-\bibitem[\protect\citeauthoryear{GroupLens}{GroupLens}{2011}]%
-        {hetrec}
-{GroupLens}. 2011.
-\newblock HetRec.
-\newblock \url{https://grouplens.org/datasets/hetrec-2011/}.   (2011).
-\newblock
-\newblock
-\shownote{[Online; accessed 03-July-2018].}
-
-
-\bibitem[\protect\citeauthoryear{GroupLens}{GroupLens}{2018}]%
-        {movielens}
-{GroupLens}. 2018.
-\newblock Movielens.
-\newblock \url{https://grouplens.org/datasets/movielens/}.   (2018).
-\newblock
-\newblock
-\shownote{[Online; accessed 03-July-2018].}
 
 
 \bibitem[\protect\citeauthoryear{Grover, Zweig, and Ermon}{Grover
@@ -892,14 +716,12 @@ Issue 11.
 \url{http://dx.doi.org/10.1016/j.ejor.2013.08.022}}
 
 
-\bibitem[\protect\citeauthoryear{Hoffart, Suchanek, Berberich, and
-  Weikum}{Hoffart et~al\mbox{.}}{2013}]%
-        {hoffart2013yago2}
-{Johannes Hoffart}, {Fabian~M Suchanek}, {Klaus Berberich}, {and} {Gerhard
-  Weikum}. 2013.
-\newblock \showarticletitle{YAGO2: A spatially and temporally enhanced
-  knowledge base from Wikipedia}.
-\newblock {\em Artificial Intelligence\/}  {194} (2013), 28--61.
+\bibitem[\protect\citeauthoryear{Holland, Laskey, and Leinhardt}{Holland
+  et~al\mbox{.}}{1983}]%
+        {holland1983stochastic}
+{Paul~W Holland}, {Kathryn~Blackmond Laskey}, {and} {Samuel Leinhardt}. 1983.
+\newblock \showarticletitle{Stochastic blockmodels: First steps}.
+\newblock {\em Social networks\/} {5}, 2 (1983), 109--137.
 \newblock
 
 
@@ -930,6 +752,16 @@ Issue 11.
 \url{http://dx.doi.org/10.14778/3007263.3007270}}
 
 
+\bibitem[\protect\citeauthoryear{ISO}{ISO}{2008}]%
+        {sql}
+{ISO}. 2008.
+\newblock {\em {ISO/IEC 9075-1:2008 Information technology -- Database
+  languages -- SQL -- Part 1: Framework (SQL/Framework)}}.
+\newblock
+\showURL{%
+\url{http://www.iso.org/iso/catalogue_detail.htm?csnumber=45498}}
+
+
 \bibitem[\protect\citeauthoryear{Joshi, Hitzler, and Dong}{Joshi
   et~al\mbox{.}}{2016}]%
         {10.1007/978-3-319-46547-0_12}
@@ -948,53 +780,6 @@ Issue 11.
 {Galileo Mark S.~Namata Jr.} {and} {Lise Getoor}. 2010.
 \newblock \showarticletitle{Identifying graphs from noisy and incomplete data}.
 \newblock {\em {SIGKDD} Explorations\/} {12}, 1 (2010), 33--39.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{K{\"a}fer and Harth}{K{\"a}fer and
-  Harth}{2014}]%
-        {btc-2014}
-{Tobias K{\"a}fer} {and} {Andreas Harth}. 2014.
-\newblock {Billion Triples Challenge} data set.
-\newblock Downloaded from http://km.aifb.kit.edu/projects/btc-2014/.   (2014).
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{K{\"a}fer, Umbrich, Hogan, and
-  Polleres}{K{\"a}fer et~al\mbox{.}}{2012}]%
-        {kafer2012towards}
-{Tobias K{\"a}fer}, {J{\"u}rgen Umbrich}, {Aidan Hogan}, {and} {Axel Polleres}.
-  2012.
-\newblock \showarticletitle{Towards a dynamic linked data observatory}.
-\newblock {\em LDOW at WWW\/} (2012).
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Kagan, Stevens, and Subrahmanian}{Kagan
-  et~al\mbox{.}}{2015}]%
-        {kagan2015using}
-{Vadim Kagan}, {Andrew Stevens}, {and} {VS Subrahmanian}. 2015.
-\newblock \showarticletitle{Using twitter sentiment to forecast the 2013
-  pakistani election and the 2014 indian election}.
-\newblock {\em IEEE Intelligent Systems\/} 1 (2015), 2--5.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Kamvar, Schlosser, and Garcia-Molina}{Kamvar
-  et~al\mbox{.}}{2003}]%
-        {kamvar2003eigentrust}
-{Sepandar~D Kamvar}, {Mario~T Schlosser}, {and} {Hector Garcia-Molina}. 2003.
-\newblock \showarticletitle{The eigentrust algorithm for reputation management
-  in p2p networks}. In {\em Proceedings of the 12th international conference on
-  World Wide Web}. ACM, 640--651.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Katz and Golbeck}{Katz and Golbeck}{2006}]%
-        {katz2006social}
-{Yarden Katz} {and} {Jennifer Golbeck}. 2006.
-\newblock \showarticletitle{Social network-based trust in prioritized default
-  logic}. In {\em AAAI}, Vol.~6. 1345--1350.
 \newblock
 
 
@@ -1027,15 +812,6 @@ Issue 11.
 \newblock \showarticletitle{Variational graph auto-encoders}.
 \newblock {\em arXiv preprint arXiv:1611.07308\/} (2016).
 \newblock
-
-
-\bibitem[\protect\citeauthoryear{Knuth}{Knuth}{2008}]%
-        {GraphBase}
-{Donald Knuth}. 2008.
-\newblock {\em {The Stanford GraphBase}}.
-\newblock
-\showURL{%
-\url{http://www3.cs.stonybrook.edu/~algorith/implement/graphbase/implement.shtml}}
 
 
 \bibitem[\protect\citeauthoryear{Kolda, Pinar, Plantenga, and Seshadhri}{Kolda
@@ -1086,32 +862,12 @@ Issue 11.
 \url{http://dx.doi.org/10.1145/1150402.1150476}}
 
 
-\bibitem[\protect\citeauthoryear{Kumar, Spezzano, Subrahmanian, and
-  Faloutsos}{Kumar et~al\mbox{.}}{2016}]%
-        {kumar2016edge}
-{Srijan Kumar}, {Francesca Spezzano}, {VS Subrahmanian}, {and} {Christos
-  Faloutsos}. 2016.
-\newblock \showarticletitle{Edge Weight Prediction in Weighted Signed
-  Networks.}. In {\em ICDM}. 221--230.
-\newblock
-
-
 \bibitem[\protect\citeauthoryear{Kunjir, Kalmegh, and Babu}{Kunjir
   et~al\mbox{.}}{2014}]%
         {journals/pvldb/KunjirKB14}
 {Mayuresh Kunjir}, {Prajakta Kalmegh}, {and} {Shivnath Babu}. 2014.
 \newblock \showarticletitle{{Thoth: Towards Managing a Multi-System Cluster}}.
 \newblock {\em {PVLDB}\/} {7}, 13 (2014), 1689--1692.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Kwak, Lee, Park, and Moon}{Kwak
-  et~al\mbox{.}}{2010}]%
-        {kwak2010twitter}
-{Haewoon Kwak}, {Changhyun Lee}, {Hosung Park}, {and} {Sue Moon}. 2010.
-\newblock \showarticletitle{What is Twitter, a social network or a news
-  media?}. In {\em Proceedings of the 19th international conference on World
-  wide web}. AcM, 591--600.
 \newblock
 
 
@@ -1139,6 +895,15 @@ Issue 11.
 \url{http://dx.doi.org/10.1103/PhysRevE.78.046110}}
 
 
+\bibitem[\protect\citeauthoryear{LDBC}{LDBC}{2015}]%
+        {spb}
+{LDBC}. 2015.
+\newblock {\em {Semantic Publishing Benchmark v2.0}}.
+\newblock
+\showURL{%
+\url{http://ldbcouncil.org/developer/spb}}
+
+
 \bibitem[\protect\citeauthoryear{Le-Phuoc, Dao-Tran, Pham, Boncz, Eiter, and
   Fink}{Le-Phuoc et~al\mbox{.}}{2012}]%
         {le2012linked}
@@ -1146,16 +911,6 @@ Issue 11.
   Eiter}, {and} {Michael Fink}. 2012.
 \newblock \showarticletitle{Linked stream data processing engines: Facts and
   figures}. In {\em International Semantic Web Conference}. Springer, 300--312.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Leskovec, Backstrom, and Kleinberg}{Leskovec
-  et~al\mbox{.}}{2009}]%
-        {leskovec2009meme}
-{Jure Leskovec}, {Lars Backstrom}, {and} {Jon Kleinberg}. 2009.
-\newblock \showarticletitle{Meme-tracking and the dynamics of the news cycle}.
-  In {\em Proceedings of the 15th ACM SIGKDD international conference on
-  Knowledge discovery and data mining}. ACM, 497--506.
 \newblock
 
 
@@ -1189,15 +944,6 @@ Issue 11.
 \url{http://dx.doi.org/10.1145/1081870.1081893}}
 
 
-\bibitem[\protect\citeauthoryear{Leskovec and Krevl}{Leskovec and
-  Krevl}{2014}]%
-        {snapnets}
-{Jure Leskovec} {and} {Andrej Krevl}. 2014.
-\newblock {SNAP Datasets}: {Stanford} Large Network Dataset Collection.
-\newblock \url{http://snap.stanford.edu/data}.   (June 2014).
-\newblock
-
-
 \bibitem[\protect\citeauthoryear{Leskovec, Lang, Dasgupta, and
   Mahoney}{Leskovec et~al\mbox{.}}{2008}]%
         {Leskovec:2008:SPC:1367497.1367591}
@@ -1211,17 +957,6 @@ Issue 11.
 \showISBNx{978-1-60558-085-2}
 \showDOI{%
 \url{http://dx.doi.org/10.1145/1367497.1367591}}
-
-
-\bibitem[\protect\citeauthoryear{Leskovec, Lang, Dasgupta, and
-  Mahoney}{Leskovec et~al\mbox{.}}{2009}]%
-        {leskovec2009community}
-{Jure Leskovec}, {Kevin~J Lang}, {Anirban Dasgupta}, {and} {Michael~W Mahoney}.
-  2009.
-\newblock \showarticletitle{Community structure in large networks: Natural
-  cluster sizes and the absence of large well-defined clusters}.
-\newblock {\em Internet Mathematics\/} {6}, 1 (2009), 29--123.
-\newblock
 
 
 \bibitem[\protect\citeauthoryear{Li, Tufte, Shkapenyuk, Papadimos, Johnson, and
@@ -1243,6 +978,15 @@ Issue 11.
 \newblock \showarticletitle{Learning deep generative models of graphs}.
 \newblock {\em arXiv preprint arXiv:1803.03324\/} (2018).
 \newblock
+
+
+\bibitem[\protect\citeauthoryear{Ltd.}{Ltd.}{2015}]%
+        {GraphGen}
+{Graph~Aware Ltd.} 2015.
+\newblock {\em {GraphGen: Graph generator for Neo4j}}.
+\newblock
+\showURL{%
+\url{http://graphgen.graphaware.com/}}
 
 
 \bibitem[\protect\citeauthoryear{Lu}{Lu}{2017}]%
@@ -1281,15 +1025,6 @@ Issue 11.
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Mahdisoltani, Biega, and
-  Suchanek}{Mahdisoltani et~al\mbox{.}}{2013}]%
-        {mahdisoltani2013yago3}
-{Farzaneh Mahdisoltani}, {Joanna Biega}, {and} {Fabian~M Suchanek}. 2013.
-\newblock \showarticletitle{Yago3: A knowledge base from multilingual
-  wikipedias}. In {\em CIDR}.
-\newblock
-
-
 \bibitem[\protect\citeauthoryear{Malewicz, Austern, Bik, Dehnert, Horn, Leiser,
   and Czajkowski}{Malewicz et~al\mbox{.}}{2010}]%
         {malewicz2010pregel}
@@ -1298,23 +1033,6 @@ Issue 11.
 \newblock \showarticletitle{Pregel: a system for large-scale graph processing}.
   In {\em Proceedings of the 2010 ACM SIGMOD International Conference on
   Management of data}. ACM, 135--146.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Maniu, Cautis, and Abdessalem}{Maniu
-  et~al\mbox{.}}{2011}]%
-        {maniu2011building}
-{Silviu Maniu}, {Bogdan Cautis}, {and} {Talel Abdessalem}. 2011.
-\newblock \showarticletitle{Building a signed network from interactions in
-  Wikipedia}. In {\em Databases and Social Networks}. ACM, 19--24.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Massa and Avesani}{Massa and Avesani}{2007}]%
-        {massa2007trust}
-{Paolo Massa} {and} {Paolo Avesani}. 2007.
-\newblock \showarticletitle{Trust-aware recommender systems}. In {\em
-  Proceedings of the 2007 ACM conference on Recommender systems}. ACM, 17--24.
 \newblock
 
 
@@ -1334,15 +1052,6 @@ Issue 11.
 \newblock \showarticletitle{Graph stream algorithms: a survey}.
 \newblock {\em ACM SIGMOD Record\/} {43}, 1 (2014), 9--20.
 \newblock
-
-
-\bibitem[\protect\citeauthoryear{McKay and Piperno}{McKay and Piperno}{2014}]%
-        {gtools}
-{Brendan McKay} {and} {Adolfo Piperno}. 2014.
-\newblock {\em {nauty and Traces}}.
-\newblock
-\showURL{%
-\url{http://pallini.di.uniroma1.it/}}
 
 
 \bibitem[\protect\citeauthoryear{Meimaris and Papastefanatos}{Meimaris and
@@ -1380,16 +1089,6 @@ Issue 11.
 \showISSN{0001-0782}
 \showDOI{%
 \url{http://dx.doi.org/10.1145/219717.219748}}
-
-
-\bibitem[\protect\citeauthoryear{Moore and Christin}{Moore and
-  Christin}{2013}]%
-        {moore2013beware}
-{Tyler Moore} {and} {Nicolas Christin}. 2013.
-\newblock \showarticletitle{Beware the middleman: Empirical analysis of
-  Bitcoin-exchange risk}. In {\em International Conference on Financial
-  Cryptography and Data Security}. Springer, 25--33.
-\newblock
 
 
 \bibitem[\protect\citeauthoryear{Morsey, Lehmann, Auer, and Ngomo}{Morsey
@@ -1507,14 +1206,16 @@ Issue 11.
 \url{http://dx.doi.org/10.1145/2621934.2621942}}
 
 
-\bibitem[\protect\citeauthoryear{Project}{Project}{2012}]%
-        {clueweb}
-{The~Lemur Project}. 2012.
-\newblock ClueWeb2012.
-\newblock \url{http://law.di.unimi.it/webdata/clueweb12/}.   (2012).
+\bibitem[\protect\citeauthoryear{Prat-P{\'e}rez, Dominguez-Sal, Brunat, and
+  Larriba-Pey}{Prat-P{\'e}rez et~al\mbox{.}}{2016}]%
+        {prat2016put}
+{Arnau Prat-P{\'e}rez}, {David Dominguez-Sal}, {Josep-M Brunat}, {and}
+  {Josep-Lluis Larriba-Pey}. 2016.
+\newblock \showarticletitle{Put three and three together: Triangle-driven
+  community detection}.
+\newblock {\em ACM Transactions on Knowledge Discovery from Data (TKDD)\/}
+  {10}, 3 (2016), 22.
 \newblock
-\newblock
-\shownote{[Online; accessed 02-July-2018].}
 
 
 \bibitem[\protect\citeauthoryear{Prud'hommeaux and Seaborne}{Prud'hommeaux and
@@ -1632,20 +1333,6 @@ Issue 11.
 \url{http://dx.doi.org/10.1007/978-3-642-04329-1_16}}
 
 
-\bibitem[\protect\citeauthoryear{Sevenich, Hong, van Rest, Wu, Banerjee, and
-  Chafi}{Sevenich et~al\mbox{.}}{2016}]%
-        {Sevenich:2016:UDL:3007263.3007265}
-{Martin Sevenich}, {Sungpack Hong}, {Oskar van Rest}, {Zhe Wu}, {Jayanta
-  Banerjee}, {and} {Hassan Chafi}. 2016.
-\newblock \showarticletitle{Using Domain-specific Languages for Analytic Graph
-  Databases}.
-\newblock {\em Proc. VLDB Endow.\/} {9}, 13 (Sept. 2016), 1257--1268.
-\newblock
-\showISSN{2150-8097}
-\showDOI{%
-\url{http://dx.doi.org/10.14778/3007263.3007265}}
-
-
 \bibitem[\protect\citeauthoryear{Simonovsky and Komodakis}{Simonovsky and
   Komodakis}{2018}]%
         {simonovsky2018graphvae}
@@ -1656,14 +1343,22 @@ Issue 11.
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Suchanek, Kasneci, and Weikum}{Suchanek
-  et~al\mbox{.}}{2007}]%
-        {suchanek2007yago}
-{Fabian~M Suchanek}, {Gjergji Kasneci}, {and} {Gerhard Weikum}. 2007.
-\newblock \showarticletitle{Yago: a core of semantic knowledge}. In {\em
-  Proceedings of the 16th international conference on World Wide Web}. ACM,
-  697--706.
+\bibitem[\protect\citeauthoryear{Solutions}{Solutions}{2016}]%
+        {TPC-H}
+{Hotea Solutions}. 2016.
+\newblock {\em The TPC Benchmark -- H}.
 \newblock
+\showURL{%
+\url{http://www.tpc.org/tpch/}}
+
+
+\bibitem[\protect\citeauthoryear{team}{team}{2016}]%
+        {dblp}
+{DBLP team}. 2016.
+\newblock {\em {DBLP Computer Science Bibliography}}.
+\newblock
+\showURL{%
+\url{http://dblp.uni-trier.de/}}
 
 
 \bibitem[\protect\citeauthoryear{Tommasini, Della~Valle, Mauri, and
@@ -1705,13 +1400,13 @@ Issue 11.
 \url{http://dx.doi.org/10.1145/1592665.1592675}}
 
 
-\bibitem[\protect\citeauthoryear{Vrande{\v{c}}i{\'c} and
-  Kr{\"o}tzsch}{Vrande{\v{c}}i{\'c} and Kr{\"o}tzsch}{2014}]%
-        {vrandevcic2014wikidata}
-{Denny Vrande{\v{c}}i{\'c}} {and} {Markus Kr{\"o}tzsch}. 2014.
-\newblock \showarticletitle{Wikidata: a free collaborative knowledgebase}.
-\newblock {\it Commun. ACM} {57}, 10 (2014), 78--85.
+\bibitem[\protect\citeauthoryear{W3C}{W3C}{2004}]%
+        {owl}
+{W3C}. 2004.
+\newblock {\em {OWL Web Ontology Language Overview}}.
 \newblock
+\showURL{%
+\url{http://www.w3.org/TR/owl-features/}}
 
 
 \bibitem[\protect\citeauthoryear{Wang, Wang, Lei, and Qiao}{Wang
@@ -1739,23 +1434,23 @@ Issue 11.
 \url{http://dx.doi.org/10.1007/11574620_54}}
 
 
+\bibitem[\protect\citeauthoryear{Wang, Maghami, and Sukthankar}{Wang
+  et~al\mbox{.}}{2011}]%
+        {wang2011leveraging}
+{Xi Wang}, {Mahsa Maghami}, {and} {Gita Sukthankar}. 2011.
+\newblock \showarticletitle{Leveraging network properties for trust evaluation
+  in multi-agent systems}. In {\em Proceedings of the 2011 IEEE/WIC/ACM
+  International Conferences on Web Intelligence and Intelligent Agent
+  Technology-Volume 02}. IEEE Computer Society, 288--295.
+\newblock
+
+
 \bibitem[\protect\citeauthoryear{Wang and Wu}{Wang and Wu}{2013}]%
         {wang2013preserving}
 {Yue Wang} {and} {Xintao Wu}. 2013.
 \newblock \showarticletitle{Preserving differential privacy in
   degree-correlation based graph generation}.
 \newblock {\em Transactions on data privacy\/} {6}, 2 (2013), 127.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{West, Paskov, Leskovec, and Potts}{West
-  et~al\mbox{.}}{2014}]%
-        {west2014exploiting}
-{Robert West}, {Hristo~S Paskov}, {Jure Leskovec}, {and} {Christopher Potts}.
-  2014.
-\newblock \showarticletitle{Exploiting social network structure for
-  person-to-person sentiment analysis}.
-\newblock {\em arXiv preprint arXiv:1409.2450\/} (2014).
 \newblock
 
 
@@ -1829,15 +1524,6 @@ Issue 11.
 \newblock
 
 
-\bibitem[\protect\citeauthoryear{Zachary}{Zachary}{1977}]%
-        {zachary1977information}
-{Wayne~W Zachary}. 1977.
-\newblock \showarticletitle{An information flow model for conflict and fission
-  in small groups}.
-\newblock {\em Journal of anthropological research\/} {33}, 4 (1977), 452--473.
-\newblock
-
-
 \bibitem[\protect\citeauthoryear{Zhao}{Zhao}{2017}]%
         {doi:10.1002/wics.1403}
 {Yunpeng Zhao}. 2017.
@@ -1848,27 +1534,6 @@ Issue 11.
 \newblock
 \showDOI{%
 \url{http://dx.doi.org/10.1002/wics.1403}}
-
-
-\bibitem[\protect\citeauthoryear{Zhou, Wilkinson, Schreiber, and Pan}{Zhou
-  et~al\mbox{.}}{2008}]%
-        {zhou2008large}
-{Yunhong Zhou}, {Dennis Wilkinson}, {Robert Schreiber}, {and} {Rong Pan}. 2008.
-\newblock \showarticletitle{Large-scale parallel collaborative filtering for
-  the netflix prize}. In {\em International Conference on Algorithmic
-  Applications in Management}. Springer, 337--348.
-\newblock
-
-
-\bibitem[\protect\citeauthoryear{Ziegler, McNee, Konstan, and Lausen}{Ziegler
-  et~al\mbox{.}}{2005}]%
-        {ziegler2005improving}
-{Cai-Nicolas Ziegler}, {Sean~M McNee}, {Joseph~A Konstan}, {and} {Georg
-  Lausen}. 2005.
-\newblock \showarticletitle{Improving recommendation lists through topic
-  diversification}. In {\em Proceedings of the 14th international conference on
-  World Wide Web}. ACM, 22--32.
-\newblock
 
 
 \end{thebibliography}
