@@ -4,25 +4,25 @@
 On-line social networks, like Facebook, Twitter, or LinkedIn, have become a
 phenomenon used by billions of people every day and thus providing extremely
 useful information for various domains. However, an analysis of such type of
-graph has to cope with two problems: (1) availability of the data and (2)
+graphs has to cope with two problems: (1) availability of the data and (2)
 privacy of the data. Hence, data generators which provide realistic synthetic
 social network graphs are in a great demand.
 
 In general, any analysis of social networks identifies their various specific
 features~\cite{Chakrabarti:2006:GML:1132952.1132954}. For example, a social
-graph often has high \emph{clustering coefficient}, i.e. the degree of
-transitivity of a graph. Or, its diameter, i.e. the longest shortest path
+graph often has high \emph{clustering coefficient}, i.e., the degree of
+transitivity of a graph. Or, its diameter, i.e., the longest shortest path
 amongst some fraction (e.g. 90\%) of all connected nodes, is usually low due to
 weak ties joining faraway cliques.
 
 Another important aspect of social networks is the community effect. A detailed
 study of structure of communities in 70 real-world networks is provided, e.g.,
-in ~\cite{Leskovec:2008:SPC:1367497.1367591}.
+in~\cite{Leskovec:2008:SPC:1367497.1367591}.
 ~\cite{Prat-Perez:2014:CSS:2621934.2621942} analyzed the structure of
 communities (clustering coefficient, triangle participation ratio, bridges,
 diameter, conductance and size) in both real-world graphs and outputs of
 existing graph generators such as LFR~\cite{PhysRevE.78.046110} and the
-LDBC-SNB~\cite{Erling:2015:LSN:2723372.2742786}. They found out that discovered
+LDBC SNB~\cite{Erling:2015:LSN:2723372.2742786}. They found out that discovered
 communities  in different graphs have common distributions and that communities
 in a single graph have diverse nature and are difficult to fit with a single
 model.
@@ -52,7 +52,7 @@ the networks are constructed by directly simulating the agents' social choices.
 ~\cite{Barrett:2009:GAL:1995456.1995598} focused on the construction of
 realistic social networks. For this purpose the authors combine both public and
 private data sets with large-scale agent-based techniques. The process works as
-follows: In the first step it generates a synthetic data by combining public and
+follows: In the first step it generates  synthetic data by combining public and
 commercial databases. In the second step, it determines a set of activity
 templates. A 24-hour activity sequence including geolocations is assigned to
 each synthetic individual. To demonstrate the approach, the authors create a
@@ -138,9 +138,9 @@ are generated according to 3 correlation dimensions.
 \paragraph{Cloning of Social Networks} ~\cite{Sukthankar-SocialInfo2014}
 introduces two synthetic generators to reproduce two characteristics typically
 observed in social networks: node features and multiple link types. Both
-generators etend on the generator proposed by~\cite{wang2011leveraging}.
+generators extend  the generator proposed by~\cite{wang2011leveraging}.
 which starts with a small number of
-nodes, and new nodes are added until the network reaches the required number. It
+nodes and new nodes are added until the network reaches the required number. It
 has two basic parameters: homophily and link density. A high \emph{homophily}
 value reflects that links have higher chances to be established among the nodes with the
 same label; these labels can be considered as being equivalent to community
@@ -149,7 +149,7 @@ membership.
 The first proposed generator is Attribute Synthetic Generator (ASG), used for
 reproducing the node feature distribution of standard networks and rewiring the
 network to preferentially connect nodes that exhibit a high feature similarity.
-The network is initialized with a group of three nodes, and new nodes and links
+The network is initialized with a group of three nodes. New nodes and links
 are added to the network based on link density, homophily, and feature
 similarity. As new nodes are created, their labels are assigned based on the
 prior label distribution. After the network has reached the same number of nodes
@@ -159,8 +159,8 @@ initial assignments closer to the target distribution extracted from social
 media dataset using the Particle Swarm Optimization algorithm. The tuned
 attributes are then used to add additional links to the network based on the
 feature similarity parameter -- a source node is selected randomly and connected
-to the most similar node. The second proposed generator is Multi-Link Generator
-(MLG) further  uses link co-occurrence statistics from the original dataset to
+to the most similar node. The second proposed generator, so-called Multi-Link Generator
+(MLG), further  uses link co-occurrence statistics from the original dataset to
 create a multiplex network. MLG uses the same network growth process as ASG.
 Based on the link density parameter, either a new node is generated with a label
 based on the label distribution of the target dataset or a new link is created
@@ -190,9 +190,9 @@ and for a given set of configuration parameters.
 %The generated data have become a part if several graph benchmarks, such as GraphBIG~\cite{Nai:2015:GUG:2807591.2807626}.
 
 \paragraph{Towards More Realistic Data} \cite{Nettleton2016} argued that the majority of existing works focuses on
-topology generation which approximates the characteristics of a real social
+topology generation which approximates the characteristics of a real-world social
 network (such as a small graph diameter, skew degree
-distribution, small average path length, and community structures), however,  this is usually done without any data. Hence, they
+distribution, small average path length, and community structures); however,  this is usually done without any data. Hence, they
 introduced a general stochastic modeling approach that enables the users to
 populate a graph topology with data. The approach has three steps: (1) topology
 generation (using R-MAT) plus community identification using the Louvain
@@ -205,29 +205,29 @@ population.
 \paragraph{Strengths and Weaknesses of Social Network Generators}
 Compared to more general graph generators, social network generators focus
 mainly on reproducing intra- and inter-node feature correlations.
-Among existing genrators, LDBC-SNB and S3G2 look
+Among existing generators, LDBC SNB and S3G2 look
 like the most advanced ones in terms of the complexity of the generated graph
 and the amount of features and correlations they can generate, while providing a
 large degree of scalability. Their generation process is based on input dictionaries and have configuration files that
-allow tweaking parameters many parameters of the generated graphs, but their schema is mainly
-static and cannot be easilly configured to meet the needs of other uses cases
+allow tweaking  many parameters of the generated graphs, but their schema is mainly
+static and cannot be easily configured to meet the needs of other uses cases
 besides the benchmarks they have been designed for. In this regard, the approaches
-like those proposed in ~\cite{Nettleton2016} and ~\cite{Sukthankar-SocialInfo2014} offer a
+like those proposed in~\cite{Nettleton2016} and~\cite{Sukthankar-SocialInfo2014} offer a
 more flexible and understandable configuration process to tweak the types,
-values and correlations between different features.
+values, and correlations between different features.
 
 Regarding the correlation between the underlying graph structure and the node
-features, approaches such as LDBC-SNB, S3G2 or ~\cite{Nettleton2016}
-take into account this aspect and the generated graphs have ralistic
+features, approaches such as LDBC SNB, S3G2 or ~\cite{Nettleton2016}
+take into account this aspect and the generated graphs have realistic
 structural properties while similar nodes have a larger probability of being
 connected. However, their approach seems to be more based on
-intuition and common sense than to be backed up by an any study of how the
+intuition and common sense than to be backed up by  any study of how the
 relation between structure and attributes showcase in real social networks. In
-this reagard, this remains as a clear open challenge for social network
+this regard, this remains as a clear open challenge for social network
 generators.
 
 Finally, scalability is another aspect to be considered in social network graph
-generators. LDBC-SNB and S3G2 are engineered with this in mind, thus they
+generators. LDBC SNB and S3G2 are engineered with this in mind, thus they
 provide a way to scale to billions of nodes and edges. This is not the case for
 the other generators, which can make them impractical if our goal is to generate
 real sized social network graphs.

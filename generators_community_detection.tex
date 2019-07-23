@@ -2,19 +2,19 @@
 \label{sec:generators_community_detection}
 
 Community detection is one of the many graph analytics algorithms typically used
-in domains such as social networks or bioinformatics. \emph{Communities} are groups of nodes that are highly connected among them, while being scarcely connected to
-the rest of the graph. Such communities emerge from the fact that real graphs
+in domains such as social networks or bioinformatics. \emph{Communities} are groups of nodes that are highly mutually connected, while being scarcely connected to
+the rest of the graph. Such communities emerge from the fact that real-world graphs
 are not random, but follow real-world dynamics that make similar entities to
 have a larger probability to be connected. As a consequence, detected
 communities are used to reveal vertices with similar characteristics, for
-instance to discover functionally equivalent proteins in protein-protein
+instance to discover functionally equivalent proteins in protein-to-protein
 interaction networks, or persons with similar interests in social networks. Such
-applications have made community detection a hot topic during the last fifteen
+applications have made community detection a hot topic during the last 15
 years with tens of developed algorithms and detection
 strategies~\cite{doi:10.1002/wics.1403,Kim:2015:CDM:2854006.2854013}. For
 comparing the quality of the different proposed techniques, one needs graphs
 with \emph{reference communities}, that is, communities known beforehand. Since
-it is very difficult to have large real graphs with reference communities
+it is very difficult to have large real-world graphs with reference communities
 (mainly because these would require a manual labeling), graphs for benchmarking
 community detection algorithms are typically generated synthetically.
 
@@ -22,7 +22,7 @@ community detection algorithms are typically generated synthetically.
 graphs proposed the use of random graphs composed by several Erd\"{o}s-R\'{e}nyi
 subgraphs, connected more internally than externally~\cite{danon2005comparing}.
 Each of these subgraphs has the same size and the same internal/external density
-of edges. However, such graphs miss the realism observed in real graphs, where
+of edges. However, such graphs miss the realism observed in real-world graphs, where
 communities are of different sizes and densities, thus several proposals exist
 to overcome such an issue.
 
@@ -46,35 +46,35 @@ belong to more than one community. This extended generator allows controlling
 the same parameters of LFR, as well as the amount of overlap of
 the generated communities.
 
-\paragraph{Stochastic Block Models} Another popular famility of generators
-widely use in the community detection field are the stochastic block
+\paragraph{Stochastic Block Models} Another popular family of generators
+widely used in the community detection field are the stochastic block
 models~\cite{holland1983stochastic}. In such models, the community structure of
-the graph is typically defined as an array of $n$ community or clusters sizes,
-and a density square matrix of size $nxn$ containing the density of
+the graph is typically defined as an array of $n$ community or cluster sizes
+and a density square matrix of size $n \times n$ containing the density of
 intra-cluster edges (in the diagonal of the matrix) and the density of
-inter-cluster edges. Then, an stochastic procedure is run to sample graphs
+inter-cluster edges. Then, a stochastic procedure is run to sample graphs
 from such array and matrix, using the sizes to compute the possible edges
 and the densities as probabilities of such edges to exist. The popularity of
 these methods stem from its simplicity and scalability, which makes them
 suitable for generating large graphs fast and in a distributed environments,
-provided that the density matrix is sparse (as it happens in most of real
+provided that the density matrix is sparse (as it happens in most of real-world
                                             world graphs). Moreover, given
 that the generation process of such models is mathematically tractable, they
 are typically used to analyze the limitations of community detection
 algorithms such as those based on modularity
 optimization~\cite{fortunato2007resolution} or based on
 triads~\cite{prat2016put}. Extensions of such models exist, such as the
-Mixed Membership Stochastic Block Model~\cite{arioldi2008mixed}, for
+Mixed Membership Stochastic Block Model~\cite{airoldi2008mixed}, for
 overlapping communities.
 
 \paragraph{Strengths and Weaknesses of Community Detection Generators}
 Besides synthetic graph generators, Yang and Leskovec~\cite{yang2015defining}
 proposed the use of real-world graphs with explicit group annotations (e.g.,
 forums in a social network, categories of products, etc.) to infer what they
-call ``meta-communities'', and use them to evaluate overlapping community
+call \emph{meta-communities}, and use them to evaluate overlapping community
 detection algorithms. However, a recent study from Hric, Darst and
 Fortunato~\cite{hric2014community} reveal a loose correspondence between
-communities (the authors refer to them as structural communities) and
+communities (the authors refer to them as \emph{structural communities}) and
 meta-communities.  This result reveals that  algorithms working for structural
 communities do not work well for finding meta-communities and vice versa,
 suggesting significantly different underlying characteristics
@@ -83,14 +83,13 @@ identified.
 
 In this regard and to the best of our knowledge, there does not exist a set of
 generators to generate graphs with meta-communities for community detection
-algorithm benchmarking. The closest one is the LDBC-SNB data
-generator~\cite{Erling:2015:LSN:2723372.2742786} which has been provided by the
+algorithm benchmarking. The closest one is the LDBC SNB data
+generator which has been provided by the
 generation of groups of users in the social network. Even though the generation
 process does not specifically enforce the generation of groups
-(meta-communities) for benchmarking community detection algorithms, the study
-from Prat-Pe\'rez and Dominguez-Sal reveals that these groups are more similar
+(meta-communities) for benchmarking community detection algorithms, the study~\cite{Prat-Perez:2014:CSS:2621934.2621942} reveals that these groups are more similar
 to the real meta-communities than those structural communities generated by the
-LFR benchmark~\cite{Prat-Perez:2014:CSS:2621934.2621942}.
+LFR benchmark.
 
 The differences observed between structural and meta-communities reveal the need
 of more accurate community definitions tight more specifically to the domain or

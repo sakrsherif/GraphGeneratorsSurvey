@@ -6,7 +6,7 @@ generation of general graph data that is not aimed at a particular application
 domain. In general, such generators focus on reproducing properties observed in
 real graphs regardless of their domain such as the degree distribution, the
 diameter, the presence of a large connected component, a community structure or
-a significantly large clustering coefficient. 
+a significantly large clustering coefficient.
 
 %Currently, there exists a number of tools which involve a kind of
 %general graph data generator, such as gtools from projects nauty and
@@ -45,7 +45,7 @@ following parameters: the number of nodes, the number of edges, and maximum weig
 an edge. It outputs a list of tuples containing identifiers of vertices of an
 edge (with the direction from the first one to the second one) and weights
 (positive integers  with a uniform random distribution) assigned to the edges of
-the multigraph.  The algorithm of the generator is based on R-MAT. 
+the multigraph.  The algorithm of the generator is based on R-MAT.
 %To reduce the data
 %locality, the vertex ids are randomly permuted and the output
 %tuples are shuffled. A related project from the same authors
@@ -124,18 +124,18 @@ able to generate graphs with billions and even trillions of edges.
 
 \paragraph{Strengths and Weaknesses of General Graph Generators}
 In general, existing general graph generators produce graphs with the following
-properties: skewed degree distribution (e.g. powerlay), small diameter, large
-clustering coefficient, a large largest connected component and some degree of
+properties: skewed degree distribution (e.g., powerlay), small diameter, large
+clustering coefficient, a large largest connected component, and some degree of
 community structure. Degree distribution can be typically configured while other
-properties are just a result of the genration process and cannot be controlled
-by any means. 
+properties are just a result of the generation process and cannot be controlled
+by any means.
 
-This is not the case of BTER and Darwini which besides the degree distribution,
-they also allow tunning the clustering coefficient. However, some use cases
+This is not the case of BTER and Darwini, which besides the degree distribution,
+they also allow tuning of the clustering coefficient. However, some use cases
 demand for more control on the characteristics of the generated graphs.
 This is the case, for instance, of benchmarking, where the underlying graph
 structure has direct implications to the performance of the graph algorithms
 to run. For this reason, the design of graph generators with the capability of fine
-tunning the characteristics of the generated graphs still remains as an open
-challenge. The question that remains though is what characteristics to tune,
-and which are the algorithms whose depends on such characteristics. 
+tuning the characteristics of the generated graphs still remains as an open
+challenge. The questions that remain are what characteristics to tune
+and which are the algorithms that depend on such characteristics.

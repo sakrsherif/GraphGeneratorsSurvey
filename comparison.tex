@@ -91,13 +91,13 @@ In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristi
 %\cline{2-10}
 \hline
 \hline %  ======================  Semantic web
-\multirow{16}{*}{\rot{\textbf{Semantic Web}}}
+\multirow{19}{*}{\rot{\textbf{Semantic Web}}}
  & LUBM & fixed & university  & fixed & N & Y & random (LCG) &  RDF & N   \\
 \cline{2-10}
-% & LBBM & extracted & Lehigh university BibTeX  & N & N & Y & Monte Carlo &  RDF & N   \\
-%\cline{2-10}
-% & UOBM & fixed & university  & fixed & N & Y & random &  RDF & N   \\
-%\cline{2-10}
+ & LBBM & extracted & Lehigh university BibTeX  & N & N & Y & Monte Carlo &  RDF & N   \\
+\cline{2-10}
+ & UOBM & fixed & university  & fixed & N & Y & random &  RDF & N   \\
+\cline{2-10}
  & IIMB & fixed & movies  & N & N & Y & random &  RDF & N   \\
 \cline{2-10}
  & BSBM & fixed & e-commerce  & fixed & N & Y & mostly normal &  RDF, relational & N   \\
@@ -186,7 +186,7 @@ In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristi
 \paragraph{Number of Generators, Size and Output Format of the Data}
 As we can see, the biggest set of available generators can be found in the Semantic Web application domain, probably due to its recent popularity and a number of research groups dealing with this topic. None of these generators is natively implemented in a distributed manner and thus primarily generating  output at the Big Data scale. On the other hand, the \emph{Linked Open Data} (LOD) is expected to be large in general; however, this is the case of the whole \emph{LOD Cloud}\footnote{\url{https://lod-cloud.net/}}, but not necessarily of the particular data sets forming it.
 
-The second large group of generators also corresponds to a popular application domain -- social networks. In this case the size of the output graph is important if we require realistic features of the result. However, most of the proposals do not provide an implementation at all and, thus, unfortunately this aspect cannot be discussed reliably.
+The second large group of generators also corresponds to a popular application domain -- social networks. In this case the size of the output graph is important if we require realistic features of the result. However, surprisingly many of the proposals do not provide an implementation at all and amongst the others there is a high percentage of those that are not highly scalable.
 
 In case of the other application-specific domains the amount of generators is relatively small. As we will show in Section~\ref{sec:overlapping}, the situation is not so critical. Some of the application-specific generators can be re-used also in other application domains or the general graph generators can be used.
 
@@ -240,13 +240,13 @@ As we have mentioned, the basic classification of the generators that we have us
   & Darwini   & {\bf x} & & &  & \\
 \hline
 \hline %  ======================  Semantic web
-\multirow{14}{*}{\rot{\textbf{Semantic web}}}
+\multirow{16}{*}{\rot{\textbf{Semantic web}}}
  & LUBM  & & {\bf x} & &  &  \\
 \cline{2-7}
-% & LBBM  & & {\bf x} & &  &  \\
-%\cline{2-7}
-% & UOBM  & & {\bf x} & &  &  \\
-%\cline{2-7}
+ & LBBM  & & {\bf x} & &  &  \\
+\cline{2-7}
+ & UOBM  & & {\bf x} & &  &  \\
+\cline{2-7}
  & IIMB & & {\bf x} & &  & \\
 \cline{2-7}
  & BSBM & & {\bf x} & &  &  \\
