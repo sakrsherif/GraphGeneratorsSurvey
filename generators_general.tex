@@ -122,6 +122,10 @@ able to generate graphs with billions and even trillions of edges.
 %suite of programs called gtools which involve generators for non-isomorphic
 %graphs, bipartite graphs, digraphs, and multigraphs.
 
+\paragraph{RTG} \emph{The Random Typing Generator} (RTG)~\cite{DBLP:journals/datamine/AkogluF09} aims at generating realistic graphs. In particular, it outputs (un)weighted, (un)directed, as well as uni/bipartite graphs, whereas the realism of the output is ensured by 11 laws (e.g., densification power law, weight power law, small and shrinking diameter, community structure, etc.) known to be typically exhibited by real-world graphs. On input it requires 4 parameters ($k$, $q$, $W$, and $\beta$) that correspond to the core Miller's observation~\cite{miller1957} that a random process (namely, random typing of $W$ words on a keyboard with $k$ characters and a space, where a space is hit with probability $q$ and other characters with probability $(1-q)/k$) leads to Zipf-like power laws (of the resulting words) plus in addition (using imbalance factor $\beta$) ensure homophily and community structure. RTG is based on the idea of connecting each pair of consecutive words by an edge.
+
+Paper~\cite{DBLP:conf/wbdb/AmmarO13} further extends this idea mainly in the direction of simplification of specifying of the parameters. Instead of Miller's parameters that are not much associated with graphs, the authors prove and exploit their relationship with size and density of the target graph.
+
 \paragraph{Strengths and Weaknesses of General Graph Generators}
 In general, existing general graph generators produce graphs with the following
 properties: skewed degree distribution (e.g., powerlay), small diameter, large
