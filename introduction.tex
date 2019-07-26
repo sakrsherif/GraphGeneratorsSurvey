@@ -18,7 +18,7 @@ name a few.
 % ANGELA: I do not think we should cite Neo4J, which is a graph database.
 %They enable to represent complex information in a simple and yet powerful way supported by a strong mathematical background. With the dawn of the new millennium which brought numerous novel technologies and applications, the graphs have become even more popular. There has appeared a number of use cases\footnote{\url{https://neo4j.com/use-cases/}} (such as fraud detection, recommendation engines, social networks etc.) where graphs represent the linked information.
 
-In general, we can distinguish between two broad types of graph data sets: (1) a single large graph (possibly with several components), such as social networks  or Linked Data graphs, and (2) a large set of small graphs, such as chemical compounds\footnote{\url{https://pubchem.ncbi.nlm.nih.gov/}} or linguistics syntax trees\footnote{\url{https://catalog.ldc.upenn.edu/ldc99t42}}. Naturally, the algorithms used in theses two classes differ a lot~\cite{DBLP:books/igi/Sakr2011}. In the former case we can search, e.g., for communities and their features or shortest paths, while in the latter case we usually query for supergraphs, subgraphs, or graphs similar to a given graph pattern. In both the cases, as in the other fields, quite often the respective real-world graph data is not publicly available (or simply does not exist when a particular method for data manipulation is proposed).
+In general, we can distinguish between two broad types of graph data sets: (1) a single large graph (possibly with several components), such as social networks  or Linked Data graphs, and (2) a large set of small graphs (e.g., chemical compounds\footnote{\url{https://pubchem.ncbi.nlm.nih.gov/}} or linguistics syntax trees\footnote{\url{https://catalog.ldc.upenn.edu/ldc99t42}}). Naturally, the algorithms used in theses two classes differ a lot~\cite{DBLP:books/igi/Sakr2011}. In the former case we can search, e.g., for communities and their features or shortest paths, while in the latter case we usually query for supergraphs, subgraphs, or graphs similar to a given graph pattern. In both the cases, as in the other fields, quite often the respective real-world graph data is not publicly available (or simply does not exist when a particular method for data manipulation is proposed).
 Even in the cases in which real data is abundant, many algorithms and techniques need to be tested on various orders of magnitudes of the graph sizes thus leading to the inception of
 configurable graph generators that reproduce real-world graph properties and provide unique tuning opportunities for
 algorithms and tools handling such data.
@@ -43,7 +43,7 @@ graph generators in view of identifying their future extensions to new emerging 
 
 
 \paragraph*{Contributions} Our survey revisits the representatives of
-modern graph data generators and summarizes their major features. The comprehensive review and analysis make this paper useful for motivating new graph data generation techniques as well as serving as a technical reference for selecting suitable solutions. In particular, the introductory categorization and comparative study enables the reader to quickly get his/her bearings in the field and identify a subset of generators of his/her interest. Since we do not limit the survey to a particular area of graph data management,  the reader can get a broader scope in the field. Hence, while practitioners can find a solution in another previously unexpected area, researchers can identify new target areas or exploit successful results in new fields. Last but not least, %to provide a global view of the state-of-the-art, we also provide an overview of most commonly used real-world testing graph datasets. And, finally,
+modern graph data generators and summarizes their main characteristics. The comprehensive review and analysis make this paper useful for motivating new graph data generation mechanisms as well as serving as a main technical reference for selecting suitable solutions. In particular, the introductory categorization and comparative study enables the reader to quickly get his/her bearings in the field and identify a subset of generators of his/her interest. Since we do not limit the survey to a particular area of graph data management,  the reader can get a broader scope in the field. Hence, while practitioners can find a solution in another previously unexpected area, researchers can identify new target areas or exploit successful results in new fields. Last but not least, %to provide a global view of the state-of-the-art, we also provide an overview of most commonly used real-world testing graph datasets. And, finally,
 we identify general open problems of graph data synthesis and indicate possible solutions to show that it still forms a challenging and promising research area.
 
 \paragraph*{Differences with prior surveys}
@@ -95,19 +95,19 @@ Densification Power Law (DPL) and shrinking diameters, community-guided
 attachment properties~\cite{Leskovec:2005:GOT:1081870.1081893}.
 Generation of graphs tackling Kronecker
 recursion with recursive tensor multiplication~\cite{AkogluMF08} is then considered in the above survey.
-We refer the readers to the aforementioned survey for evolutionary network generators and further 
+We refer the readers to the aforementioned survey for evolutionary network generators and further
 discuss the open challenges of evolving graph data in Section~\ref{sec:challenges}.
 %\TODO{Better highlight the differences when Sherif's part is in.}
 
 %\TODO{Outreach other surveys in other communities.}
 
 
-\paragraph*{Outline} The rest of this paper is organized as follows: Section~\ref{sec:comparison}  
-provides the opening categorization and comparison of the generators. Section~\ref{sec:generators} 
-provides an overview of the existing graph data generators and their main features in the frame of 
-the proposed categories. 
+\paragraph*{Outline} The rest of this paper is organized as follows: Section~\ref{sec:comparison}
+provides the opening categorization and comparison of the generators. Section~\ref{sec:generators}
+provides an overview of the existing graph data generators and their main features in the frame of
+the proposed categories.
 %To provide a complete overview,  we list the most commonly used testing data sets for the particular categories in Section~\ref{sec:data_sets}.
-In Section~\ref{sec:challenges}, we highlight some of the challenges and open problems of graph 
+In Section~\ref{sec:challenges}, we highlight some of the challenges and open problems of graph
 data synthesis before we conclude in Section~\ref{sec:conclusion}.
 
 
