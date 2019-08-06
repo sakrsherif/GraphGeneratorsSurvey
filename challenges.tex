@@ -103,7 +103,7 @@ the complexity of classical graph problems increases
 significantly~\cite{Michail2015,Wu:2014:PPT:2732939.2732945}. In some graph
 applications, such as, e.g., social networks, the evolution of the data is a
 significant aspect, especially in the activity
-graphs~\cite{doreian1997evolution,Kumar:2006:SEO:1150402.1150476,Hellmann2014583,wang2013,Kossinets88,Viswanath:2009:EUI:1592665.1592675}.
+graphs~\cite{Kumar:2006:SEO:1150402.1150476,doreian1997evolution,Hellmann2014583,wang2013,Viswanath:2009:EUI:1592665.1592675,Kossinets88}.
 However, as shown
 in~\cite{Leskovec:2005:RMT:2101235.2101254,Leskovec:2005:GOT:1081870.1081893},
 evolving graphs have further specific features. For example, some graphs grow
@@ -126,8 +126,7 @@ is intensively studied, surprisingly there seem to exist only very few proposals
 of a generator for dealing with this area.
 In~\cite{GoerkeKlugeSchumm2012_1000029825} the authors focus on \emph{clustering
 dynamic graphs}, i.e. graphs where the clustering corresponds to the partition
-of nodes into natural groups based on the concept of intra-cluster
-versus inter-cluster density of edges. The generator generates a time series
+of nodes into natural groups based on the concept of density of edges within and between the clusters. The generator generates a time series
 of random graphs $G_0, G_1, ..., G_n$, where $G_t$ emerges from $G_{t-1}$ via
 successive atomic updates like for instance, the insertion of a vertex or the removal of an
 edge. The generator dynamically monitors the ground truth clustering, and the probability
@@ -162,7 +161,7 @@ generate a synthetic graph with the same features.
 With the dawn of Big Data and especially its Variety, another key 3V characteristic, new types of
 database management systems have emerged. One of the most interesting ones
 are the so-called \emph{multi-model databases}~\cite{Lu:2019:MDN:3341324.3323214} that enable to store and
-thus query across structurally different data, including structured, semi-structured, and unstructured. There exist various types of
+thus query across structurally different data, including unstructured, semi-structured, and structured. There exist various types of
 multi-model systems combining  distinct subsets of Big Data structures including graph data.
 For example, OrientDB\footnote{\url{http://orientdb.com/orientdb/}} which has been mainly designed as an object DBMS currently supports graph, document,
 key/value, and object models. Such type of DBMSs also needs a specific
@@ -175,8 +174,8 @@ with limited capabilities.
 
 
 Another interesting approach to multi-model data is to adopt a unifying
-expressive graph data model, known as property graph data
-model~\cite{BFVY18}. Such a model allows to specify multi-edges and list of
+expressive graph data model, so-called \emph{property graph data
+model}~\cite{BFVY18}. Such a  model allows to specify multi-edges and list of
 properties for the nodes. Synthetic graph generators for property graphs and its
 companion standard graph query language~\cite{Angles18,AnglesABBFGLPPS18} are also needed in order to boost
 their availability and adoption for different communities.
@@ -187,12 +186,12 @@ their availability and adoption for different communities.
 With the advent of neural networks and specially generative adversarial networks
 (GANs)~\cite{goodfellow2014generative}, several researchers have started to
 explore their application to generate graphs. This is the case of
-~\cite{kipf2016variational,grover2018graphite,simonovsky2018graphvae,li2018learning,you2018graphrnn},
+~\cite{simonovsky2018graphvae,kipf2016variational,grover2018graphite,li2018learning,you2018graphrnn},
 which present several generative models to generate realistic graphs.  Such
 techniques still suffer from several problems. For instance, some of them are
 limited to learn from a single
 graph~\cite{kipf2016variational,grover2018graphite} or generate small
-graphs~\cite{simonovsky2018graphvae,li2018learning,you2018graphrnn}. The
+graphs~\cite{simonovsky2018graphvae,you2018graphrnn,li2018learning}. The
 technique proposed in~\cite{you2018graphrnn} is capable of generating graphs
 with complex edge dependencies (e.g. community structure) and is not restricted
 to graphs of a fixed size. However, there are still in general several open

@@ -113,9 +113,8 @@ graph whose vertices represent objects having property values. The respective
 classes determine the structure of the properties. S3G2 does not aim at
 generating near real-world data, but at generating synthetic graphs with a
 correlated structure. Hence, the existing data values influence the probability
-of choosing a certain property value from a pre-defined dictionary, or the
-probability of connecting two nodes. For example, the degree distribution can be
-correlated with the properties of a node and thus, e.g., people having many
+of choosing a particular property value from a pre-defined dictionary or connecting two nodes. For example, the degree distribution can be
+correlated with the properties of a node and thus, e.g., people who have many
 friend relationships typically post more comments and pictures. The data
 generation process starts with generating a number of nodes with property values
 generated according to specified property value correlations and then adding
@@ -132,7 +131,7 @@ inspired by DBpedia and provided with 20 property value correlations. The edges
 are generated according to 3 correlation dimensions.
 
 
-\paragraph{SIB} The developers of the Social Network Intelligence BenchMark (SIB)\footnote{\url{https://www.w3.org/wiki/Social_Network_Intelligence_BenchMark}} based the design of their benchmark on the claim that existing benchmarks are limited in reflecting the characteristics of the real RDF databases and are mostly focusing on the relational style aspects. Hence, they proposed a benchmark for  query evaluation using real graphs~\cite{sib}. The proposed benchmark mimics using an RDF store for a social network. \iffalse site where users and their interactions form a social graph of social activities such as creating/managing groups, writing posts and posting comments.\fi The distribution of the generated data for each type follows the  distribution of the associated type inferred from real-world social networks. Additionally, association rules are exploited for representing the real-world data correlation in the generated synthetic data. The  generated data is linked with the RDF datasets from DBpedia. The benchmark specification contains 3 query mixes -- interactive, update, and analysis -- expressed in SPARQL 1.1 Working Draft.
+\paragraph{SIB} The developers of the Social Network Intelligence BenchMark (SIB)\footnote{\url{https://www.w3.org/wiki/Social_Network_Intelligence_BenchMark}} based the design of their benchmark on the claim that the state-of-the-art benchmarks are limited in reflecting the characteristics of the real RDF databases and are mostly focusing on the relational style aspects. Hence, they proposed a benchmark for  query evaluation using real graphs~\cite{sib}. The proposed benchmark mimics using an RDF store for a social network. \iffalse site where users and their interactions form a social graph of social activities such as creating/managing groups, writing posts and posting comments.\fi The distribution of the generated data for each type follows the  distribution of the associated type inferred from real-world social networks. Additionally, association rules are exploited for representing the real-world data correlation in the generated synthetic data. The  generated data is linked with the RDF datasets from DBpedia. The benchmark specification contains 3 query mixes -- interactive, update, and analysis -- expressed in SPARQL 1.1 Working Draft.
 
 \paragraph{Cloning of Social Networks} ~\cite{Sukthankar-SocialInfo2014}
 introduces two synthetic generators to reproduce two characteristics typically
@@ -141,9 +140,8 @@ generators extend  the generator proposed by~\cite{wang2011leveraging}.
 which starts with a small number of
 nodes and new nodes are added until the network reaches the required number. It
 has two basic parameters: homophily and link density. A high \emph{homophily}
-value reflects that links have higher chances to be established among the nodes with the
-same label; these labels can be considered as being equivalent to community
-membership.
+value reflects that links have higher chances to be established among the nodes belonging to the same community, 
+whereas the community membership is represented by the same labels.
 
 The first proposed generator is Attribute Synthetic Generator (ASG), used for
 reproducing the node feature distribution of standard networks and rewiring the
@@ -172,7 +170,7 @@ three distinct workloads the Social Network Benchmark
 distinct benchmarks. The network nodes correspond to people and the edges
 represent their friendship and messages they post in discussion trees on their
 forums. The three query workloads involve: (1) SNB-Interactive, i.e., complex
-read-only queries accessing a significant portion of data, (2) SNB-BI, i.e.,
+read-only queries accessing a high portion of data, (2) SNB-BI, i.e.,
 queries accessing a high percentage of  entities and grouping them in various
 dimensions, and (3) SNB-Algorithms, involving graph analysis algorithms, such as
 community detection, PageRank, BFS, and clustering. The graph generator, called
@@ -189,16 +187,16 @@ and for a given set of configuration parameters.
 %The generated data have become a part if several graph benchmarks, such as GraphBIG~\cite{Nai:2015:GUG:2807591.2807626}.
 
 \paragraph{Towards More Realistic Data} \cite{Nettleton2016} argued that the majority of existing works focuses on
-topology generation which approximates the characteristics of a real-world social
-network (e.g., a small graph diameter, skew degree
-distribution, small average path length, and community structures); however,  this is usually done without any data. Hence, they
+topology generation which approximates the features of a real-world social
+network (e.g., community structures, skew degree
+distribution, a small average path length, or a small graph diameter); however,  this is usually done without any data. Hence, they
 introduced a general stochastic modeling approach that enables the users to
-populate a graph topology with data. The approach has three steps: (1) topology
+fill a graph topology with data. The approach has three steps: (1) topology
 generation (using R-MAT) plus community identification using the Louvain
 method~\cite{1742-5468-2008-10-P10008} or usage of a real-world topology from
 SNAP\footnote{\url{https://snap.stanford.edu/data/}}, (2) data definition
-that describes distribution profiles, attribute value definitions, using a
-parameterizable set of data propagation rules and affinities, and (3) data
+that describes  definitions of attribute values (distribution profiles) using a
+parameterizable set of affinities and data propagation rules, and (3) data
 population.
 
 \paragraph{Strengths and Weaknesses of Social Network Generators}
