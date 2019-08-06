@@ -28,8 +28,8 @@ characteristics of individual applications.
 synthetic graph generator which is designed to generate power-law degree
 distributions~\cite{DBLP:conf/sdm/ChakrabartiZF04}.  The generator is recursive
 and employs a fairly small number of parameters.  In principle, the strategy of
-this generator is to achieve simple means to produce graphs that are matching
-the properties of the real graphs. In particular, the design goal of R-MAT is to
+this generator is to achieve simple means to produce graphs whose properties correspond to 
+properties of the real-world graphs. In particular, the design goal of R-MAT is to
 produce graphs which mimics the degree distributions, imitate a community
 structure and have a small diameter. R-MAT can generate weighted, directed and
 bipartite graphs.
@@ -98,7 +98,7 @@ average clustering coefficient of the nodes of such degree. Based on this
 probability, for each node, the excess degree (i.e, the degree that in
 expectation will not be realized internally in the group) is computed and used to connect
 nodes from different groups at random. The authors describe a highly scalable
-MapReduce based implementation that is capable of generating large graphs (with
+MapReduce-based implementation that is able to generate large graphs (consisting of
 billions of nodes) in a reasonable amounts of time.
 
 \paragraph{Darwini} Darwini~\cite{edunov2016darwini} is an extension of BTER
@@ -122,14 +122,14 @@ able to generate graphs with billions and even trillions of edges.
 %suite of programs called gtools which involve generators for non-isomorphic
 %graphs, bipartite graphs, digraphs, and multigraphs.
 
-\paragraph{RTG} \emph{The Random Typing Generator} (RTG)~\cite{DBLP:journals/datamine/AkogluF09} aims at generating realistic graphs. In particular, it outputs (un)weighted, (un)directed, as well as uni/bipartite graphs, whereas the realism of the output is ensured by 11 laws (e.g., densification power law, weight power law, small and shrinking diameter, community structure, etc.) known to be typically exhibited by real-world graphs. On input it requires 4 parameters ($k$, $q$, $W$, and $\beta$) that correspond to the core Miller's observation~\cite{miller1957} that a random process (namely, random typing of $W$ words on a keyboard with $k$ characters and a space, where a space is hit with probability $q$ and other characters with probability $(1-q)/k$) leads to Zipf-like power laws (of the resulting words) plus in addition (using imbalance factor $\beta$) ensure homophily and community structure. RTG is based on the idea of connecting each pair of consecutive words by an edge.
+\paragraph{RTG} \emph{The Random Typing Generator} (RTG)~\cite{DBLP:journals/datamine/AkogluF09} aims at generating realistic graphs. In particular, it outputs (un)weighted, (un)directed, as well as uni/bipartite graphs, whereas the realism of the output is ensured by 11 laws (e.g., densification power law, weight power law, small and shrinking diameter, community structure, etc.) known to be typically exhibited by real-world graphs. On input it requires 4 parameters ($k$, $q$, $W$, and $\beta$) that correspond to the core Miller's observation~\cite{miller1957} that a random process (namely, having a keyboard with $k$ characters and a space, the process of random typing of $W$ words, where the probability of hitting a space is $q$ and the probability of hitting any other characters is $(1-q)/k$) leads to Zipf-like power laws (of the resulting words) plus in addition (using imbalance factor $\beta$) ensure homophily and community structure. RTG is based on the idea creating an edge between pairs of consecutive words.
 
 Paper~\cite{DBLP:conf/wbdb/AmmarO13} further extends this idea mainly in the direction of simplification of specifying of the parameters. Instead of Miller's parameters that are not much associated with graphs, the authors prove and exploit their relationship with size and density of the target graph.
 
 \paragraph{Strengths and Weaknesses of General Graph Generators}
 In general, existing general graph generators produce graphs with the following
-properties: skewed degree distribution (e.g., powerlay), small diameter, large
-clustering coefficient, a large largest connected component, and some degree of
+properties: skewed degree distribution (e.g., powerlay), small diameter, a large largest connected component, large
+clustering coefficient, and some degree of
 community structure. Degree distribution can be typically configured while other
 properties are just a result of the generation process and cannot be controlled
 by any means.
