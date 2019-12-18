@@ -1,0 +1,104 @@
+% Copyright Javier Sánchez-Monedero.
+% Please report bugs and suggestions to (jsanchezm at uco.es)
+%
+% This document is released under a Creative Commons Licence
+% CC-BY-SA (http://creativecommons.org/licenses/by-sa/3.0/)
+%
+% BASIC INSTRUCTIONS:
+% 1. Load and set up proper language packages
+% 2. Complete the paper data commands
+% 3. Use commands \rcomment and \newtext as shown in the example
+
+\documentclass[a4paper,twoside,11pt]{reviewresponse}
+
+% 1. Load and set up proper language packages
+%\usepackage[utf8x]{inputenc}
+\usepackage[latin9]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{epstopdf}
+
+% 2. Complete the paper data
+\newcommand{\myAuthors}{{Angela Bonifati, Irena Holoubova, Arnau Part-Perez and Sherif Sakr} }
+\newcommand{\myEmail}{holubova@ksi.mff.cuni.cz}
+\newcommand{\myTitle}{Response Letter to Review Comments}
+\newcommand{\myShortTitle}{CSUR-2019-0568}
+\newcommand{\myJournal}{Journal: ACM Computing Surveys}
+\newcommand{\manuTitle}{Manuscript Title: \textbf{Graph Generators: State of the Art and Open Challenges}}
+\newcommand{\manuId}{Manuscript ID: \textbf{CSUR-2019-0568}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\usepackage[linktoc=all]{hyperref}
+\usepackage[linktoc=all,bookmarks,bookmarksopen=true,bookmarksnumbered=true]{hyperref}
+
+\hypersetup{
+pdftitle = {\myTitle},
+pdfsubject = {\myJournal\xspace},
+colorlinks = true,
+linkcolor=black!70!green,          % color of internal links
+citecolor=black!70!green,        % color of links to bibliography
+filecolor=magenta,      % color of file links
+urlcolor=black!70!green           % color of external links
+}
+
+\begin{document}
+
+\thispagestyle{plain}
+
+\begin{center}
+ {\LARGE\myTitle} \vspace{0.5cm} \\
+  {\large\myJournal} \vspace{0.5cm} \\
+  \large\manuTitle \vspace{0.5cm} \\
+  \manuId \vspace{0.5cm} \\
+ \myAuthors \\
+ \url{\myEmail} \vspace{1cm} \\
+\end{center}
+
+%\tableofcontents
+
+\begin{abstract}
+The authors would like to thank the reviewers for their detailed, useful and constructive comments to improve the manuscript. Please find below our responses to the comments which have been included in the attached revised version for our manuscript.
+\end{abstract}
+
+\section{Reviewer 1 (Minor Revision)}
+
+\rcomment{
+I do not think it is necessary to modify the review to include lengthy discussions of graph generators that are primarily used for null models or molecule design. However, the introduction should more clearly delineate the scope of the review as being focused on graph generators that are designed for benchmarking.
+}
+
+\textbf{Response}
+
+Thanks for the comment. We have specified benchmarking as a main context for our surveyed graph generators.
+
+
+
+\section{Reviewer 2 (Accept)}
+
+
+The reviewer has been satisfied with the manuscript and did not have comments to address.
+
+\section{Reviewer 3 (Minor Revision)}
+
+\rcomment{
+Authors say MapReduce-based BTER algorithm can generate large graphs in a reasonable amount of time. I find such a sentence too vague to be of any substance. What is a large graph? What is a reasonable amount of time? }
+
+\textbf{Response}
+
+.....
+
+\rcomment{List of Typos}
+\textbf{Response}
+Thanks for the listed typos. We have addressed them and made an additional proof-reading round of the manuscript.
+
+
+
+% Uncomment in case references are needed
+%\bibliographystyle{apalike}
+%\bibliography{response}
+
+
+\end{document}
