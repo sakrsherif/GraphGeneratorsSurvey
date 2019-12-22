@@ -767,9 +767,11 @@ groups are assigned an internal edge probability in order to match the observed
 average clustering coefficient of the nodes of such degree. Based on this
 probability, for each node, the excess degree (i.e, the degree that in
 expectation will not be realized internally in the group) is computed and used to connect
-nodes from different groups at random. The authors describe a highly scalable
-MapReduce-based implementation that is able to generate large graphs (consisting of
-billions of nodes) in a reasonable time budget.
+nodes from different groups at random. 
+The authors report that BTER is able to generate graphs with billions of edges. 
+%The authors describe a highly scalable
+%MapReduce-based implementation that is able to generate large graphs (consisting of
+%billions of nodes) in a reasonable time budget.
 
 \paragraph{Darwini} Darwini~\cite{edunov2016darwini} is an extension of BTER
 designed to run on Vertex Centric computing frameworks like
