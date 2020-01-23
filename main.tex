@@ -11,7 +11,10 @@
 %
 % For tracking purposes => this is v1.3 - March 2012
 
-\documentclass[prodmode,acmtecs]{acmsmall} % Aptara syntax
+%\documentclass[prodmode,acmtecs]{acmsmall} % Aptara syntax
+\RequirePackage{rotating}
+\documentclass[acmsmall]{acmart}
+
 
 % Package to generate and customize Algorithm as per ACM style
 \usepackage[ruled]{algorithm2e}
@@ -30,18 +33,17 @@
 \usepackage{rotating}
 
 
-
 \newcommand*\rot{\rotatebox{90}}
 \newcommand*\OK[0]{$\surd$}
 \newcommand*\NO[0]{$\times$}
 \newcommand*\QQ[0]{$?$}
 
 % Metadata Information
-\acmVolume{0}
-\acmNumber{0}
-\acmArticle{0}
-\acmYear{2019}
-\acmMonth{0}
+%\acmVolume{0}
+%\acmNumber{0}
+%\acmArticle{0}
+%\acmYear{2019}
+%\acmMonth{0}
 
 % Copyright
 %\setcopyright{acmcopyright}
@@ -53,10 +55,18 @@
 %\setcopyright{cagovmixed}
 
 % DOI
-\doi{0000001.0000001}
+%\doi{0000001.0000001}
+
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}} 
+
+\setcopyright{acmcopyright}
+\acmJournal{CSUR}
+\acmYear{2020} \acmVolume{1} \acmNumber{1} \acmArticle{1} \acmMonth{1} \acmPrice{15.00}\acmDOI{10.1145/3379445}
 
 %ISSN
-\issn{0360-0300}
+%\issn{0360-0300}
 
 \newcommand{\TODO}[1]{{\color{red}{\textbf{TODO: {#1}}\xspace}}}
 \newcommand{\QUE}[1]{{\color{blue}{\textbf{Q: {#1}}\xspace}}}
@@ -66,22 +76,65 @@
 \begin{document}
 
 % Page heads
-\markboth{A. Bonifati, I. Holubov\'{a}, A. Prat-P\'erez, S. Sakr}{Graph Generators: State of the Art and Open Challenges}
+%\markboth{A. Bonifati, I. Holubov\'{a}, A. Prat-P\'erez, S. Sakr}{Graph Generators: State of the Art and Open Challenges}
 
 % Title portion
 %\title{Graph Data Generators in the World of Big Data}
 %\title{Modern Graph Generators: A Survey}
 \title{Graph Generators: State of the Art and Open Challenges}
-\author{
-ANGELA BONIFATI
-\affil{Lyon 1 University, France}
-IRENA HOLUBOV\'{A}
-\affil{Charles University, Prague, Czech Republic}
-ARNAU PRAT-P\'{E}REZ
-\affil{Sparsity-Technologies, Barcelona, Spain}
-SHERIF SAKR
-\affil{University of Tartu, Estonia}
-}
+
+\author{Angela Bonifati}
+\affiliation{%
+  \institution{Lyon 1 University}
+  \streetaddress{Liris CNRS Campus La Doua 23-25 Avenue Pierre de Coubertin}
+  \city{Villerubanne}
+  \postcode{69622}
+  \country{France}
+   }
+\email{angela.bonifati@univ-lyon1.fr} 
+
+
+\author{Irena Holubov\'a}
+\affiliation{%
+  \institution{Charles University}
+  \streetaddress{Faculty of Mathematics and Physics, Department of Software Engineering, Malostransk\'{e} n\'{a}m. 25}
+  \city{Prague}
+  \postcode{118 00}
+  \country{Czech Republic}
+  }
+\email{holubova@ksi.mff.cuni.cz} 
+
+\author{Arnau Prat-P\'erez}
+\affiliation{%
+  \institution{Sparsity-Technologies}
+  \streetaddress{Compte Guell 13}
+  \city{Barcelona}
+  \country{Spain}}
+\email{aprat@ac.upc.edu} 
+
+\author{Sherif Sakr}
+\affiliation{%
+  \institution{University of Tartu}
+  \streetaddress{J Liivi 2}
+  \city{Tartu}
+  \postcode{50409}
+  \country{Estonia}
+  }
+\email{sherif.sakr@ut.ee} 
+
+\renewcommand{\shortauthors}{Bonifati, Holubov\'a, Prat-P\'erez, and Sakr}
+ 
+
+%\author{
+%ANGELA BONIFATI
+%\affil{Lyon 1 University, France}
+%IRENA HOLUBOV\'{A}
+%\affil{Charles University, Prague, Czech Republic}
+%ARNAU PRAT-P\'{E}REZ
+%\affil{Sparsity-Technologies, Barcelona, Spain}
+%SHERIF SAKR
+%\affil{University of Tartu, Estonia}
+%}
 % NOTE! Affiliations placed here should be for the institution where the
 %       BULK of the research was done. If the author has gone to a new
 %       institution, before publication, the (above) affiliation should NOT be changed.
@@ -159,8 +212,8 @@ challenges and missing requirements of current graph generators along with their
 
 \keywords{Big Data management, graph data, generators, benchmarks, synthetic data}
 
-\acmformat{A. Bonifati, I. Holubov\'{a}, A. Prat-P\'erez, S. Sakr, 2019.
-Graph Generators: State of the Art and Open Challenges.}
+%\acmformat{A. Bonifati, I. Holubov\'{a}, A. Prat-P\'erez, S. Sakr, 2019.
+%Graph Generators: State of the Art and Open Challenges.}
 % At a minimum you need to supply the author names, year and a title.
 % IMPORTANT:
 % Full first names whenever they are known, surname last, followed by a period.
@@ -172,15 +225,15 @@ Graph Generators: State of the Art and Open Challenges.}
 % is followed by a period and they are separated by a space.
 % The remaining information (journal title, volume, article number, date, etc.) is 'auto-generated'.
 
-\begin{bottomstuff}
-%This work is supported by ...
-Author's addresses:
-A. Bonifati, Universit\'{e} Claude Bernard Lyon 1, Liris CNRS Campus La
-Doua 23-25 Avenue Pierre de Coubertin, 69622 Villerubanne, France;
-I. Holubov\'{a}, Department of Software Engineering, Faculty of Mathematics and Physics, Charles University, Malostransk\'{e} n\'{a}m. 25, 118 00 Praha~1, Czech Republic;
-A. Prat-P\'erez, Sparsity-Technologies, Compte Guell 13, Barcelona, Spain;
-S. Sakr, University of Tartu, J Liivi 2, Tartu 50409, Estonia.
-\end{bottomstuff}
+%\begin{bottomstuff}
+%%This work is supported by ...
+%Author's addresses:
+%A. Bonifati, Universit\'{e} Claude Bernard Lyon 1, Liris CNRS Campus La
+%Doua 23-25 Avenue Pierre de Coubertin, 69622 Villerubanne, France;
+%I. Holubov\'{a}, Department of Software Engineering, Faculty of Mathematics and Physics, Charles University, Malostransk\'{e} n\'{a}m. 25, 118 00 Praha~1, Czech Republic;
+%A. Prat-P\'erez, Sparsity-Technologies, Compte Guell 13, Barcelona, Spain;
+%S. Sakr, University of Tartu, J Liivi 2, Tartu 50409, Estonia.
+%\end{bottomstuff}
 
 \maketitle
 
@@ -356,11 +409,10 @@ In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristi
   \end{itemize}
 \end{itemize}
 
-
 \begin{sidewaystable}
 \scriptsize
 \centering
-\tbl{Key characteristics of the generators} {
+\caption{Key characteristics of the generators} 
 \begin{tabular}{| c | l | p{2cm} |  p{2cm} | p{1.3cm} |  l | l | p{3.2cm} | p{2cm} | l | }
  \hline
            &   & \multicolumn{2}{c}{\textbf{Domain}}
@@ -484,7 +536,7 @@ In Table~\ref{tab:comparisonCharacteristics}   we overview the key characteristi
 %  & RSPLab & schema-driven & agnostic & Y & Y & N & user-defined & RDF & N     \\
 %\cline{2-10}
 %  & & & & & & & &  &   \\
-\end{tabular} }
+\end{tabular} 
 \label{tab:comparisonCharacteristics}
 \end{sidewaystable}
 
@@ -518,7 +570,7 @@ As we have mentioned, the basic classification of the generators that we have us
 \begin{table}
 \scriptsize
 \centering
-\tbl{Overlapping of classes of generators} {
+\caption{Overlapping of classes of generators} 
 \begin{tabular}{| c | l | l | l | l | l | l | l | }
  \hline
            &  \textbf{Generator}
@@ -636,7 +688,7 @@ As we have mentioned, the basic classification of the generators that we have us
 %%\cline{2-7}
 %%  & & & & & & \\
 %\hline
-\end{tabular} }
+\end{tabular} 
 \label{tab:overlapping}
 \end{table}
 
@@ -1553,7 +1605,7 @@ The work of Irena Holubov\'{a} was partially funded by the GA\v{C}R project no. 
 \end{acks}
 
 % Bibliography
-\bibliographystyle{ACM-Reference-Format-Journals}
+\bibliographystyle{ACM-Reference-Format}
 \bibliography{biblio}
 
 % History dates
@@ -1561,3 +1613,4 @@ The work of Irena Holubov\'{a} was partially funded by the GA\v{C}R project no. 
 
 
 \end{document}
+\endinput
